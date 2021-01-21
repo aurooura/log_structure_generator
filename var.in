@@ -1,0 +1,10 @@
+EKF_00
+update_ground_effect_detector
+float gndeffect_state.takeoff_expected
+float gndeffect_state.touchdown_expected
+float inertial_nav.get_velocity()
+float inertial_nav.get_altitude();
+float flightmode->has_manual_throttle()
+float pos_control->is_active_xy()
+float position_ok()
+
