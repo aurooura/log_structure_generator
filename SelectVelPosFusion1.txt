@@ -51,26 +51,10 @@ void Write_SelectVelPosFusion1(float gpsDataDelayed_sensor_idx,float accelPosOff
 ===============LOG_STRUCTURE.H=======================
 NAO ESQUECER O SHOULD_LOG_EKF!!!!!
 
-LOG_EKF_20,
+LOG_EKF_20_BASE(LOG_EKF_20),
+===============LOG_FILE_H====================
 
-LOG_EKF_20_BASE(LOG_EKF_20),\
-===============LOG_FILE_CPP====================
-
-void AP_Logger::Write_SelectVelPosFusion1(
-	float gpsDataDelayed_sensor_idx,
-	float accelPosOffset,
-	float _fusionModeGPS,
-	uint8_t gpsDataToFuse,
-	uint8_t extNavDataToFuse,
-	float gpsDataDelayed_vel_x,
-	float gpsDataDelayed_vel_y,
-	float gpsDataDelayed_vel_z,
-	float gpsDataDelayed_pos_x,
-	float gpsDataDelayed_pos_y,
-	float gpsDataDelayed_hgt,
-	float imuDataDelayed_delAng,
-	float imuDataDelayed_delAngDT)
-{
+void AP_Logger::Write_SelectVelPosFusion1(float gpsDataDelayed_sensor_idx,float accelPosOffset,float _fusionModeGPS,uint8_t gpsDataToFuse,uint8_t extNavDataToFuse,float gpsDataDelayed_vel_x,float gpsDataDelayed_vel_y,float gpsDataDelayed_vel_z,float gpsDataDelayed_pos_x,float gpsDataDelayed_pos_y,float gpsDataDelayed_hgt,float imuDataDelayed_delAng,float imuDataDelayed_delAngDT){
 	struct log_EKF_20 pkt = {
 		LOG_PACKET_HEADER_INIT(LOG_EKF_20),
 		time_us : AP_HAL::micros64(),
@@ -89,5 +73,5 @@ void AP_Logger::Write_SelectVelPosFusion1(
 		imuDataDelayed_delAngDT : imuDataDelayed_delAngDT
 	};
 	WriteBlock(&pkt, sizeof(pkt));
-} 
+}
 

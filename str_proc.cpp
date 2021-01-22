@@ -28,7 +28,7 @@ map<string, string> mp = {
 
 
 bool is_forb(char x) {
-    return(x == '.' || x == '(' || x == ')' || x == '>' || x == '-' || x == ';');
+    return(x == '.' || x == '(' || x == ')' || x == '>' || x == '-' || x == ';' || x == '[' || x == ']');
 }
 
 
@@ -141,11 +141,26 @@ int main() {
     cout << "void " << tmp;
     cout << ");\n\n\n";
 
+    cout << "===============LOG_STRUCTURE.H=======================\n";
+    cout << "NAO ESQUECER O SHOULD_LOG_EKF!!!!!\n\n";
+    cout << "LOG_" + model << ",\n\n";
 
-    cout << "===============LOG_FILE_H====================\n\n";
+    cout << "LOG_" << model << "_BASE(LOG_" << model << "),\\\n";
 
-    cout << "void AP_Logger::" << tmp << "){\n";
-    cout << "\tstruct log_" << model << "pkt = {\n\t\tLOG_PACKET_HEADER_INIT(LOG_" + model + "),\n";
+
+
+
+    cout << "===============LOG_FILE_CPP====================\n\n";
+
+    cout << "void AP_Logger::";
+    for(int i = 0; i < tmp.size(); ++i) {
+        cout << tmp[i];
+        if(tmp[i] == '(') cout << endl << '\t';
+        if(tmp[i] == ',') cout << "\n\t"; 
+    }
+
+    cout << ")\n{\n";
+    cout << "\tstruct log_" << model << " pkt = {\n\t\tLOG_PACKET_HEADER_INIT(LOG_" + model + "),\n";
     cout << "\t\ttime_us : AP_HAL::micros64(),\n";
     for(int i = 0; i < buffer.size(); ++i) {
         cout << "\t\t";
@@ -153,6 +168,6 @@ int main() {
         if(i != buffer.size()-1) cout << ',';
         cout << endl;
     }
-    cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n}\n\n";
+    cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
 
 }

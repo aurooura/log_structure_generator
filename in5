@@ -1,0 +1,15 @@
+EKF_20 EKFK
+SelectVelPosFusion1 
+float gpsDataDelayed.sensor_idx
+float accelPosOffset
+float _fusionModeGPS
+uint8_t gpsDataToFuse
+uint8_t extNavDataToFuse
+float gpsDataDelayed.vel.x
+float gpsDataDelayed.vel.y
+float gpsDataDelayed.vel.z
+float gpsDataDelayed.pos.x
+float gpsDataDelayed.pos.y
+float gpsDataDelayed.hgt
+float imuDataDelayed.delAng
+float imuDataDelayed.delAngDT
