@@ -1,5 +1,0 @@
-EKF_01
-update_ground_effect_detector1
-uint8_t slow_horizontal
-uint8_t slow_descent
-uint8_t is_active_xy()
