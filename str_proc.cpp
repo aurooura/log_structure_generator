@@ -71,12 +71,14 @@ int main() {
     cout << build_header(model, name_func) << endl;
     
     
-    vector<string> type, buffer;
+    vector<string> type, buffer, originals;
     string test, curType;
 
     while(cin >> curType >> test) {
+        originals.push_back(test);
         sp_trim(test);
         buffer.push_back(test);
+        if(curType == "bool") curType = "uint8_t";
         type.push_back(curType);
     }
 
@@ -87,8 +89,13 @@ int main() {
 
     cout << "\t" + buffer.back() + ")" << endl;
     cout << "\n\n";
+    cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
+    for(int i = 0; i < buffer.size(); ++i) {
+        cout << '\t' << type[i] << " " << buffer[i] << " = " << originals[i] << ";\n";
+    }
+    cout << "\tAUX_LOG_" + model << ";\n";
 
-    cout << "=============== XMOBOTS_LOGS.H ====================\n\n";
+    cout << "\n\n=============== XMOBOTS_LOGS.H ====================\n\n";
 
     for(string &s : buffer) {
         s.erase(s.begin(), s.begin() + 4);
@@ -150,7 +157,7 @@ int main() {
 
 
 
-    cout << "===============LOG_FILE_CPP====================\n\n";
+    cout << "\n\n===============LOG_FILE_CPP====================\n\n";
 
     cout << "void AP_Logger::";
     for(int i = 0; i < tmp.size(); ++i) {

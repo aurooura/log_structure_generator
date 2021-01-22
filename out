@@ -1,0 +1,89 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_EKF23 1
+
+
+#define AUX_LOG_EKF23 AP::logger().Write_FuseDeclination1(\
+	log_magDecAng, \
+	log_innovation1, \
+	log_innovation2, \
+	log_magN, \
+	log_magE, \
+	log_healthyFusion, \
+	log_faultStatus_bad_decl, \
+	log_Kfusion_16, \
+	log_Kfusion_17, \
+	log_H_MAG_24, \
+	log_H_MAG_16, \
+	log_H_MAG_17)
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_EKF23_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_EKF23), "EKFM",\
+	"QfffffBBfffff","t,1,2,3,4,5,6,7,8,9,10,11,12","s------------","F000000000000"}
+
+struct PACKED log_EKF23 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float magDecAng;
+	float innovation1;
+	float innovation2;
+	float magN;
+	float magE;
+	uint8_t healthyFusion;
+	uint8_t faultStatus_bad_decl;
+	float Kfusion_16;
+	float Kfusion_17;
+	float H_MAG_24;
+	float H_MAG_16;
+	float H_MAG_17;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_FuseDeclination1(float magDecAng,float innovation1,float innovation2,float magN,float magE,uint8_t healthyFusion,uint8_t faultStatus_bad_decl,float Kfusion_16,float Kfusion_17,float H_MAG_24,float H_MAG_16,float H_MAG_17);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_EKF23,
+
+LOG_EKF23_BASE(LOG_EKF23),\
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_FuseDeclination1(
+	float magDecAng,
+	float innovation1,
+	float innovation2,
+	float magN,
+	float magE,
+	uint8_t healthyFusion,
+	uint8_t faultStatus_bad_decl,
+	float Kfusion_16,
+	float Kfusion_17,
+	float H_MAG_24,
+	float H_MAG_16,
+	float H_MAG_17)
+{
+	struct log_EKF23 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_EKF23),
+		time_us : AP_HAL::micros64(),
+		magDecAng : magDecAng,
+		innovation1 : innovation1,
+		innovation2 : innovation2,
+		magN : magN,
+		magE : magE,
+		healthyFusion : healthyFusion,
+		faultStatus_bad_decl : faultStatus_bad_decl,
+		Kfusion_16 : Kfusion_16,
+		Kfusion_17 : Kfusion_17,
+		H_MAG_24 : H_MAG_24,
+		H_MAG_16 : H_MAG_16,
+		H_MAG_17 : H_MAG_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
