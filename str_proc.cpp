@@ -49,7 +49,7 @@ void sp_trim(string& str) {
 
 
 string build_act(string& model) {
-    string ret = ("#define ACTIVE_LOG_" + model + "1");
+    string ret = ("#define ACTIVE_LOG_" + model + " 1");
     return ret;
 }
 
@@ -61,8 +61,8 @@ string build_header(string& model, string& name_func) {
 
 int main() {
     cout << "===============ARQUIVO.CPP ====================\n\n";
-    string model;
-    cin >> model;
+    string model, name;
+    cin >> model >> name;
     cout << build_act(model) << endl;
 
     string name_func;
@@ -95,7 +95,7 @@ int main() {
     }
 
     cout << "#define LOG_" <<  model << "_BASE(struct_enum)\\" << endl;
-    cout << "\t{ (struct_enum), sizeof(log_" + model + "), \"EKFJ\",\\" << endl;
+    cout << "\t{ (struct_enum), sizeof(log_" + model + "), \"" + name + "\",\\" << endl;
     cout << "\t\"Q";
 
 
@@ -126,7 +126,33 @@ int main() {
     for(int i = 0; i < buffer.size(); ++i) {
         cout << "\t" << type[i] << " " << buffer[i] << ";" << endl;
     }
-
-
     cout << "};\n\n";
+
+
+    cout << "=============== AP_LOGGER_H====================\n\n";
+
+    string tmp = "Write_" + name_func + "(";
+    for(int i = 0; i < buffer.size(); ++i) {
+        tmp += type[i];
+        tmp.push_back(' ');
+        tmp += buffer[i];
+        if(i != buffer.size()-1) tmp.push_back(',');
+    }
+    cout << "void " << tmp;
+    cout << ");\n\n\n";
+
+
+    cout << "===============LOG_FILE_H====================\n\n";
+
+    cout << "void AP_Logger::" << tmp << "){\n";
+    cout << "\tstruct log_" << model << "pkt = {\n\t\tLOG_PACKET_HEADER_INIT(LOG_" + model + "),\n";
+    cout << "\t\ttime_us : AP_HAL::micros64(),\n";
+    for(int i = 0; i < buffer.size(); ++i) {
+        cout << "\t\t";
+        cout << buffer[i] << " : " << buffer[i];
+        if(i != buffer.size()-1) cout << ',';
+        cout << endl;
+    }
+    cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n}\n\n";
+
 }

@@ -1,0 +1,79 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_EKF_02 1
+
+
+#define AUX_LOG_EKF_02 AP::logger().Write_FuseDeclination(\
+	log_declErr, \
+	log_t2, \
+	log_t3, \
+	log_t4, \
+	log_t5, \
+	log_t22, \
+	log_t23, \
+	log_t6, \
+	log_t13, \
+	log_t7, \
+	log_t8, \
+	log_t9, \
+	log_t14, \
+	log_t10, \
+	log_t15)
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_EKF_02_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_EKF_02), "EKFC",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_EKF_02 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float declErr;
+	float t2;
+	float t3;
+	float t4;
+	float t5;
+	float t22;
+	float t23;
+	float t6;
+	float t13;
+	float t7;
+	float t8;
+	float t9;
+	float t14;
+	float t10;
+	float t15;
+};
+
+=============== AP_LOGGER.H ====================
+
+void Write_FuseDeclination(float declErr,float t2,float t3,float t4,float t5,float t22,float t23,float t6,float t13,float t7,float t8,float t9,float t14,float t10,float t15);
+
+
+===============LOGFILE.H ====================
+
+void AP_Logger::void Write_FuseDeclination(float declErr,float t2,float t3,float t4,float t5,float t22,float t23,float t6,float t13,float t7,float t8,float t9,float t14,float t10,float t15){
+	struct log_EKF_02 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_EKF_02),
+		time_us : AP_HAL::micros64(),
+		declErr : declErr,
+		t2 : t2,
+		t3 : t3,
+		t4 : t4,
+		t5 : t5,
+		t22 : t22,
+		t23 : t23,
+		t6 : t6,
+		t13 : t13,
+		t7 : t7,
+		t8 : t8,
+		t9 : t9,
+		t14 : t14,
+		t10 : t10,
+		t15 : t15
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+}
+

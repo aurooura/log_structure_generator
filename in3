@@ -1,0 +1,18 @@
+EKF_02 EKFC
+FuseDeclination
+float declErr
+float t2 
+float t3 
+float t4 
+float t5 
+float t22
+float t23
+float t6 
+float t13
+float t7 
+float t8 
+float t9 
+float t14
+float t10
+float t15
+
