@@ -2,6 +2,10 @@
 
 using namespace std;
 
+
+const int MAX = 255;
+
+
 map<string, string> mp = {
     {"int16_t[32]", "a"},
     {"int8_t","b"},
@@ -61,132 +65,144 @@ string build_header(string& model, string& name_func) {
 
 int main() {
     cout << "===============ARQUIVO.CPP ====================\n\n";
-    string model, name;
-    cin >> model >> name;
-    cout << build_act(model) << endl;
+    vector<string> model(MAX), name(MAX);
+    vector<string> type[MAX], buffer[MAX], originals[MAX], name_func(MAX);
 
-    string name_func;
-    cin >> name_func;
-    cout << "\n\n";
-    cout << build_header(model, name_func) << endl;
-    
-    
-    vector<string> type, buffer, originals;
     string test, curType;
-
-    while(cin >> curType >> test) {
-        originals.push_back(test);
+    int size = 0;
+    cin >> model[size] >> name[size] >> name_func[size];
+    while(cin >> curType) {
+        if(curType == "END") {
+            size++;
+            cin >> model[size] >> name[size] >> name_func[size];
+            continue;
+        }
+        cin >> test;
+        originals[size].push_back(test);
         sp_trim(test);
-        buffer.push_back(test);
+        buffer[size].push_back(test);
         if(curType == "bool") curType = "uint8_t";
-        type.push_back(curType);
+        type[size].push_back(curType);
     }
 
+    
+    
 
-    for(int i = 0; i < buffer.size()-1; ++i) {
-        cout << "\t" + buffer[i] + "," + " \\" << endl;
+    for(int j = 0; j < size; ++j) {
+        cout << build_act(model[j]) << endl;
+        cout << build_header(model[j], name_func[j]) << endl;
+        for(int i = 0; i < buffer[j].size()-1; ++i) {
+            cout << "\t" + buffer[j][i] + "," + " \\" << endl;
+        }
+
+        cout << "\t" + buffer[j].back() + ")" << endl;
+        cout << "\n\n";
+        cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
+        for(int i = 0; i < buffer[j].size(); ++i) {
+            cout << '\t' << type[j][i] << " " << buffer[j][i] << " = " << originals[j][i] << ";\n";
+        }
+        cout << "\tAUX_LOG_" + model[j] << ";\n\n";
     }
-
-    cout << "\t" + buffer.back() + ")" << endl;
-    cout << "\n\n";
-    cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
-    for(int i = 0; i < buffer.size(); ++i) {
-        cout << '\t' << type[i] << " " << buffer[i] << " = " << originals[i] << ";\n";
-    }
-    cout << "\tAUX_LOG_" + model << ";\n";
-
     cout << "\n\n=============== XMOBOTS_LOGS.H ====================\n\n";
 
-    for(string &s : buffer) {
-        s.erase(s.begin(), s.begin() + 4);
+    for(int j = 0; j < size; ++j) {
+        for(string &s : buffer[j]) {
+            s.erase(s.begin(), s.begin() + 4);
+        }
+
+        cout << "#define LOG_" <<  model[j] << "_BASE(struct_enum)\\" << endl;
+        cout << "\t{ (struct_enum), sizeof(log_" + model[j] + "), \"" + name[j] + "\",\\" << endl;
+        cout << "\t\"Q";
+
+
+        for(string it : type[j]) {
+            cout << mp[it];
+        }
+        cout << "\",\"t,";
+
+        
+        for(int i = 1; i <= type[j].size(); ++i) {
+            cout << i;
+            if(i != type[j].size()) cout << ",";
+        }
+        cout << "\",\"s";
+        for(int i = 0; i < type[j].size(); ++i) {
+            cout << "-";
+        }
+
+        cout << "\",\"F";
+        for(int i = 0; i < type[j].size(); ++i) {
+            cout << "0";
+        }
+        cout << "\"}\n";
+        cout << endl;
+        cout << "struct PACKED log_" + model[j] + " {\n\tLOG_PACKET_HEADER;\n";
+        cout << "\tuint64_t time_us;" << endl;
+
+        for(int i = 0; i < buffer[j].size(); ++i) {
+            cout << "\t" << type[j][i] << " " << buffer[j][i] << ";" << endl;
+        }
+        cout << "};\n\n";
+
     }
-
-    cout << "#define LOG_" <<  model << "_BASE(struct_enum)\\" << endl;
-    cout << "\t{ (struct_enum), sizeof(log_" + model + "), \"" + name + "\",\\" << endl;
-    cout << "\t\"Q";
-
-
-    for(string it : type) {
-        cout << mp[it];
-    }
-    cout << "\",\"t,";
-
-    
-    for(int i = 1; i <= type.size(); ++i) {
-        cout << i;
-        if(i != type.size()) cout << ",";
-    }
-    cout << "\",\"s";
-    for(int i = 0; i < type.size(); ++i) {
-        cout << "-";
-    }
-
-    cout << "\",\"F";
-    for(int i = 0; i < type.size(); ++i) {
-        cout << "0";
-    }
-    cout << "\"}\n";
-    cout << endl;
-    cout << "struct PACKED log_" + model + " {\n\tLOG_PACKET_HEADER;\n";
-    cout << "\tuint64_t time_us;" << endl;
-
-    for(int i = 0; i < buffer.size(); ++i) {
-        cout << "\t" << type[i] << " " << buffer[i] << ";" << endl;
-    }
-    cout << "};\n\n";
-
-
     cout << "=============== AP_LOGGER_H====================\n\n";
+    string tmp[MAX];
 
-    string tmp = "Write_" + name_func + "(";
-    for(int i = 0; i < buffer.size(); ++i) {
-        tmp += type[i];
-        tmp.push_back(' ');
-        tmp += buffer[i];
-        if(i != buffer.size()-1) tmp.push_back(',');
+    for(int j = 0; j < size; ++j) {
+        tmp[j] = "Write_" + name_func[j] + "(";
+        for(int i = 0; i < buffer[j].size(); ++i) {
+            tmp[j] += type[j][i];
+            tmp[j].push_back(' ');
+            tmp[j] += buffer[j][i];
+            if(i != buffer[j].size()-1) tmp[j].push_back(',');
+        }
+        cout << "void " << tmp[j];
+        cout << ");\n\n\n";
     }
-    cout << "void " << tmp;
-    cout << ");\n\n\n";
+
 
     cout << "===============LOG_STRUCTURE.H=======================\n";
-    cout << "NAO ESQUECER O SHOULD_LOG_EKF!!!!!\n\n";
-    cout << "LOG_" + model << ",\n\n";
 
-    cout << "LOG_" << model << "_BASE(LOG_" << model << "),\\\n";
+    for(int j = 0; j < size; ++j) {
+        cout << "NAO ESQUECER O SHOULD_LOG_EKF!!!!!\n\n";
+        cout << "LOG_" + model[j] << ",\n\n";
 
-
-
+        cout << "LOG_" << model[j] << "_BASE(LOG_" << model[j] << "),\\\n\n";
+    }
 
     cout << "\n\n===============LOG_FILE_CPP====================\n\n";
 
-    cout << "void AP_Logger::";
-    for(int i = 0; i < tmp.size(); ++i) {
-        cout << tmp[i];
-        if(tmp[i] == '(') cout << endl << '\t';
-        if(tmp[i] == ',') cout << "\n\t"; 
-    }
+    for(int j = 0; j < size; ++j) {
+        cout << "void AP_Logger::";
+        for(int i = 0; i < tmp[j].size(); ++i) {
+            cout << tmp[j][i];
+            if(tmp[j][i] == '(') cout << endl << '\t';
+            if(tmp[j][i] == ',') cout << "\n\t"; 
+        }
 
-    cout << ")\n{\n";
-    cout << "\tstruct log_" << model << " pkt = {\n\t\tLOG_PACKET_HEADER_INIT(LOG_" + model + "),\n";
-    cout << "\t\ttime_us : AP_HAL::micros64(),\n";
-    for(int i = 0; i < buffer.size(); ++i) {
-        cout << "\t\t";
-        cout << buffer[i] << " : " << buffer[i];
-        if(i != buffer.size()-1) cout << ',';
-        cout << endl;
+        cout << ")\n{\n";
+        cout << "\tstruct log_" << model[j] << " pkt = {\n\t\tLOG_PACKET_HEADER_INIT(LOG_" + model[j] + "),\n";
+        cout << "\t\ttime_us : AP_HAL::micros64(),\n";
+        for(int i = 0; i < buffer[j].size(); ++i) {
+            cout << "\t\t";
+            cout << buffer[j][i] << " : " << buffer[j][i];
+            if(i != buffer[j].size()-1) cout << ',';
+            cout << endl;
+        }
+        cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
     }
-    cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
-
 
     cout << "--------------------------------------------------------------\n\n\n";
     cout << "PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M\n\n";
-
-    string time = name + "_time";
-    cout << "\t" << time << " = 1e-6*" << name << "(:,2);\n";
-    int counter = 3;
-    for(string& it : buffer) {
-        cout << "\t" << name << "_" << it << " = [";
-        cout << time << ", " << name << "(:," << counter++ << ")];\n";
+    for(int j = 0; j < size; ++j) {
+        string time = name[j] + "_time";
+        cout << "\t" << time << " = 1e-6*" << name[j] << "(:,2);\n";
+        int counter = 3;
+        for(string& it : buffer[j]) {
+            cout << "\t" << name[j] << "_" << it << " = [";
+            cout << time << ", " << name[j] << "(:," << counter++ << ")];\n";
+        }
+        cout << "\n\n";
     }
 
 }
