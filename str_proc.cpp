@@ -177,4 +177,16 @@ int main() {
     }
     cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
 
+
+    cout << "--------------------------------------------------------------\n\n\n";
+    cout << "PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M\n\n";
+
+    string time = name + "_time";
+    cout << "\t" << time << " = 1e-6*" << name << "(:,2);\n";
+    int counter = 3;
+    for(string& it : buffer) {
+        cout << "\t" << name << "_" << it << " = [";
+        cout << time << ", " << name << "(:," << counter++ << ")];\n";
+    }
+
 }
