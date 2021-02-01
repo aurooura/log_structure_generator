@@ -65,8 +65,8 @@ string build_header(string& model, string& name_func) {
 
 int main() {
     cout << "===============ARQUIVO.CPP ====================\n\n";
-    vector<string> model(MAX), name(MAX);
-    vector<string> type[MAX], buffer[MAX], originals[MAX], name_func(MAX);
+    vector<string> model(MAX), name(MAX), name_func(MAX);
+    vector<string> type[MAX], buffer[MAX], originals[MAX];
 
     string test, curType;
     int size = 0;
@@ -82,6 +82,7 @@ int main() {
         sp_trim(test);
         buffer[size].push_back(test);
         if(curType == "bool") curType = "uint8_t";
+        if(curType == "int") curType = "int32_t";
         type[size].push_back(curType);
     }
 
@@ -97,12 +98,15 @@ int main() {
 
         cout << "\t" + buffer[j].back() + ")" << endl;
         cout << "\n\n";
-        cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
+    }
+
+      cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
+      for(int j = 0; j < size; ++j) {
         for(int i = 0; i < buffer[j].size(); ++i) {
             cout << '\t' << type[j][i] << " " << buffer[j][i] << " = " << originals[j][i] << ";\n";
         }
         cout << "\tAUX_LOG_" + model[j] << ";\n\n";
-    }
+      }
     cout << "\n\n=============== XMOBOTS_LOGS.H ====================\n\n";
 
     for(int j = 0; j < size; ++j) {
@@ -146,6 +150,7 @@ int main() {
 
     }
     cout << "=============== AP_LOGGER_H====================\n\n";
+    
     string tmp[MAX];
 
     for(int j = 0; j < size; ++j) {
@@ -162,14 +167,16 @@ int main() {
 
 
     cout << "===============LOG_STRUCTURE.H=======================\n";
+    cout << "NAO ESQUECER O SHOULD_LOG_EKF!!!!!\n\n";
 
     for(int j = 0; j < size; ++j) {
-        cout << "NAO ESQUECER O SHOULD_LOG_EKF!!!!!\n\n";
-        cout << "LOG_" + model[j] << ",\n\n";
-
-        cout << "LOG_" << model[j] << "_BASE(LOG_" << model[j] << "),\\\n\n";
+        cout << "LOG_" + model[j] << ",\n";
     }
-
+    
+    for(int j = 0; j < size; ++j) {
+        cout << "LOG_" << model[j] << "_BASE(LOG_" << model[j] << "),\\\n";
+    }
+    
     cout << "\n\n===============LOG_FILE_CPP====================\n\n";
 
     for(int j = 0; j < size; ++j) {
