@@ -1,0 +1,4726 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_MAG_29 1
+#define AUX_LOG_MAG_29 AP::logger().Write_SelectMagFusion7(\
+	log_P_0_0, \
+	log_P_0_1, \
+	log_P_0_2, \
+	log_P_0_3, \
+	log_P_0_4, \
+	log_P_0_5, \
+	log_P_0_6, \
+	log_P_0_7, \
+	log_P_0_8, \
+	log_P_0_9, \
+	log_P_0_10, \
+	log_P_0_11, \
+	log_P_0_12, \
+	log_P_0_13, \
+	log_P_0_14)
+
+
+#define ACTIVE_LOG_MAG_30 1
+#define AUX_LOG_MAG_30 AP::logger().Write_SelectMagFusion8(\
+	log_P_0_15, \
+	log_P_0_16, \
+	log_P_0_17, \
+	log_P_0_18, \
+	log_P_0_19, \
+	log_P_0_20, \
+	log_P_0_21, \
+	log_P_0_22, \
+	log_P_0_23, \
+	log_P_1_0, \
+	log_P_1_1, \
+	log_P_1_2, \
+	log_P_1_3, \
+	log_P_1_4, \
+	log_P_1_5)
+
+
+#define ACTIVE_LOG_MAG_31 1
+#define AUX_LOG_MAG_31 AP::logger().Write_SelectMagFusion9(\
+	log_P_1_6, \
+	log_P_1_7, \
+	log_P_1_8, \
+	log_P_1_9, \
+	log_P_1_10, \
+	log_P_1_11, \
+	log_P_1_12, \
+	log_P_1_13, \
+	log_P_1_14, \
+	log_P_1_15, \
+	log_P_1_16, \
+	log_P_1_17, \
+	log_P_1_18, \
+	log_P_1_19, \
+	log_P_1_20)
+
+
+#define ACTIVE_LOG_MAG_32 1
+#define AUX_LOG_MAG_32 AP::logger().Write_SelectMagFusion10(\
+	log_P_1_21, \
+	log_P_1_22, \
+	log_P_1_23, \
+	log_P_2_0, \
+	log_P_2_1, \
+	log_P_2_2, \
+	log_P_2_3, \
+	log_P_2_4, \
+	log_P_2_5, \
+	log_P_2_6, \
+	log_P_2_7, \
+	log_P_2_8, \
+	log_P_2_9, \
+	log_P_2_10, \
+	log_P_2_11)
+
+
+#define ACTIVE_LOG_MAG_33 1
+#define AUX_LOG_MAG_33 AP::logger().Write_SelectMagFusion11(\
+	log_P_2_12, \
+	log_P_2_13, \
+	log_P_2_14, \
+	log_P_2_15, \
+	log_P_2_16, \
+	log_P_2_17, \
+	log_P_2_18, \
+	log_P_2_19, \
+	log_P_2_20, \
+	log_P_2_21, \
+	log_P_2_22, \
+	log_P_2_23, \
+	log_P_3_0, \
+	log_P_3_1, \
+	log_P_3_2)
+
+
+#define ACTIVE_LOG_MAG_34 1
+#define AUX_LOG_MAG_34 AP::logger().Write_SelectMagFusion12(\
+	log_P_3_3, \
+	log_P_3_4, \
+	log_P_3_5, \
+	log_P_3_6, \
+	log_P_3_7, \
+	log_P_3_8, \
+	log_P_3_9, \
+	log_P_3_10, \
+	log_P_3_11, \
+	log_P_3_12, \
+	log_P_3_13, \
+	log_P_3_14, \
+	log_P_3_15, \
+	log_P_3_16, \
+	log_P_3_17)
+
+
+#define ACTIVE_LOG_MAG_35 1
+#define AUX_LOG_MAG_35 AP::logger().Write_SelectMagFusion13(\
+	log_P_3_18, \
+	log_P_3_19, \
+	log_P_3_20, \
+	log_P_3_21, \
+	log_P_3_22, \
+	log_P_3_23, \
+	log_P_4_0, \
+	log_P_4_1, \
+	log_P_4_2, \
+	log_P_4_3, \
+	log_P_4_4, \
+	log_P_4_5, \
+	log_P_4_6, \
+	log_P_4_7, \
+	log_P_4_8)
+
+
+#define ACTIVE_LOG_MAG_36 1
+#define AUX_LOG_MAG_36 AP::logger().Write_SelectMagFusion14(\
+	log_P_4_9, \
+	log_P_4_10, \
+	log_P_4_11, \
+	log_P_4_12, \
+	log_P_4_13, \
+	log_P_4_14, \
+	log_P_4_15, \
+	log_P_4_16, \
+	log_P_4_17, \
+	log_P_4_18, \
+	log_P_4_19, \
+	log_P_4_20, \
+	log_P_4_21, \
+	log_P_4_22, \
+	log_P_4_23)
+
+
+#define ACTIVE_LOG_MAG_37 1
+#define AUX_LOG_MAG_37 AP::logger().Write_SelectMagFusion15(\
+	log_P_5_0, \
+	log_P_5_1, \
+	log_P_5_2, \
+	log_P_5_3, \
+	log_P_5_4, \
+	log_P_5_5, \
+	log_P_5_6, \
+	log_P_5_7, \
+	log_P_5_8, \
+	log_P_5_9, \
+	log_P_5_10, \
+	log_P_5_11, \
+	log_P_5_12, \
+	log_P_5_13, \
+	log_P_5_14)
+
+
+#define ACTIVE_LOG_MAG_38 1
+#define AUX_LOG_MAG_38 AP::logger().Write_SelectMagFusion16(\
+	log_P_5_15, \
+	log_P_5_16, \
+	log_P_5_17, \
+	log_P_5_18, \
+	log_P_5_19, \
+	log_P_5_20, \
+	log_P_5_21, \
+	log_P_5_22, \
+	log_P_5_23, \
+	log_P_6_0, \
+	log_P_6_1, \
+	log_P_6_2, \
+	log_P_6_3, \
+	log_P_6_4, \
+	log_P_6_5)
+
+
+#define ACTIVE_LOG_MAG_39 1
+#define AUX_LOG_MAG_39 AP::logger().Write_SelectMagFusion17(\
+	log_P_6_6, \
+	log_P_6_7, \
+	log_P_6_8, \
+	log_P_6_9, \
+	log_P_6_10, \
+	log_P_6_11, \
+	log_P_6_12, \
+	log_P_6_13, \
+	log_P_6_14, \
+	log_P_6_15, \
+	log_P_6_16, \
+	log_P_6_17, \
+	log_P_6_18, \
+	log_P_6_19, \
+	log_P_6_20)
+
+
+#define ACTIVE_LOG_MAG_40 1
+#define AUX_LOG_MAG_40 AP::logger().Write_SelectMagFusion18(\
+	log_P_6_21, \
+	log_P_6_22, \
+	log_P_6_23, \
+	log_P_7_0, \
+	log_P_7_1, \
+	log_P_7_2, \
+	log_P_7_3, \
+	log_P_7_4, \
+	log_P_7_5, \
+	log_P_7_6, \
+	log_P_7_7, \
+	log_P_7_8, \
+	log_P_7_9, \
+	log_P_7_10, \
+	log_P_7_11)
+
+
+#define ACTIVE_LOG_MAG_41 1
+#define AUX_LOG_MAG_41 AP::logger().Write_SelectMagFusion19(\
+	log_P_7_12, \
+	log_P_7_13, \
+	log_P_7_14, \
+	log_P_7_15, \
+	log_P_7_16, \
+	log_P_7_17, \
+	log_P_7_18, \
+	log_P_7_19, \
+	log_P_7_20, \
+	log_P_7_21, \
+	log_P_7_22, \
+	log_P_7_23, \
+	log_P_8_0, \
+	log_P_8_1, \
+	log_P_8_2)
+
+
+#define ACTIVE_LOG_MAG_42 1
+#define AUX_LOG_MAG_42 AP::logger().Write_SelectMagFusion20(\
+	log_P_8_3, \
+	log_P_8_4, \
+	log_P_8_5, \
+	log_P_8_6, \
+	log_P_8_7, \
+	log_P_8_8, \
+	log_P_8_9, \
+	log_P_8_10, \
+	log_P_8_11, \
+	log_P_8_12, \
+	log_P_8_13, \
+	log_P_8_14, \
+	log_P_8_15, \
+	log_P_8_16, \
+	log_P_8_17)
+
+
+#define ACTIVE_LOG_MAG_43 1
+#define AUX_LOG_MAG_43 AP::logger().Write_SelectMagFusion21(\
+	log_P_8_18, \
+	log_P_8_19, \
+	log_P_8_20, \
+	log_P_8_21, \
+	log_P_8_22, \
+	log_P_8_23, \
+	log_P_9_0, \
+	log_P_9_1, \
+	log_P_9_2, \
+	log_P_9_3, \
+	log_P_9_4, \
+	log_P_9_5, \
+	log_P_9_6, \
+	log_P_9_7, \
+	log_P_9_8)
+
+
+#define ACTIVE_LOG_MAG_44 1
+#define AUX_LOG_MAG_44 AP::logger().Write_SelectMagFusion22(\
+	log_P_9_9, \
+	log_P_9_10, \
+	log_P_9_11, \
+	log_P_9_12, \
+	log_P_9_13, \
+	log_P_9_14, \
+	log_P_9_15, \
+	log_P_9_16, \
+	log_P_9_17, \
+	log_P_9_18, \
+	log_P_9_19, \
+	log_P_9_20, \
+	log_P_9_21, \
+	log_P_9_22, \
+	log_P_9_23)
+
+
+#define ACTIVE_LOG_MAG_45 1
+#define AUX_LOG_MAG_45 AP::logger().Write_SelectMagFusion23(\
+	log_P_10_0, \
+	log_P_10_1, \
+	log_P_10_2, \
+	log_P_10_3, \
+	log_P_10_4, \
+	log_P_10_5, \
+	log_P_10_6, \
+	log_P_10_7, \
+	log_P_10_8, \
+	log_P_10_9, \
+	log_P_10_10, \
+	log_P_10_11, \
+	log_P_10_12, \
+	log_P_10_13, \
+	log_P_10_14)
+
+
+#define ACTIVE_LOG_MAG_46 1
+#define AUX_LOG_MAG_46 AP::logger().Write_SelectMagFusion24(\
+	log_P_10_15, \
+	log_P_10_16, \
+	log_P_10_17, \
+	log_P_10_18, \
+	log_P_10_19, \
+	log_P_10_20, \
+	log_P_10_21, \
+	log_P_10_22, \
+	log_P_10_23, \
+	log_P_11_0, \
+	log_P_11_1, \
+	log_P_11_2, \
+	log_P_11_3, \
+	log_P_11_4, \
+	log_P_11_5)
+
+
+#define ACTIVE_LOG_MAG_47 1
+#define AUX_LOG_MAG_47 AP::logger().Write_SelectMagFusion25(\
+	log_P_11_6, \
+	log_P_11_7, \
+	log_P_11_8, \
+	log_P_11_9, \
+	log_P_11_10, \
+	log_P_11_11, \
+	log_P_11_12, \
+	log_P_11_13, \
+	log_P_11_14, \
+	log_P_11_15, \
+	log_P_11_16, \
+	log_P_11_17, \
+	log_P_11_18, \
+	log_P_11_19, \
+	log_P_11_20)
+
+
+#define ACTIVE_LOG_MAG_48 1
+#define AUX_LOG_MAG_48 AP::logger().Write_SelectMagFusion26(\
+	log_P_11_21, \
+	log_P_11_22, \
+	log_P_11_23, \
+	log_P_12_0, \
+	log_P_12_1, \
+	log_P_12_2, \
+	log_P_12_3, \
+	log_P_12_4, \
+	log_P_12_5, \
+	log_P_12_6, \
+	log_P_12_7, \
+	log_P_12_8, \
+	log_P_12_9, \
+	log_P_12_10, \
+	log_P_12_11)
+
+
+#define ACTIVE_LOG_MAG_49 1
+#define AUX_LOG_MAG_49 AP::logger().Write_SelectMagFusion27(\
+	log_P_12_12, \
+	log_P_12_13, \
+	log_P_12_14, \
+	log_P_12_15, \
+	log_P_12_16, \
+	log_P_12_17, \
+	log_P_12_18, \
+	log_P_12_19, \
+	log_P_12_20, \
+	log_P_12_21, \
+	log_P_12_22, \
+	log_P_12_23, \
+	log_P_13_0, \
+	log_P_13_1, \
+	log_P_13_2)
+
+
+#define ACTIVE_LOG_MAG_50 1
+#define AUX_LOG_MAG_50 AP::logger().Write_SelectMagFusion28(\
+	log_P_13_3, \
+	log_P_13_4, \
+	log_P_13_5, \
+	log_P_13_6, \
+	log_P_13_7, \
+	log_P_13_8, \
+	log_P_13_9, \
+	log_P_13_10, \
+	log_P_13_11, \
+	log_P_13_12, \
+	log_P_13_13, \
+	log_P_13_14, \
+	log_P_13_15, \
+	log_P_13_16, \
+	log_P_13_17)
+
+
+#define ACTIVE_LOG_MAG_51 1
+#define AUX_LOG_MAG_51 AP::logger().Write_SelectMagFusion29(\
+	log_P_13_18, \
+	log_P_13_19, \
+	log_P_13_20, \
+	log_P_13_21, \
+	log_P_13_22, \
+	log_P_13_23, \
+	log_P_14_0, \
+	log_P_14_1, \
+	log_P_14_2, \
+	log_P_14_3, \
+	log_P_14_4, \
+	log_P_14_5, \
+	log_P_14_6, \
+	log_P_14_7, \
+	log_P_14_8)
+
+
+#define ACTIVE_LOG_MAG_52 1
+#define AUX_LOG_MAG_52 AP::logger().Write_SelectMagFusion30(\
+	log_P_14_9, \
+	log_P_14_10, \
+	log_P_14_11, \
+	log_P_14_12, \
+	log_P_14_13, \
+	log_P_14_14, \
+	log_P_14_15, \
+	log_P_14_16, \
+	log_P_14_17, \
+	log_P_14_18, \
+	log_P_14_19, \
+	log_P_14_20, \
+	log_P_14_21, \
+	log_P_14_22, \
+	log_P_14_23)
+
+
+#define ACTIVE_LOG_MAG_53 1
+#define AUX_LOG_MAG_53 AP::logger().Write_SelectMagFusion31(\
+	log_P_15_0, \
+	log_P_15_1, \
+	log_P_15_2, \
+	log_P_15_3, \
+	log_P_15_4, \
+	log_P_15_5, \
+	log_P_15_6, \
+	log_P_15_7, \
+	log_P_15_8, \
+	log_P_15_9, \
+	log_P_15_10, \
+	log_P_15_11, \
+	log_P_15_12, \
+	log_P_15_13, \
+	log_P_15_14)
+
+
+#define ACTIVE_LOG_MAG_54 1
+#define AUX_LOG_MAG_54 AP::logger().Write_SelectMagFusion32(\
+	log_P_15_15, \
+	log_P_15_16, \
+	log_P_15_17, \
+	log_P_15_18, \
+	log_P_15_19, \
+	log_P_15_20, \
+	log_P_15_21, \
+	log_P_15_22, \
+	log_P_15_23, \
+	log_P_16_0, \
+	log_P_16_1, \
+	log_P_16_2, \
+	log_P_16_3, \
+	log_P_16_4, \
+	log_P_16_5)
+
+
+#define ACTIVE_LOG_MAG_55 1
+#define AUX_LOG_MAG_55 AP::logger().Write_SelectMagFusion33(\
+	log_P_16_6, \
+	log_P_16_7, \
+	log_P_16_8, \
+	log_P_16_9, \
+	log_P_16_10, \
+	log_P_16_11, \
+	log_P_16_12, \
+	log_P_16_13, \
+	log_P_16_14, \
+	log_P_16_15, \
+	log_P_16_16, \
+	log_P_16_17, \
+	log_P_16_18, \
+	log_P_16_19, \
+	log_P_16_20)
+
+
+#define ACTIVE_LOG_MAG_56 1
+#define AUX_LOG_MAG_56 AP::logger().Write_SelectMagFusion34(\
+	log_P_16_21, \
+	log_P_16_22, \
+	log_P_16_23, \
+	log_P_17_0, \
+	log_P_17_1, \
+	log_P_17_2, \
+	log_P_17_3, \
+	log_P_17_4, \
+	log_P_17_5, \
+	log_P_17_6, \
+	log_P_17_7, \
+	log_P_17_8, \
+	log_P_17_9, \
+	log_P_17_10, \
+	log_P_17_11)
+
+
+#define ACTIVE_LOG_MAG_57 1
+#define AUX_LOG_MAG_57 AP::logger().Write_SelectMagFusion35(\
+	log_P_17_12, \
+	log_P_17_13, \
+	log_P_17_14, \
+	log_P_17_15, \
+	log_P_17_16, \
+	log_P_17_17, \
+	log_P_17_18, \
+	log_P_17_19, \
+	log_P_17_20, \
+	log_P_17_21, \
+	log_P_17_22, \
+	log_P_17_23, \
+	log_P_18_0, \
+	log_P_18_1, \
+	log_P_18_2)
+
+
+#define ACTIVE_LOG_MAG_58 1
+#define AUX_LOG_MAG_58 AP::logger().Write_SelectMagFusion36(\
+	log_P_18_3, \
+	log_P_18_4, \
+	log_P_18_5, \
+	log_P_18_6, \
+	log_P_18_7, \
+	log_P_18_8, \
+	log_P_18_9, \
+	log_P_18_10, \
+	log_P_18_11, \
+	log_P_18_12, \
+	log_P_18_13, \
+	log_P_18_14, \
+	log_P_18_15, \
+	log_P_18_16, \
+	log_P_18_17)
+
+
+#define ACTIVE_LOG_MAG_59 1
+#define AUX_LOG_MAG_59 AP::logger().Write_SelectMagFusion37(\
+	log_P_18_18, \
+	log_P_18_19, \
+	log_P_18_20, \
+	log_P_18_21, \
+	log_P_18_22, \
+	log_P_18_23, \
+	log_P_19_0, \
+	log_P_19_1, \
+	log_P_19_2, \
+	log_P_19_3, \
+	log_P_19_4, \
+	log_P_19_5, \
+	log_P_19_6, \
+	log_P_19_7, \
+	log_P_19_8)
+
+
+#define ACTIVE_LOG_MAG_60 1
+#define AUX_LOG_MAG_60 AP::logger().Write_SelectMagFusion38(\
+	log_P_19_9, \
+	log_P_19_10, \
+	log_P_19_11, \
+	log_P_19_12, \
+	log_P_19_13, \
+	log_P_19_14, \
+	log_P_19_15, \
+	log_P_19_16, \
+	log_P_19_17, \
+	log_P_19_18, \
+	log_P_19_19, \
+	log_P_19_20, \
+	log_P_19_21, \
+	log_P_19_22, \
+	log_P_19_23)
+
+
+#define ACTIVE_LOG_MAG_61 1
+#define AUX_LOG_MAG_61 AP::logger().Write_SelectMagFusion39(\
+	log_P_20_0, \
+	log_P_20_1, \
+	log_P_20_2, \
+	log_P_20_3, \
+	log_P_20_4, \
+	log_P_20_5, \
+	log_P_20_6, \
+	log_P_20_7, \
+	log_P_20_8, \
+	log_P_20_9, \
+	log_P_20_10, \
+	log_P_20_11, \
+	log_P_20_12, \
+	log_P_20_13, \
+	log_P_20_14)
+
+
+#define ACTIVE_LOG_MAG_62 1
+#define AUX_LOG_MAG_62 AP::logger().Write_SelectMagFusion40(\
+	log_P_20_15, \
+	log_P_20_16, \
+	log_P_20_17, \
+	log_P_20_18, \
+	log_P_20_19, \
+	log_P_20_20, \
+	log_P_20_21, \
+	log_P_20_22, \
+	log_P_20_23, \
+	log_P_21_0, \
+	log_P_21_1, \
+	log_P_21_2, \
+	log_P_21_3, \
+	log_P_21_4, \
+	log_P_21_5)
+
+
+#define ACTIVE_LOG_MAG_63 1
+#define AUX_LOG_MAG_63 AP::logger().Write_SelectMagFusion41(\
+	log_P_21_6, \
+	log_P_21_7, \
+	log_P_21_8, \
+	log_P_21_9, \
+	log_P_21_10, \
+	log_P_21_11, \
+	log_P_21_12, \
+	log_P_21_13, \
+	log_P_21_14, \
+	log_P_21_15, \
+	log_P_21_16, \
+	log_P_21_17, \
+	log_P_21_18, \
+	log_P_21_19, \
+	log_P_21_20)
+
+
+#define ACTIVE_LOG_MAG_64 1
+#define AUX_LOG_MAG_64 AP::logger().Write_SelectMagFusion42(\
+	log_P_21_21, \
+	log_P_21_22, \
+	log_P_21_23, \
+	log_P_22_0, \
+	log_P_22_1, \
+	log_P_22_2, \
+	log_P_22_3, \
+	log_P_22_4, \
+	log_P_22_5, \
+	log_P_22_6, \
+	log_P_22_7, \
+	log_P_22_8, \
+	log_P_22_9, \
+	log_P_22_10, \
+	log_P_22_11)
+
+
+#define ACTIVE_LOG_MAG_65 1
+#define AUX_LOG_MAG_65 AP::logger().Write_SelectMagFusion43(\
+	log_P_22_12, \
+	log_P_22_13, \
+	log_P_22_14, \
+	log_P_22_15, \
+	log_P_22_16, \
+	log_P_22_17, \
+	log_P_22_18, \
+	log_P_22_19, \
+	log_P_22_20, \
+	log_P_22_21, \
+	log_P_22_22, \
+	log_P_22_23, \
+	log_P_23_0, \
+	log_P_23_1, \
+	log_P_23_2)
+
+
+#define ACTIVE_LOG_MAG_66 1
+#define AUX_LOG_MAG_66 AP::logger().Write_SelectMagFusion44(\
+	log_P_23_3, \
+	log_P_23_4, \
+	log_P_23_5, \
+	log_P_23_6, \
+	log_P_23_7, \
+	log_P_23_8, \
+	log_P_23_9, \
+	log_P_23_10, \
+	log_P_23_11, \
+	log_P_23_12, \
+	log_P_23_13, \
+	log_P_23_14, \
+	log_P_23_15, \
+	log_P_23_16, \
+	log_P_23_17)
+
+
+#define ACTIVE_LOG_MAG_67 1
+#define AUX_LOG_MAG_67 AP::logger().Write_SelectMagFusion45(\
+	log_P_23_18, \
+	log_P_23_19, \
+	log_P_23_20, \
+	log_P_23_21, \
+	log_P_23_22, \
+	log_P_23_23)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	float log_P_0_0 = P[0][0];
+	float log_P_0_1 = P[0][1];
+	float log_P_0_2 = P[0][2];
+	float log_P_0_3 = P[0][3];
+	float log_P_0_4 = P[0][4];
+	float log_P_0_5 = P[0][5];
+	float log_P_0_6 = P[0][6];
+	float log_P_0_7 = P[0][7];
+	float log_P_0_8 = P[0][8];
+	float log_P_0_9 = P[0][9];
+	float log_P_0_10 = P[0][10];
+	float log_P_0_11 = P[0][11];
+	float log_P_0_12 = P[0][12];
+	float log_P_0_13 = P[0][13];
+	float log_P_0_14 = P[0][14];
+	AUX_LOG_MAG_29;
+
+	float log_P_0_15 = P[0][15];
+	float log_P_0_16 = P[0][16];
+	float log_P_0_17 = P[0][17];
+	float log_P_0_18 = P[0][18];
+	float log_P_0_19 = P[0][19];
+	float log_P_0_20 = P[0][20];
+	float log_P_0_21 = P[0][21];
+	float log_P_0_22 = P[0][22];
+	float log_P_0_23 = P[0][23];
+	float log_P_1_0 = P[1][0];
+	float log_P_1_1 = P[1][1];
+	float log_P_1_2 = P[1][2];
+	float log_P_1_3 = P[1][3];
+	float log_P_1_4 = P[1][4];
+	float log_P_1_5 = P[1][5];
+	AUX_LOG_MAG_30;
+
+	float log_P_1_6 = P[1][6];
+	float log_P_1_7 = P[1][7];
+	float log_P_1_8 = P[1][8];
+	float log_P_1_9 = P[1][9];
+	float log_P_1_10 = P[1][10];
+	float log_P_1_11 = P[1][11];
+	float log_P_1_12 = P[1][12];
+	float log_P_1_13 = P[1][13];
+	float log_P_1_14 = P[1][14];
+	float log_P_1_15 = P[1][15];
+	float log_P_1_16 = P[1][16];
+	float log_P_1_17 = P[1][17];
+	float log_P_1_18 = P[1][18];
+	float log_P_1_19 = P[1][19];
+	float log_P_1_20 = P[1][20];
+	AUX_LOG_MAG_31;
+
+	float log_P_1_21 = P[1][21];
+	float log_P_1_22 = P[1][22];
+	float log_P_1_23 = P[1][23];
+	float log_P_2_0 = P[2][0];
+	float log_P_2_1 = P[2][1];
+	float log_P_2_2 = P[2][2];
+	float log_P_2_3 = P[2][3];
+	float log_P_2_4 = P[2][4];
+	float log_P_2_5 = P[2][5];
+	float log_P_2_6 = P[2][6];
+	float log_P_2_7 = P[2][7];
+	float log_P_2_8 = P[2][8];
+	float log_P_2_9 = P[2][9];
+	float log_P_2_10 = P[2][10];
+	float log_P_2_11 = P[2][11];
+	AUX_LOG_MAG_32;
+
+	float log_P_2_12 = P[2][12];
+	float log_P_2_13 = P[2][13];
+	float log_P_2_14 = P[2][14];
+	float log_P_2_15 = P[2][15];
+	float log_P_2_16 = P[2][16];
+	float log_P_2_17 = P[2][17];
+	float log_P_2_18 = P[2][18];
+	float log_P_2_19 = P[2][19];
+	float log_P_2_20 = P[2][20];
+	float log_P_2_21 = P[2][21];
+	float log_P_2_22 = P[2][22];
+	float log_P_2_23 = P[2][23];
+	float log_P_3_0 = P[3][0];
+	float log_P_3_1 = P[3][1];
+	float log_P_3_2 = P[3][2];
+	AUX_LOG_MAG_33;
+
+	float log_P_3_3 = P[3][3];
+	float log_P_3_4 = P[3][4];
+	float log_P_3_5 = P[3][5];
+	float log_P_3_6 = P[3][6];
+	float log_P_3_7 = P[3][7];
+	float log_P_3_8 = P[3][8];
+	float log_P_3_9 = P[3][9];
+	float log_P_3_10 = P[3][10];
+	float log_P_3_11 = P[3][11];
+	float log_P_3_12 = P[3][12];
+	float log_P_3_13 = P[3][13];
+	float log_P_3_14 = P[3][14];
+	float log_P_3_15 = P[3][15];
+	float log_P_3_16 = P[3][16];
+	float log_P_3_17 = P[3][17];
+	AUX_LOG_MAG_34;
+
+	float log_P_3_18 = P[3][18];
+	float log_P_3_19 = P[3][19];
+	float log_P_3_20 = P[3][20];
+	float log_P_3_21 = P[3][21];
+	float log_P_3_22 = P[3][22];
+	float log_P_3_23 = P[3][23];
+	float log_P_4_0 = P[4][0];
+	float log_P_4_1 = P[4][1];
+	float log_P_4_2 = P[4][2];
+	float log_P_4_3 = P[4][3];
+	float log_P_4_4 = P[4][4];
+	float log_P_4_5 = P[4][5];
+	float log_P_4_6 = P[4][6];
+	float log_P_4_7 = P[4][7];
+	float log_P_4_8 = P[4][8];
+	AUX_LOG_MAG_35;
+
+	float log_P_4_9 = P[4][9];
+	float log_P_4_10 = P[4][10];
+	float log_P_4_11 = P[4][11];
+	float log_P_4_12 = P[4][12];
+	float log_P_4_13 = P[4][13];
+	float log_P_4_14 = P[4][14];
+	float log_P_4_15 = P[4][15];
+	float log_P_4_16 = P[4][16];
+	float log_P_4_17 = P[4][17];
+	float log_P_4_18 = P[4][18];
+	float log_P_4_19 = P[4][19];
+	float log_P_4_20 = P[4][20];
+	float log_P_4_21 = P[4][21];
+	float log_P_4_22 = P[4][22];
+	float log_P_4_23 = P[4][23];
+	AUX_LOG_MAG_36;
+
+	float log_P_5_0 = P[5][0];
+	float log_P_5_1 = P[5][1];
+	float log_P_5_2 = P[5][2];
+	float log_P_5_3 = P[5][3];
+	float log_P_5_4 = P[5][4];
+	float log_P_5_5 = P[5][5];
+	float log_P_5_6 = P[5][6];
+	float log_P_5_7 = P[5][7];
+	float log_P_5_8 = P[5][8];
+	float log_P_5_9 = P[5][9];
+	float log_P_5_10 = P[5][10];
+	float log_P_5_11 = P[5][11];
+	float log_P_5_12 = P[5][12];
+	float log_P_5_13 = P[5][13];
+	float log_P_5_14 = P[5][14];
+	AUX_LOG_MAG_37;
+
+	float log_P_5_15 = P[5][15];
+	float log_P_5_16 = P[5][16];
+	float log_P_5_17 = P[5][17];
+	float log_P_5_18 = P[5][18];
+	float log_P_5_19 = P[5][19];
+	float log_P_5_20 = P[5][20];
+	float log_P_5_21 = P[5][21];
+	float log_P_5_22 = P[5][22];
+	float log_P_5_23 = P[5][23];
+	float log_P_6_0 = P[6][0];
+	float log_P_6_1 = P[6][1];
+	float log_P_6_2 = P[6][2];
+	float log_P_6_3 = P[6][3];
+	float log_P_6_4 = P[6][4];
+	float log_P_6_5 = P[6][5];
+	AUX_LOG_MAG_38;
+
+	float log_P_6_6 = P[6][6];
+	float log_P_6_7 = P[6][7];
+	float log_P_6_8 = P[6][8];
+	float log_P_6_9 = P[6][9];
+	float log_P_6_10 = P[6][10];
+	float log_P_6_11 = P[6][11];
+	float log_P_6_12 = P[6][12];
+	float log_P_6_13 = P[6][13];
+	float log_P_6_14 = P[6][14];
+	float log_P_6_15 = P[6][15];
+	float log_P_6_16 = P[6][16];
+	float log_P_6_17 = P[6][17];
+	float log_P_6_18 = P[6][18];
+	float log_P_6_19 = P[6][19];
+	float log_P_6_20 = P[6][20];
+	AUX_LOG_MAG_39;
+
+	float log_P_6_21 = P[6][21];
+	float log_P_6_22 = P[6][22];
+	float log_P_6_23 = P[6][23];
+	float log_P_7_0 = P[7][0];
+	float log_P_7_1 = P[7][1];
+	float log_P_7_2 = P[7][2];
+	float log_P_7_3 = P[7][3];
+	float log_P_7_4 = P[7][4];
+	float log_P_7_5 = P[7][5];
+	float log_P_7_6 = P[7][6];
+	float log_P_7_7 = P[7][7];
+	float log_P_7_8 = P[7][8];
+	float log_P_7_9 = P[7][9];
+	float log_P_7_10 = P[7][10];
+	float log_P_7_11 = P[7][11];
+	AUX_LOG_MAG_40;
+
+	float log_P_7_12 = P[7][12];
+	float log_P_7_13 = P[7][13];
+	float log_P_7_14 = P[7][14];
+	float log_P_7_15 = P[7][15];
+	float log_P_7_16 = P[7][16];
+	float log_P_7_17 = P[7][17];
+	float log_P_7_18 = P[7][18];
+	float log_P_7_19 = P[7][19];
+	float log_P_7_20 = P[7][20];
+	float log_P_7_21 = P[7][21];
+	float log_P_7_22 = P[7][22];
+	float log_P_7_23 = P[7][23];
+	float log_P_8_0 = P[8][0];
+	float log_P_8_1 = P[8][1];
+	float log_P_8_2 = P[8][2];
+	AUX_LOG_MAG_41;
+
+	float log_P_8_3 = P[8][3];
+	float log_P_8_4 = P[8][4];
+	float log_P_8_5 = P[8][5];
+	float log_P_8_6 = P[8][6];
+	float log_P_8_7 = P[8][7];
+	float log_P_8_8 = P[8][8];
+	float log_P_8_9 = P[8][9];
+	float log_P_8_10 = P[8][10];
+	float log_P_8_11 = P[8][11];
+	float log_P_8_12 = P[8][12];
+	float log_P_8_13 = P[8][13];
+	float log_P_8_14 = P[8][14];
+	float log_P_8_15 = P[8][15];
+	float log_P_8_16 = P[8][16];
+	float log_P_8_17 = P[8][17];
+	AUX_LOG_MAG_42;
+
+	float log_P_8_18 = P[8][18];
+	float log_P_8_19 = P[8][19];
+	float log_P_8_20 = P[8][20];
+	float log_P_8_21 = P[8][21];
+	float log_P_8_22 = P[8][22];
+	float log_P_8_23 = P[8][23];
+	float log_P_9_0 = P[9][0];
+	float log_P_9_1 = P[9][1];
+	float log_P_9_2 = P[9][2];
+	float log_P_9_3 = P[9][3];
+	float log_P_9_4 = P[9][4];
+	float log_P_9_5 = P[9][5];
+	float log_P_9_6 = P[9][6];
+	float log_P_9_7 = P[9][7];
+	float log_P_9_8 = P[9][8];
+	AUX_LOG_MAG_43;
+
+	float log_P_9_9 = P[9][9];
+	float log_P_9_10 = P[9][10];
+	float log_P_9_11 = P[9][11];
+	float log_P_9_12 = P[9][12];
+	float log_P_9_13 = P[9][13];
+	float log_P_9_14 = P[9][14];
+	float log_P_9_15 = P[9][15];
+	float log_P_9_16 = P[9][16];
+	float log_P_9_17 = P[9][17];
+	float log_P_9_18 = P[9][18];
+	float log_P_9_19 = P[9][19];
+	float log_P_9_20 = P[9][20];
+	float log_P_9_21 = P[9][21];
+	float log_P_9_22 = P[9][22];
+	float log_P_9_23 = P[9][23];
+	AUX_LOG_MAG_44;
+
+	float log_P_10_0 = P[10][0];
+	float log_P_10_1 = P[10][1];
+	float log_P_10_2 = P[10][2];
+	float log_P_10_3 = P[10][3];
+	float log_P_10_4 = P[10][4];
+	float log_P_10_5 = P[10][5];
+	float log_P_10_6 = P[10][6];
+	float log_P_10_7 = P[10][7];
+	float log_P_10_8 = P[10][8];
+	float log_P_10_9 = P[10][9];
+	float log_P_10_10 = P[10][10];
+	float log_P_10_11 = P[10][11];
+	float log_P_10_12 = P[10][12];
+	float log_P_10_13 = P[10][13];
+	float log_P_10_14 = P[10][14];
+	AUX_LOG_MAG_45;
+
+	float log_P_10_15 = P[10][15];
+	float log_P_10_16 = P[10][16];
+	float log_P_10_17 = P[10][17];
+	float log_P_10_18 = P[10][18];
+	float log_P_10_19 = P[10][19];
+	float log_P_10_20 = P[10][20];
+	float log_P_10_21 = P[10][21];
+	float log_P_10_22 = P[10][22];
+	float log_P_10_23 = P[10][23];
+	float log_P_11_0 = P[11][0];
+	float log_P_11_1 = P[11][1];
+	float log_P_11_2 = P[11][2];
+	float log_P_11_3 = P[11][3];
+	float log_P_11_4 = P[11][4];
+	float log_P_11_5 = P[11][5];
+	AUX_LOG_MAG_46;
+
+	float log_P_11_6 = P[11][6];
+	float log_P_11_7 = P[11][7];
+	float log_P_11_8 = P[11][8];
+	float log_P_11_9 = P[11][9];
+	float log_P_11_10 = P[11][10];
+	float log_P_11_11 = P[11][11];
+	float log_P_11_12 = P[11][12];
+	float log_P_11_13 = P[11][13];
+	float log_P_11_14 = P[11][14];
+	float log_P_11_15 = P[11][15];
+	float log_P_11_16 = P[11][16];
+	float log_P_11_17 = P[11][17];
+	float log_P_11_18 = P[11][18];
+	float log_P_11_19 = P[11][19];
+	float log_P_11_20 = P[11][20];
+	AUX_LOG_MAG_47;
+
+	float log_P_11_21 = P[11][21];
+	float log_P_11_22 = P[11][22];
+	float log_P_11_23 = P[11][23];
+	float log_P_12_0 = P[12][0];
+	float log_P_12_1 = P[12][1];
+	float log_P_12_2 = P[12][2];
+	float log_P_12_3 = P[12][3];
+	float log_P_12_4 = P[12][4];
+	float log_P_12_5 = P[12][5];
+	float log_P_12_6 = P[12][6];
+	float log_P_12_7 = P[12][7];
+	float log_P_12_8 = P[12][8];
+	float log_P_12_9 = P[12][9];
+	float log_P_12_10 = P[12][10];
+	float log_P_12_11 = P[12][11];
+	AUX_LOG_MAG_48;
+
+	float log_P_12_12 = P[12][12];
+	float log_P_12_13 = P[12][13];
+	float log_P_12_14 = P[12][14];
+	float log_P_12_15 = P[12][15];
+	float log_P_12_16 = P[12][16];
+	float log_P_12_17 = P[12][17];
+	float log_P_12_18 = P[12][18];
+	float log_P_12_19 = P[12][19];
+	float log_P_12_20 = P[12][20];
+	float log_P_12_21 = P[12][21];
+	float log_P_12_22 = P[12][22];
+	float log_P_12_23 = P[12][23];
+	float log_P_13_0 = P[13][0];
+	float log_P_13_1 = P[13][1];
+	float log_P_13_2 = P[13][2];
+	AUX_LOG_MAG_49;
+
+	float log_P_13_3 = P[13][3];
+	float log_P_13_4 = P[13][4];
+	float log_P_13_5 = P[13][5];
+	float log_P_13_6 = P[13][6];
+	float log_P_13_7 = P[13][7];
+	float log_P_13_8 = P[13][8];
+	float log_P_13_9 = P[13][9];
+	float log_P_13_10 = P[13][10];
+	float log_P_13_11 = P[13][11];
+	float log_P_13_12 = P[13][12];
+	float log_P_13_13 = P[13][13];
+	float log_P_13_14 = P[13][14];
+	float log_P_13_15 = P[13][15];
+	float log_P_13_16 = P[13][16];
+	float log_P_13_17 = P[13][17];
+	AUX_LOG_MAG_50;
+
+	float log_P_13_18 = P[13][18];
+	float log_P_13_19 = P[13][19];
+	float log_P_13_20 = P[13][20];
+	float log_P_13_21 = P[13][21];
+	float log_P_13_22 = P[13][22];
+	float log_P_13_23 = P[13][23];
+	float log_P_14_0 = P[14][0];
+	float log_P_14_1 = P[14][1];
+	float log_P_14_2 = P[14][2];
+	float log_P_14_3 = P[14][3];
+	float log_P_14_4 = P[14][4];
+	float log_P_14_5 = P[14][5];
+	float log_P_14_6 = P[14][6];
+	float log_P_14_7 = P[14][7];
+	float log_P_14_8 = P[14][8];
+	AUX_LOG_MAG_51;
+
+	float log_P_14_9 = P[14][9];
+	float log_P_14_10 = P[14][10];
+	float log_P_14_11 = P[14][11];
+	float log_P_14_12 = P[14][12];
+	float log_P_14_13 = P[14][13];
+	float log_P_14_14 = P[14][14];
+	float log_P_14_15 = P[14][15];
+	float log_P_14_16 = P[14][16];
+	float log_P_14_17 = P[14][17];
+	float log_P_14_18 = P[14][18];
+	float log_P_14_19 = P[14][19];
+	float log_P_14_20 = P[14][20];
+	float log_P_14_21 = P[14][21];
+	float log_P_14_22 = P[14][22];
+	float log_P_14_23 = P[14][23];
+	AUX_LOG_MAG_52;
+
+	float log_P_15_0 = P[15][0];
+	float log_P_15_1 = P[15][1];
+	float log_P_15_2 = P[15][2];
+	float log_P_15_3 = P[15][3];
+	float log_P_15_4 = P[15][4];
+	float log_P_15_5 = P[15][5];
+	float log_P_15_6 = P[15][6];
+	float log_P_15_7 = P[15][7];
+	float log_P_15_8 = P[15][8];
+	float log_P_15_9 = P[15][9];
+	float log_P_15_10 = P[15][10];
+	float log_P_15_11 = P[15][11];
+	float log_P_15_12 = P[15][12];
+	float log_P_15_13 = P[15][13];
+	float log_P_15_14 = P[15][14];
+	AUX_LOG_MAG_53;
+
+	float log_P_15_15 = P[15][15];
+	float log_P_15_16 = P[15][16];
+	float log_P_15_17 = P[15][17];
+	float log_P_15_18 = P[15][18];
+	float log_P_15_19 = P[15][19];
+	float log_P_15_20 = P[15][20];
+	float log_P_15_21 = P[15][21];
+	float log_P_15_22 = P[15][22];
+	float log_P_15_23 = P[15][23];
+	float log_P_16_0 = P[16][0];
+	float log_P_16_1 = P[16][1];
+	float log_P_16_2 = P[16][2];
+	float log_P_16_3 = P[16][3];
+	float log_P_16_4 = P[16][4];
+	float log_P_16_5 = P[16][5];
+	AUX_LOG_MAG_54;
+
+	float log_P_16_6 = P[16][6];
+	float log_P_16_7 = P[16][7];
+	float log_P_16_8 = P[16][8];
+	float log_P_16_9 = P[16][9];
+	float log_P_16_10 = P[16][10];
+	float log_P_16_11 = P[16][11];
+	float log_P_16_12 = P[16][12];
+	float log_P_16_13 = P[16][13];
+	float log_P_16_14 = P[16][14];
+	float log_P_16_15 = P[16][15];
+	float log_P_16_16 = P[16][16];
+	float log_P_16_17 = P[16][17];
+	float log_P_16_18 = P[16][18];
+	float log_P_16_19 = P[16][19];
+	float log_P_16_20 = P[16][20];
+	AUX_LOG_MAG_55;
+
+	float log_P_16_21 = P[16][21];
+	float log_P_16_22 = P[16][22];
+	float log_P_16_23 = P[16][23];
+	float log_P_17_0 = P[17][0];
+	float log_P_17_1 = P[17][1];
+	float log_P_17_2 = P[17][2];
+	float log_P_17_3 = P[17][3];
+	float log_P_17_4 = P[17][4];
+	float log_P_17_5 = P[17][5];
+	float log_P_17_6 = P[17][6];
+	float log_P_17_7 = P[17][7];
+	float log_P_17_8 = P[17][8];
+	float log_P_17_9 = P[17][9];
+	float log_P_17_10 = P[17][10];
+	float log_P_17_11 = P[17][11];
+	AUX_LOG_MAG_56;
+
+	float log_P_17_12 = P[17][12];
+	float log_P_17_13 = P[17][13];
+	float log_P_17_14 = P[17][14];
+	float log_P_17_15 = P[17][15];
+	float log_P_17_16 = P[17][16];
+	float log_P_17_17 = P[17][17];
+	float log_P_17_18 = P[17][18];
+	float log_P_17_19 = P[17][19];
+	float log_P_17_20 = P[17][20];
+	float log_P_17_21 = P[17][21];
+	float log_P_17_22 = P[17][22];
+	float log_P_17_23 = P[17][23];
+	float log_P_18_0 = P[18][0];
+	float log_P_18_1 = P[18][1];
+	float log_P_18_2 = P[18][2];
+	AUX_LOG_MAG_57;
+
+	float log_P_18_3 = P[18][3];
+	float log_P_18_4 = P[18][4];
+	float log_P_18_5 = P[18][5];
+	float log_P_18_6 = P[18][6];
+	float log_P_18_7 = P[18][7];
+	float log_P_18_8 = P[18][8];
+	float log_P_18_9 = P[18][9];
+	float log_P_18_10 = P[18][10];
+	float log_P_18_11 = P[18][11];
+	float log_P_18_12 = P[18][12];
+	float log_P_18_13 = P[18][13];
+	float log_P_18_14 = P[18][14];
+	float log_P_18_15 = P[18][15];
+	float log_P_18_16 = P[18][16];
+	float log_P_18_17 = P[18][17];
+	AUX_LOG_MAG_58;
+
+	float log_P_18_18 = P[18][18];
+	float log_P_18_19 = P[18][19];
+	float log_P_18_20 = P[18][20];
+	float log_P_18_21 = P[18][21];
+	float log_P_18_22 = P[18][22];
+	float log_P_18_23 = P[18][23];
+	float log_P_19_0 = P[19][0];
+	float log_P_19_1 = P[19][1];
+	float log_P_19_2 = P[19][2];
+	float log_P_19_3 = P[19][3];
+	float log_P_19_4 = P[19][4];
+	float log_P_19_5 = P[19][5];
+	float log_P_19_6 = P[19][6];
+	float log_P_19_7 = P[19][7];
+	float log_P_19_8 = P[19][8];
+	AUX_LOG_MAG_59;
+
+	float log_P_19_9 = P[19][9];
+	float log_P_19_10 = P[19][10];
+	float log_P_19_11 = P[19][11];
+	float log_P_19_12 = P[19][12];
+	float log_P_19_13 = P[19][13];
+	float log_P_19_14 = P[19][14];
+	float log_P_19_15 = P[19][15];
+	float log_P_19_16 = P[19][16];
+	float log_P_19_17 = P[19][17];
+	float log_P_19_18 = P[19][18];
+	float log_P_19_19 = P[19][19];
+	float log_P_19_20 = P[19][20];
+	float log_P_19_21 = P[19][21];
+	float log_P_19_22 = P[19][22];
+	float log_P_19_23 = P[19][23];
+	AUX_LOG_MAG_60;
+
+	float log_P_20_0 = P[20][0];
+	float log_P_20_1 = P[20][1];
+	float log_P_20_2 = P[20][2];
+	float log_P_20_3 = P[20][3];
+	float log_P_20_4 = P[20][4];
+	float log_P_20_5 = P[20][5];
+	float log_P_20_6 = P[20][6];
+	float log_P_20_7 = P[20][7];
+	float log_P_20_8 = P[20][8];
+	float log_P_20_9 = P[20][9];
+	float log_P_20_10 = P[20][10];
+	float log_P_20_11 = P[20][11];
+	float log_P_20_12 = P[20][12];
+	float log_P_20_13 = P[20][13];
+	float log_P_20_14 = P[20][14];
+	AUX_LOG_MAG_61;
+
+	float log_P_20_15 = P[20][15];
+	float log_P_20_16 = P[20][16];
+	float log_P_20_17 = P[20][17];
+	float log_P_20_18 = P[20][18];
+	float log_P_20_19 = P[20][19];
+	float log_P_20_20 = P[20][20];
+	float log_P_20_21 = P[20][21];
+	float log_P_20_22 = P[20][22];
+	float log_P_20_23 = P[20][23];
+	float log_P_21_0 = P[21][0];
+	float log_P_21_1 = P[21][1];
+	float log_P_21_2 = P[21][2];
+	float log_P_21_3 = P[21][3];
+	float log_P_21_4 = P[21][4];
+	float log_P_21_5 = P[21][5];
+	AUX_LOG_MAG_62;
+
+	float log_P_21_6 = P[21][6];
+	float log_P_21_7 = P[21][7];
+	float log_P_21_8 = P[21][8];
+	float log_P_21_9 = P[21][9];
+	float log_P_21_10 = P[21][10];
+	float log_P_21_11 = P[21][11];
+	float log_P_21_12 = P[21][12];
+	float log_P_21_13 = P[21][13];
+	float log_P_21_14 = P[21][14];
+	float log_P_21_15 = P[21][15];
+	float log_P_21_16 = P[21][16];
+	float log_P_21_17 = P[21][17];
+	float log_P_21_18 = P[21][18];
+	float log_P_21_19 = P[21][19];
+	float log_P_21_20 = P[21][20];
+	AUX_LOG_MAG_63;
+
+	float log_P_21_21 = P[21][21];
+	float log_P_21_22 = P[21][22];
+	float log_P_21_23 = P[21][23];
+	float log_P_22_0 = P[22][0];
+	float log_P_22_1 = P[22][1];
+	float log_P_22_2 = P[22][2];
+	float log_P_22_3 = P[22][3];
+	float log_P_22_4 = P[22][4];
+	float log_P_22_5 = P[22][5];
+	float log_P_22_6 = P[22][6];
+	float log_P_22_7 = P[22][7];
+	float log_P_22_8 = P[22][8];
+	float log_P_22_9 = P[22][9];
+	float log_P_22_10 = P[22][10];
+	float log_P_22_11 = P[22][11];
+	AUX_LOG_MAG_64;
+
+	float log_P_22_12 = P[22][12];
+	float log_P_22_13 = P[22][13];
+	float log_P_22_14 = P[22][14];
+	float log_P_22_15 = P[22][15];
+	float log_P_22_16 = P[22][16];
+	float log_P_22_17 = P[22][17];
+	float log_P_22_18 = P[22][18];
+	float log_P_22_19 = P[22][19];
+	float log_P_22_20 = P[22][20];
+	float log_P_22_21 = P[22][21];
+	float log_P_22_22 = P[22][22];
+	float log_P_22_23 = P[22][23];
+	float log_P_23_0 = P[23][0];
+	float log_P_23_1 = P[23][1];
+	float log_P_23_2 = P[23][2];
+	AUX_LOG_MAG_65;
+
+	float log_P_23_3 = P[23][3];
+	float log_P_23_4 = P[23][4];
+	float log_P_23_5 = P[23][5];
+	float log_P_23_6 = P[23][6];
+	float log_P_23_7 = P[23][7];
+	float log_P_23_8 = P[23][8];
+	float log_P_23_9 = P[23][9];
+	float log_P_23_10 = P[23][10];
+	float log_P_23_11 = P[23][11];
+	float log_P_23_12 = P[23][12];
+	float log_P_23_13 = P[23][13];
+	float log_P_23_14 = P[23][14];
+	float log_P_23_15 = P[23][15];
+	float log_P_23_16 = P[23][16];
+	float log_P_23_17 = P[23][17];
+	AUX_LOG_MAG_66;
+
+	float log_P_23_18 = P[23][18];
+	float log_P_23_19 = P[23][19];
+	float log_P_23_20 = P[23][20];
+	float log_P_23_21 = P[23][21];
+	float log_P_23_22 = P[23][22];
+	float log_P_23_23 = P[23][23];
+	AUX_LOG_MAG_67;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_MAG_29_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_29), "MG29",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_29 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_0_0;
+	float P_0_1;
+	float P_0_2;
+	float P_0_3;
+	float P_0_4;
+	float P_0_5;
+	float P_0_6;
+	float P_0_7;
+	float P_0_8;
+	float P_0_9;
+	float P_0_10;
+	float P_0_11;
+	float P_0_12;
+	float P_0_13;
+	float P_0_14;
+};
+
+#define LOG_MAG_30_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_30), "MG30",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_30 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_0_15;
+	float P_0_16;
+	float P_0_17;
+	float P_0_18;
+	float P_0_19;
+	float P_0_20;
+	float P_0_21;
+	float P_0_22;
+	float P_0_23;
+	float P_1_0;
+	float P_1_1;
+	float P_1_2;
+	float P_1_3;
+	float P_1_4;
+	float P_1_5;
+};
+
+#define LOG_MAG_31_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_31), "MG31",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_31 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_1_6;
+	float P_1_7;
+	float P_1_8;
+	float P_1_9;
+	float P_1_10;
+	float P_1_11;
+	float P_1_12;
+	float P_1_13;
+	float P_1_14;
+	float P_1_15;
+	float P_1_16;
+	float P_1_17;
+	float P_1_18;
+	float P_1_19;
+	float P_1_20;
+};
+
+#define LOG_MAG_32_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_32), "MG32",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_32 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_1_21;
+	float P_1_22;
+	float P_1_23;
+	float P_2_0;
+	float P_2_1;
+	float P_2_2;
+	float P_2_3;
+	float P_2_4;
+	float P_2_5;
+	float P_2_6;
+	float P_2_7;
+	float P_2_8;
+	float P_2_9;
+	float P_2_10;
+	float P_2_11;
+};
+
+#define LOG_MAG_33_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_33), "MG33",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_33 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_2_12;
+	float P_2_13;
+	float P_2_14;
+	float P_2_15;
+	float P_2_16;
+	float P_2_17;
+	float P_2_18;
+	float P_2_19;
+	float P_2_20;
+	float P_2_21;
+	float P_2_22;
+	float P_2_23;
+	float P_3_0;
+	float P_3_1;
+	float P_3_2;
+};
+
+#define LOG_MAG_34_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_34), "MG34",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_34 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_3_3;
+	float P_3_4;
+	float P_3_5;
+	float P_3_6;
+	float P_3_7;
+	float P_3_8;
+	float P_3_9;
+	float P_3_10;
+	float P_3_11;
+	float P_3_12;
+	float P_3_13;
+	float P_3_14;
+	float P_3_15;
+	float P_3_16;
+	float P_3_17;
+};
+
+#define LOG_MAG_35_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_35), "MG35",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_35 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_3_18;
+	float P_3_19;
+	float P_3_20;
+	float P_3_21;
+	float P_3_22;
+	float P_3_23;
+	float P_4_0;
+	float P_4_1;
+	float P_4_2;
+	float P_4_3;
+	float P_4_4;
+	float P_4_5;
+	float P_4_6;
+	float P_4_7;
+	float P_4_8;
+};
+
+#define LOG_MAG_36_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_36), "MG36",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_36 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_4_9;
+	float P_4_10;
+	float P_4_11;
+	float P_4_12;
+	float P_4_13;
+	float P_4_14;
+	float P_4_15;
+	float P_4_16;
+	float P_4_17;
+	float P_4_18;
+	float P_4_19;
+	float P_4_20;
+	float P_4_21;
+	float P_4_22;
+	float P_4_23;
+};
+
+#define LOG_MAG_37_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_37), "MG37",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_37 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_5_0;
+	float P_5_1;
+	float P_5_2;
+	float P_5_3;
+	float P_5_4;
+	float P_5_5;
+	float P_5_6;
+	float P_5_7;
+	float P_5_8;
+	float P_5_9;
+	float P_5_10;
+	float P_5_11;
+	float P_5_12;
+	float P_5_13;
+	float P_5_14;
+};
+
+#define LOG_MAG_38_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_38), "MG38",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_38 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_5_15;
+	float P_5_16;
+	float P_5_17;
+	float P_5_18;
+	float P_5_19;
+	float P_5_20;
+	float P_5_21;
+	float P_5_22;
+	float P_5_23;
+	float P_6_0;
+	float P_6_1;
+	float P_6_2;
+	float P_6_3;
+	float P_6_4;
+	float P_6_5;
+};
+
+#define LOG_MAG_39_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_39), "MG39",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_39 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_6_6;
+	float P_6_7;
+	float P_6_8;
+	float P_6_9;
+	float P_6_10;
+	float P_6_11;
+	float P_6_12;
+	float P_6_13;
+	float P_6_14;
+	float P_6_15;
+	float P_6_16;
+	float P_6_17;
+	float P_6_18;
+	float P_6_19;
+	float P_6_20;
+};
+
+#define LOG_MAG_40_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_40), "MG40",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_40 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_6_21;
+	float P_6_22;
+	float P_6_23;
+	float P_7_0;
+	float P_7_1;
+	float P_7_2;
+	float P_7_3;
+	float P_7_4;
+	float P_7_5;
+	float P_7_6;
+	float P_7_7;
+	float P_7_8;
+	float P_7_9;
+	float P_7_10;
+	float P_7_11;
+};
+
+#define LOG_MAG_41_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_41), "MG41",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_41 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_7_12;
+	float P_7_13;
+	float P_7_14;
+	float P_7_15;
+	float P_7_16;
+	float P_7_17;
+	float P_7_18;
+	float P_7_19;
+	float P_7_20;
+	float P_7_21;
+	float P_7_22;
+	float P_7_23;
+	float P_8_0;
+	float P_8_1;
+	float P_8_2;
+};
+
+#define LOG_MAG_42_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_42), "MG42",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_42 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_8_3;
+	float P_8_4;
+	float P_8_5;
+	float P_8_6;
+	float P_8_7;
+	float P_8_8;
+	float P_8_9;
+	float P_8_10;
+	float P_8_11;
+	float P_8_12;
+	float P_8_13;
+	float P_8_14;
+	float P_8_15;
+	float P_8_16;
+	float P_8_17;
+};
+
+#define LOG_MAG_43_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_43), "MG43",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_43 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_8_18;
+	float P_8_19;
+	float P_8_20;
+	float P_8_21;
+	float P_8_22;
+	float P_8_23;
+	float P_9_0;
+	float P_9_1;
+	float P_9_2;
+	float P_9_3;
+	float P_9_4;
+	float P_9_5;
+	float P_9_6;
+	float P_9_7;
+	float P_9_8;
+};
+
+#define LOG_MAG_44_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_44), "MG44",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_44 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_9_9;
+	float P_9_10;
+	float P_9_11;
+	float P_9_12;
+	float P_9_13;
+	float P_9_14;
+	float P_9_15;
+	float P_9_16;
+	float P_9_17;
+	float P_9_18;
+	float P_9_19;
+	float P_9_20;
+	float P_9_21;
+	float P_9_22;
+	float P_9_23;
+};
+
+#define LOG_MAG_45_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_45), "MG45",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_45 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_10_0;
+	float P_10_1;
+	float P_10_2;
+	float P_10_3;
+	float P_10_4;
+	float P_10_5;
+	float P_10_6;
+	float P_10_7;
+	float P_10_8;
+	float P_10_9;
+	float P_10_10;
+	float P_10_11;
+	float P_10_12;
+	float P_10_13;
+	float P_10_14;
+};
+
+#define LOG_MAG_46_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_46), "MG46",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_46 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_10_15;
+	float P_10_16;
+	float P_10_17;
+	float P_10_18;
+	float P_10_19;
+	float P_10_20;
+	float P_10_21;
+	float P_10_22;
+	float P_10_23;
+	float P_11_0;
+	float P_11_1;
+	float P_11_2;
+	float P_11_3;
+	float P_11_4;
+	float P_11_5;
+};
+
+#define LOG_MAG_47_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_47), "MG47",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_47 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_11_6;
+	float P_11_7;
+	float P_11_8;
+	float P_11_9;
+	float P_11_10;
+	float P_11_11;
+	float P_11_12;
+	float P_11_13;
+	float P_11_14;
+	float P_11_15;
+	float P_11_16;
+	float P_11_17;
+	float P_11_18;
+	float P_11_19;
+	float P_11_20;
+};
+
+#define LOG_MAG_48_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_48), "MG48",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_48 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_11_21;
+	float P_11_22;
+	float P_11_23;
+	float P_12_0;
+	float P_12_1;
+	float P_12_2;
+	float P_12_3;
+	float P_12_4;
+	float P_12_5;
+	float P_12_6;
+	float P_12_7;
+	float P_12_8;
+	float P_12_9;
+	float P_12_10;
+	float P_12_11;
+};
+
+#define LOG_MAG_49_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_49), "MG49",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_49 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_12_12;
+	float P_12_13;
+	float P_12_14;
+	float P_12_15;
+	float P_12_16;
+	float P_12_17;
+	float P_12_18;
+	float P_12_19;
+	float P_12_20;
+	float P_12_21;
+	float P_12_22;
+	float P_12_23;
+	float P_13_0;
+	float P_13_1;
+	float P_13_2;
+};
+
+#define LOG_MAG_50_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_50), "MG50",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_50 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_13_3;
+	float P_13_4;
+	float P_13_5;
+	float P_13_6;
+	float P_13_7;
+	float P_13_8;
+	float P_13_9;
+	float P_13_10;
+	float P_13_11;
+	float P_13_12;
+	float P_13_13;
+	float P_13_14;
+	float P_13_15;
+	float P_13_16;
+	float P_13_17;
+};
+
+#define LOG_MAG_51_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_51), "MG51",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_51 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_13_18;
+	float P_13_19;
+	float P_13_20;
+	float P_13_21;
+	float P_13_22;
+	float P_13_23;
+	float P_14_0;
+	float P_14_1;
+	float P_14_2;
+	float P_14_3;
+	float P_14_4;
+	float P_14_5;
+	float P_14_6;
+	float P_14_7;
+	float P_14_8;
+};
+
+#define LOG_MAG_52_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_52), "MG52",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_52 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_14_9;
+	float P_14_10;
+	float P_14_11;
+	float P_14_12;
+	float P_14_13;
+	float P_14_14;
+	float P_14_15;
+	float P_14_16;
+	float P_14_17;
+	float P_14_18;
+	float P_14_19;
+	float P_14_20;
+	float P_14_21;
+	float P_14_22;
+	float P_14_23;
+};
+
+#define LOG_MAG_53_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_53), "MG53",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_53 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_15_0;
+	float P_15_1;
+	float P_15_2;
+	float P_15_3;
+	float P_15_4;
+	float P_15_5;
+	float P_15_6;
+	float P_15_7;
+	float P_15_8;
+	float P_15_9;
+	float P_15_10;
+	float P_15_11;
+	float P_15_12;
+	float P_15_13;
+	float P_15_14;
+};
+
+#define LOG_MAG_54_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_54), "MG54",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_54 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_15_15;
+	float P_15_16;
+	float P_15_17;
+	float P_15_18;
+	float P_15_19;
+	float P_15_20;
+	float P_15_21;
+	float P_15_22;
+	float P_15_23;
+	float P_16_0;
+	float P_16_1;
+	float P_16_2;
+	float P_16_3;
+	float P_16_4;
+	float P_16_5;
+};
+
+#define LOG_MAG_55_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_55), "MG55",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_55 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_16_6;
+	float P_16_7;
+	float P_16_8;
+	float P_16_9;
+	float P_16_10;
+	float P_16_11;
+	float P_16_12;
+	float P_16_13;
+	float P_16_14;
+	float P_16_15;
+	float P_16_16;
+	float P_16_17;
+	float P_16_18;
+	float P_16_19;
+	float P_16_20;
+};
+
+#define LOG_MAG_56_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_56), "MG56",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_56 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_16_21;
+	float P_16_22;
+	float P_16_23;
+	float P_17_0;
+	float P_17_1;
+	float P_17_2;
+	float P_17_3;
+	float P_17_4;
+	float P_17_5;
+	float P_17_6;
+	float P_17_7;
+	float P_17_8;
+	float P_17_9;
+	float P_17_10;
+	float P_17_11;
+};
+
+#define LOG_MAG_57_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_57), "MG57",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_57 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_17_12;
+	float P_17_13;
+	float P_17_14;
+	float P_17_15;
+	float P_17_16;
+	float P_17_17;
+	float P_17_18;
+	float P_17_19;
+	float P_17_20;
+	float P_17_21;
+	float P_17_22;
+	float P_17_23;
+	float P_18_0;
+	float P_18_1;
+	float P_18_2;
+};
+
+#define LOG_MAG_58_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_58), "MG58",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_58 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_18_3;
+	float P_18_4;
+	float P_18_5;
+	float P_18_6;
+	float P_18_7;
+	float P_18_8;
+	float P_18_9;
+	float P_18_10;
+	float P_18_11;
+	float P_18_12;
+	float P_18_13;
+	float P_18_14;
+	float P_18_15;
+	float P_18_16;
+	float P_18_17;
+};
+
+#define LOG_MAG_59_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_59), "MG59",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_59 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_18_18;
+	float P_18_19;
+	float P_18_20;
+	float P_18_21;
+	float P_18_22;
+	float P_18_23;
+	float P_19_0;
+	float P_19_1;
+	float P_19_2;
+	float P_19_3;
+	float P_19_4;
+	float P_19_5;
+	float P_19_6;
+	float P_19_7;
+	float P_19_8;
+};
+
+#define LOG_MAG_60_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_60), "MG60",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_60 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_19_9;
+	float P_19_10;
+	float P_19_11;
+	float P_19_12;
+	float P_19_13;
+	float P_19_14;
+	float P_19_15;
+	float P_19_16;
+	float P_19_17;
+	float P_19_18;
+	float P_19_19;
+	float P_19_20;
+	float P_19_21;
+	float P_19_22;
+	float P_19_23;
+};
+
+#define LOG_MAG_61_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_61), "MG61",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_61 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_20_0;
+	float P_20_1;
+	float P_20_2;
+	float P_20_3;
+	float P_20_4;
+	float P_20_5;
+	float P_20_6;
+	float P_20_7;
+	float P_20_8;
+	float P_20_9;
+	float P_20_10;
+	float P_20_11;
+	float P_20_12;
+	float P_20_13;
+	float P_20_14;
+};
+
+#define LOG_MAG_62_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_62), "MG62",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_62 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_20_15;
+	float P_20_16;
+	float P_20_17;
+	float P_20_18;
+	float P_20_19;
+	float P_20_20;
+	float P_20_21;
+	float P_20_22;
+	float P_20_23;
+	float P_21_0;
+	float P_21_1;
+	float P_21_2;
+	float P_21_3;
+	float P_21_4;
+	float P_21_5;
+};
+
+#define LOG_MAG_63_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_63), "MG63",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_63 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_21_6;
+	float P_21_7;
+	float P_21_8;
+	float P_21_9;
+	float P_21_10;
+	float P_21_11;
+	float P_21_12;
+	float P_21_13;
+	float P_21_14;
+	float P_21_15;
+	float P_21_16;
+	float P_21_17;
+	float P_21_18;
+	float P_21_19;
+	float P_21_20;
+};
+
+#define LOG_MAG_64_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_64), "MG64",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_64 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_21_21;
+	float P_21_22;
+	float P_21_23;
+	float P_22_0;
+	float P_22_1;
+	float P_22_2;
+	float P_22_3;
+	float P_22_4;
+	float P_22_5;
+	float P_22_6;
+	float P_22_7;
+	float P_22_8;
+	float P_22_9;
+	float P_22_10;
+	float P_22_11;
+};
+
+#define LOG_MAG_65_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_65), "MG65",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_65 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_22_12;
+	float P_22_13;
+	float P_22_14;
+	float P_22_15;
+	float P_22_16;
+	float P_22_17;
+	float P_22_18;
+	float P_22_19;
+	float P_22_20;
+	float P_22_21;
+	float P_22_22;
+	float P_22_23;
+	float P_23_0;
+	float P_23_1;
+	float P_23_2;
+};
+
+#define LOG_MAG_66_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_66), "MG66",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MAG_66 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_23_3;
+	float P_23_4;
+	float P_23_5;
+	float P_23_6;
+	float P_23_7;
+	float P_23_8;
+	float P_23_9;
+	float P_23_10;
+	float P_23_11;
+	float P_23_12;
+	float P_23_13;
+	float P_23_14;
+	float P_23_15;
+	float P_23_16;
+	float P_23_17;
+};
+
+#define LOG_MAG_67_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MAG_67), "MG67",\
+	"Qffffff","t,1,2,3,4,5,6","s------","F000000"}
+
+struct PACKED log_MAG_67 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float P_23_18;
+	float P_23_19;
+	float P_23_20;
+	float P_23_21;
+	float P_23_22;
+	float P_23_23;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_SelectMagFusion7(float P_0_0,float P_0_1,float P_0_2,float P_0_3,float P_0_4,float P_0_5,float P_0_6,float P_0_7,float P_0_8,float P_0_9,float P_0_10,float P_0_11,float P_0_12,float P_0_13,float P_0_14);
+
+
+void Write_SelectMagFusion8(float P_0_15,float P_0_16,float P_0_17,float P_0_18,float P_0_19,float P_0_20,float P_0_21,float P_0_22,float P_0_23,float P_1_0,float P_1_1,float P_1_2,float P_1_3,float P_1_4,float P_1_5);
+
+
+void Write_SelectMagFusion9(float P_1_6,float P_1_7,float P_1_8,float P_1_9,float P_1_10,float P_1_11,float P_1_12,float P_1_13,float P_1_14,float P_1_15,float P_1_16,float P_1_17,float P_1_18,float P_1_19,float P_1_20);
+
+
+void Write_SelectMagFusion10(float P_1_21,float P_1_22,float P_1_23,float P_2_0,float P_2_1,float P_2_2,float P_2_3,float P_2_4,float P_2_5,float P_2_6,float P_2_7,float P_2_8,float P_2_9,float P_2_10,float P_2_11);
+
+
+void Write_SelectMagFusion11(float P_2_12,float P_2_13,float P_2_14,float P_2_15,float P_2_16,float P_2_17,float P_2_18,float P_2_19,float P_2_20,float P_2_21,float P_2_22,float P_2_23,float P_3_0,float P_3_1,float P_3_2);
+
+
+void Write_SelectMagFusion12(float P_3_3,float P_3_4,float P_3_5,float P_3_6,float P_3_7,float P_3_8,float P_3_9,float P_3_10,float P_3_11,float P_3_12,float P_3_13,float P_3_14,float P_3_15,float P_3_16,float P_3_17);
+
+
+void Write_SelectMagFusion13(float P_3_18,float P_3_19,float P_3_20,float P_3_21,float P_3_22,float P_3_23,float P_4_0,float P_4_1,float P_4_2,float P_4_3,float P_4_4,float P_4_5,float P_4_6,float P_4_7,float P_4_8);
+
+
+void Write_SelectMagFusion14(float P_4_9,float P_4_10,float P_4_11,float P_4_12,float P_4_13,float P_4_14,float P_4_15,float P_4_16,float P_4_17,float P_4_18,float P_4_19,float P_4_20,float P_4_21,float P_4_22,float P_4_23);
+
+
+void Write_SelectMagFusion15(float P_5_0,float P_5_1,float P_5_2,float P_5_3,float P_5_4,float P_5_5,float P_5_6,float P_5_7,float P_5_8,float P_5_9,float P_5_10,float P_5_11,float P_5_12,float P_5_13,float P_5_14);
+
+
+void Write_SelectMagFusion16(float P_5_15,float P_5_16,float P_5_17,float P_5_18,float P_5_19,float P_5_20,float P_5_21,float P_5_22,float P_5_23,float P_6_0,float P_6_1,float P_6_2,float P_6_3,float P_6_4,float P_6_5);
+
+
+void Write_SelectMagFusion17(float P_6_6,float P_6_7,float P_6_8,float P_6_9,float P_6_10,float P_6_11,float P_6_12,float P_6_13,float P_6_14,float P_6_15,float P_6_16,float P_6_17,float P_6_18,float P_6_19,float P_6_20);
+
+
+void Write_SelectMagFusion18(float P_6_21,float P_6_22,float P_6_23,float P_7_0,float P_7_1,float P_7_2,float P_7_3,float P_7_4,float P_7_5,float P_7_6,float P_7_7,float P_7_8,float P_7_9,float P_7_10,float P_7_11);
+
+
+void Write_SelectMagFusion19(float P_7_12,float P_7_13,float P_7_14,float P_7_15,float P_7_16,float P_7_17,float P_7_18,float P_7_19,float P_7_20,float P_7_21,float P_7_22,float P_7_23,float P_8_0,float P_8_1,float P_8_2);
+
+
+void Write_SelectMagFusion20(float P_8_3,float P_8_4,float P_8_5,float P_8_6,float P_8_7,float P_8_8,float P_8_9,float P_8_10,float P_8_11,float P_8_12,float P_8_13,float P_8_14,float P_8_15,float P_8_16,float P_8_17);
+
+
+void Write_SelectMagFusion21(float P_8_18,float P_8_19,float P_8_20,float P_8_21,float P_8_22,float P_8_23,float P_9_0,float P_9_1,float P_9_2,float P_9_3,float P_9_4,float P_9_5,float P_9_6,float P_9_7,float P_9_8);
+
+
+void Write_SelectMagFusion22(float P_9_9,float P_9_10,float P_9_11,float P_9_12,float P_9_13,float P_9_14,float P_9_15,float P_9_16,float P_9_17,float P_9_18,float P_9_19,float P_9_20,float P_9_21,float P_9_22,float P_9_23);
+
+
+void Write_SelectMagFusion23(float P_10_0,float P_10_1,float P_10_2,float P_10_3,float P_10_4,float P_10_5,float P_10_6,float P_10_7,float P_10_8,float P_10_9,float P_10_10,float P_10_11,float P_10_12,float P_10_13,float P_10_14);
+
+
+void Write_SelectMagFusion24(float P_10_15,float P_10_16,float P_10_17,float P_10_18,float P_10_19,float P_10_20,float P_10_21,float P_10_22,float P_10_23,float P_11_0,float P_11_1,float P_11_2,float P_11_3,float P_11_4,float P_11_5);
+
+
+void Write_SelectMagFusion25(float P_11_6,float P_11_7,float P_11_8,float P_11_9,float P_11_10,float P_11_11,float P_11_12,float P_11_13,float P_11_14,float P_11_15,float P_11_16,float P_11_17,float P_11_18,float P_11_19,float P_11_20);
+
+
+void Write_SelectMagFusion26(float P_11_21,float P_11_22,float P_11_23,float P_12_0,float P_12_1,float P_12_2,float P_12_3,float P_12_4,float P_12_5,float P_12_6,float P_12_7,float P_12_8,float P_12_9,float P_12_10,float P_12_11);
+
+
+void Write_SelectMagFusion27(float P_12_12,float P_12_13,float P_12_14,float P_12_15,float P_12_16,float P_12_17,float P_12_18,float P_12_19,float P_12_20,float P_12_21,float P_12_22,float P_12_23,float P_13_0,float P_13_1,float P_13_2);
+
+
+void Write_SelectMagFusion28(float P_13_3,float P_13_4,float P_13_5,float P_13_6,float P_13_7,float P_13_8,float P_13_9,float P_13_10,float P_13_11,float P_13_12,float P_13_13,float P_13_14,float P_13_15,float P_13_16,float P_13_17);
+
+
+void Write_SelectMagFusion29(float P_13_18,float P_13_19,float P_13_20,float P_13_21,float P_13_22,float P_13_23,float P_14_0,float P_14_1,float P_14_2,float P_14_3,float P_14_4,float P_14_5,float P_14_6,float P_14_7,float P_14_8);
+
+
+void Write_SelectMagFusion30(float P_14_9,float P_14_10,float P_14_11,float P_14_12,float P_14_13,float P_14_14,float P_14_15,float P_14_16,float P_14_17,float P_14_18,float P_14_19,float P_14_20,float P_14_21,float P_14_22,float P_14_23);
+
+
+void Write_SelectMagFusion31(float P_15_0,float P_15_1,float P_15_2,float P_15_3,float P_15_4,float P_15_5,float P_15_6,float P_15_7,float P_15_8,float P_15_9,float P_15_10,float P_15_11,float P_15_12,float P_15_13,float P_15_14);
+
+
+void Write_SelectMagFusion32(float P_15_15,float P_15_16,float P_15_17,float P_15_18,float P_15_19,float P_15_20,float P_15_21,float P_15_22,float P_15_23,float P_16_0,float P_16_1,float P_16_2,float P_16_3,float P_16_4,float P_16_5);
+
+
+void Write_SelectMagFusion33(float P_16_6,float P_16_7,float P_16_8,float P_16_9,float P_16_10,float P_16_11,float P_16_12,float P_16_13,float P_16_14,float P_16_15,float P_16_16,float P_16_17,float P_16_18,float P_16_19,float P_16_20);
+
+
+void Write_SelectMagFusion34(float P_16_21,float P_16_22,float P_16_23,float P_17_0,float P_17_1,float P_17_2,float P_17_3,float P_17_4,float P_17_5,float P_17_6,float P_17_7,float P_17_8,float P_17_9,float P_17_10,float P_17_11);
+
+
+void Write_SelectMagFusion35(float P_17_12,float P_17_13,float P_17_14,float P_17_15,float P_17_16,float P_17_17,float P_17_18,float P_17_19,float P_17_20,float P_17_21,float P_17_22,float P_17_23,float P_18_0,float P_18_1,float P_18_2);
+
+
+void Write_SelectMagFusion36(float P_18_3,float P_18_4,float P_18_5,float P_18_6,float P_18_7,float P_18_8,float P_18_9,float P_18_10,float P_18_11,float P_18_12,float P_18_13,float P_18_14,float P_18_15,float P_18_16,float P_18_17);
+
+
+void Write_SelectMagFusion37(float P_18_18,float P_18_19,float P_18_20,float P_18_21,float P_18_22,float P_18_23,float P_19_0,float P_19_1,float P_19_2,float P_19_3,float P_19_4,float P_19_5,float P_19_6,float P_19_7,float P_19_8);
+
+
+void Write_SelectMagFusion38(float P_19_9,float P_19_10,float P_19_11,float P_19_12,float P_19_13,float P_19_14,float P_19_15,float P_19_16,float P_19_17,float P_19_18,float P_19_19,float P_19_20,float P_19_21,float P_19_22,float P_19_23);
+
+
+void Write_SelectMagFusion39(float P_20_0,float P_20_1,float P_20_2,float P_20_3,float P_20_4,float P_20_5,float P_20_6,float P_20_7,float P_20_8,float P_20_9,float P_20_10,float P_20_11,float P_20_12,float P_20_13,float P_20_14);
+
+
+void Write_SelectMagFusion40(float P_20_15,float P_20_16,float P_20_17,float P_20_18,float P_20_19,float P_20_20,float P_20_21,float P_20_22,float P_20_23,float P_21_0,float P_21_1,float P_21_2,float P_21_3,float P_21_4,float P_21_5);
+
+
+void Write_SelectMagFusion41(float P_21_6,float P_21_7,float P_21_8,float P_21_9,float P_21_10,float P_21_11,float P_21_12,float P_21_13,float P_21_14,float P_21_15,float P_21_16,float P_21_17,float P_21_18,float P_21_19,float P_21_20);
+
+
+void Write_SelectMagFusion42(float P_21_21,float P_21_22,float P_21_23,float P_22_0,float P_22_1,float P_22_2,float P_22_3,float P_22_4,float P_22_5,float P_22_6,float P_22_7,float P_22_8,float P_22_9,float P_22_10,float P_22_11);
+
+
+void Write_SelectMagFusion43(float P_22_12,float P_22_13,float P_22_14,float P_22_15,float P_22_16,float P_22_17,float P_22_18,float P_22_19,float P_22_20,float P_22_21,float P_22_22,float P_22_23,float P_23_0,float P_23_1,float P_23_2);
+
+
+void Write_SelectMagFusion44(float P_23_3,float P_23_4,float P_23_5,float P_23_6,float P_23_7,float P_23_8,float P_23_9,float P_23_10,float P_23_11,float P_23_12,float P_23_13,float P_23_14,float P_23_15,float P_23_16,float P_23_17);
+
+
+void Write_SelectMagFusion45(float P_23_18,float P_23_19,float P_23_20,float P_23_21,float P_23_22,float P_23_23);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_MAG_29,
+LOG_MAG_30,
+LOG_MAG_31,
+LOG_MAG_32,
+LOG_MAG_33,
+LOG_MAG_34,
+LOG_MAG_35,
+LOG_MAG_36,
+LOG_MAG_37,
+LOG_MAG_38,
+LOG_MAG_39,
+LOG_MAG_40,
+LOG_MAG_41,
+LOG_MAG_42,
+LOG_MAG_43,
+LOG_MAG_44,
+LOG_MAG_45,
+LOG_MAG_46,
+LOG_MAG_47,
+LOG_MAG_48,
+LOG_MAG_49,
+LOG_MAG_50,
+LOG_MAG_51,
+LOG_MAG_52,
+LOG_MAG_53,
+LOG_MAG_54,
+LOG_MAG_55,
+LOG_MAG_56,
+LOG_MAG_57,
+LOG_MAG_58,
+LOG_MAG_59,
+LOG_MAG_60,
+LOG_MAG_61,
+LOG_MAG_62,
+LOG_MAG_63,
+LOG_MAG_64,
+LOG_MAG_65,
+LOG_MAG_66,
+LOG_MAG_67,
+LOG_MAG_29_BASE(LOG_MAG_29),\
+LOG_MAG_30_BASE(LOG_MAG_30),\
+LOG_MAG_31_BASE(LOG_MAG_31),\
+LOG_MAG_32_BASE(LOG_MAG_32),\
+LOG_MAG_33_BASE(LOG_MAG_33),\
+LOG_MAG_34_BASE(LOG_MAG_34),\
+LOG_MAG_35_BASE(LOG_MAG_35),\
+LOG_MAG_36_BASE(LOG_MAG_36),\
+LOG_MAG_37_BASE(LOG_MAG_37),\
+LOG_MAG_38_BASE(LOG_MAG_38),\
+LOG_MAG_39_BASE(LOG_MAG_39),\
+LOG_MAG_40_BASE(LOG_MAG_40),\
+LOG_MAG_41_BASE(LOG_MAG_41),\
+LOG_MAG_42_BASE(LOG_MAG_42),\
+LOG_MAG_43_BASE(LOG_MAG_43),\
+LOG_MAG_44_BASE(LOG_MAG_44),\
+LOG_MAG_45_BASE(LOG_MAG_45),\
+LOG_MAG_46_BASE(LOG_MAG_46),\
+LOG_MAG_47_BASE(LOG_MAG_47),\
+LOG_MAG_48_BASE(LOG_MAG_48),\
+LOG_MAG_49_BASE(LOG_MAG_49),\
+LOG_MAG_50_BASE(LOG_MAG_50),\
+LOG_MAG_51_BASE(LOG_MAG_51),\
+LOG_MAG_52_BASE(LOG_MAG_52),\
+LOG_MAG_53_BASE(LOG_MAG_53),\
+LOG_MAG_54_BASE(LOG_MAG_54),\
+LOG_MAG_55_BASE(LOG_MAG_55),\
+LOG_MAG_56_BASE(LOG_MAG_56),\
+LOG_MAG_57_BASE(LOG_MAG_57),\
+LOG_MAG_58_BASE(LOG_MAG_58),\
+LOG_MAG_59_BASE(LOG_MAG_59),\
+LOG_MAG_60_BASE(LOG_MAG_60),\
+LOG_MAG_61_BASE(LOG_MAG_61),\
+LOG_MAG_62_BASE(LOG_MAG_62),\
+LOG_MAG_63_BASE(LOG_MAG_63),\
+LOG_MAG_64_BASE(LOG_MAG_64),\
+LOG_MAG_65_BASE(LOG_MAG_65),\
+LOG_MAG_66_BASE(LOG_MAG_66),\
+LOG_MAG_67_BASE(LOG_MAG_67),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_SelectMagFusion7(
+	float P_0_0,
+	float P_0_1,
+	float P_0_2,
+	float P_0_3,
+	float P_0_4,
+	float P_0_5,
+	float P_0_6,
+	float P_0_7,
+	float P_0_8,
+	float P_0_9,
+	float P_0_10,
+	float P_0_11,
+	float P_0_12,
+	float P_0_13,
+	float P_0_14)
+{
+	struct log_MAG_29 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_29),
+		time_us : AP_HAL::micros64(),
+		P_0_0 : P_0_0,
+		P_0_1 : P_0_1,
+		P_0_2 : P_0_2,
+		P_0_3 : P_0_3,
+		P_0_4 : P_0_4,
+		P_0_5 : P_0_5,
+		P_0_6 : P_0_6,
+		P_0_7 : P_0_7,
+		P_0_8 : P_0_8,
+		P_0_9 : P_0_9,
+		P_0_10 : P_0_10,
+		P_0_11 : P_0_11,
+		P_0_12 : P_0_12,
+		P_0_13 : P_0_13,
+		P_0_14 : P_0_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion8(
+	float P_0_15,
+	float P_0_16,
+	float P_0_17,
+	float P_0_18,
+	float P_0_19,
+	float P_0_20,
+	float P_0_21,
+	float P_0_22,
+	float P_0_23,
+	float P_1_0,
+	float P_1_1,
+	float P_1_2,
+	float P_1_3,
+	float P_1_4,
+	float P_1_5)
+{
+	struct log_MAG_30 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_30),
+		time_us : AP_HAL::micros64(),
+		P_0_15 : P_0_15,
+		P_0_16 : P_0_16,
+		P_0_17 : P_0_17,
+		P_0_18 : P_0_18,
+		P_0_19 : P_0_19,
+		P_0_20 : P_0_20,
+		P_0_21 : P_0_21,
+		P_0_22 : P_0_22,
+		P_0_23 : P_0_23,
+		P_1_0 : P_1_0,
+		P_1_1 : P_1_1,
+		P_1_2 : P_1_2,
+		P_1_3 : P_1_3,
+		P_1_4 : P_1_4,
+		P_1_5 : P_1_5
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion9(
+	float P_1_6,
+	float P_1_7,
+	float P_1_8,
+	float P_1_9,
+	float P_1_10,
+	float P_1_11,
+	float P_1_12,
+	float P_1_13,
+	float P_1_14,
+	float P_1_15,
+	float P_1_16,
+	float P_1_17,
+	float P_1_18,
+	float P_1_19,
+	float P_1_20)
+{
+	struct log_MAG_31 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_31),
+		time_us : AP_HAL::micros64(),
+		P_1_6 : P_1_6,
+		P_1_7 : P_1_7,
+		P_1_8 : P_1_8,
+		P_1_9 : P_1_9,
+		P_1_10 : P_1_10,
+		P_1_11 : P_1_11,
+		P_1_12 : P_1_12,
+		P_1_13 : P_1_13,
+		P_1_14 : P_1_14,
+		P_1_15 : P_1_15,
+		P_1_16 : P_1_16,
+		P_1_17 : P_1_17,
+		P_1_18 : P_1_18,
+		P_1_19 : P_1_19,
+		P_1_20 : P_1_20
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion10(
+	float P_1_21,
+	float P_1_22,
+	float P_1_23,
+	float P_2_0,
+	float P_2_1,
+	float P_2_2,
+	float P_2_3,
+	float P_2_4,
+	float P_2_5,
+	float P_2_6,
+	float P_2_7,
+	float P_2_8,
+	float P_2_9,
+	float P_2_10,
+	float P_2_11)
+{
+	struct log_MAG_32 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_32),
+		time_us : AP_HAL::micros64(),
+		P_1_21 : P_1_21,
+		P_1_22 : P_1_22,
+		P_1_23 : P_1_23,
+		P_2_0 : P_2_0,
+		P_2_1 : P_2_1,
+		P_2_2 : P_2_2,
+		P_2_3 : P_2_3,
+		P_2_4 : P_2_4,
+		P_2_5 : P_2_5,
+		P_2_6 : P_2_6,
+		P_2_7 : P_2_7,
+		P_2_8 : P_2_8,
+		P_2_9 : P_2_9,
+		P_2_10 : P_2_10,
+		P_2_11 : P_2_11
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion11(
+	float P_2_12,
+	float P_2_13,
+	float P_2_14,
+	float P_2_15,
+	float P_2_16,
+	float P_2_17,
+	float P_2_18,
+	float P_2_19,
+	float P_2_20,
+	float P_2_21,
+	float P_2_22,
+	float P_2_23,
+	float P_3_0,
+	float P_3_1,
+	float P_3_2)
+{
+	struct log_MAG_33 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_33),
+		time_us : AP_HAL::micros64(),
+		P_2_12 : P_2_12,
+		P_2_13 : P_2_13,
+		P_2_14 : P_2_14,
+		P_2_15 : P_2_15,
+		P_2_16 : P_2_16,
+		P_2_17 : P_2_17,
+		P_2_18 : P_2_18,
+		P_2_19 : P_2_19,
+		P_2_20 : P_2_20,
+		P_2_21 : P_2_21,
+		P_2_22 : P_2_22,
+		P_2_23 : P_2_23,
+		P_3_0 : P_3_0,
+		P_3_1 : P_3_1,
+		P_3_2 : P_3_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion12(
+	float P_3_3,
+	float P_3_4,
+	float P_3_5,
+	float P_3_6,
+	float P_3_7,
+	float P_3_8,
+	float P_3_9,
+	float P_3_10,
+	float P_3_11,
+	float P_3_12,
+	float P_3_13,
+	float P_3_14,
+	float P_3_15,
+	float P_3_16,
+	float P_3_17)
+{
+	struct log_MAG_34 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_34),
+		time_us : AP_HAL::micros64(),
+		P_3_3 : P_3_3,
+		P_3_4 : P_3_4,
+		P_3_5 : P_3_5,
+		P_3_6 : P_3_6,
+		P_3_7 : P_3_7,
+		P_3_8 : P_3_8,
+		P_3_9 : P_3_9,
+		P_3_10 : P_3_10,
+		P_3_11 : P_3_11,
+		P_3_12 : P_3_12,
+		P_3_13 : P_3_13,
+		P_3_14 : P_3_14,
+		P_3_15 : P_3_15,
+		P_3_16 : P_3_16,
+		P_3_17 : P_3_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion13(
+	float P_3_18,
+	float P_3_19,
+	float P_3_20,
+	float P_3_21,
+	float P_3_22,
+	float P_3_23,
+	float P_4_0,
+	float P_4_1,
+	float P_4_2,
+	float P_4_3,
+	float P_4_4,
+	float P_4_5,
+	float P_4_6,
+	float P_4_7,
+	float P_4_8)
+{
+	struct log_MAG_35 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_35),
+		time_us : AP_HAL::micros64(),
+		P_3_18 : P_3_18,
+		P_3_19 : P_3_19,
+		P_3_20 : P_3_20,
+		P_3_21 : P_3_21,
+		P_3_22 : P_3_22,
+		P_3_23 : P_3_23,
+		P_4_0 : P_4_0,
+		P_4_1 : P_4_1,
+		P_4_2 : P_4_2,
+		P_4_3 : P_4_3,
+		P_4_4 : P_4_4,
+		P_4_5 : P_4_5,
+		P_4_6 : P_4_6,
+		P_4_7 : P_4_7,
+		P_4_8 : P_4_8
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion14(
+	float P_4_9,
+	float P_4_10,
+	float P_4_11,
+	float P_4_12,
+	float P_4_13,
+	float P_4_14,
+	float P_4_15,
+	float P_4_16,
+	float P_4_17,
+	float P_4_18,
+	float P_4_19,
+	float P_4_20,
+	float P_4_21,
+	float P_4_22,
+	float P_4_23)
+{
+	struct log_MAG_36 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_36),
+		time_us : AP_HAL::micros64(),
+		P_4_9 : P_4_9,
+		P_4_10 : P_4_10,
+		P_4_11 : P_4_11,
+		P_4_12 : P_4_12,
+		P_4_13 : P_4_13,
+		P_4_14 : P_4_14,
+		P_4_15 : P_4_15,
+		P_4_16 : P_4_16,
+		P_4_17 : P_4_17,
+		P_4_18 : P_4_18,
+		P_4_19 : P_4_19,
+		P_4_20 : P_4_20,
+		P_4_21 : P_4_21,
+		P_4_22 : P_4_22,
+		P_4_23 : P_4_23
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion15(
+	float P_5_0,
+	float P_5_1,
+	float P_5_2,
+	float P_5_3,
+	float P_5_4,
+	float P_5_5,
+	float P_5_6,
+	float P_5_7,
+	float P_5_8,
+	float P_5_9,
+	float P_5_10,
+	float P_5_11,
+	float P_5_12,
+	float P_5_13,
+	float P_5_14)
+{
+	struct log_MAG_37 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_37),
+		time_us : AP_HAL::micros64(),
+		P_5_0 : P_5_0,
+		P_5_1 : P_5_1,
+		P_5_2 : P_5_2,
+		P_5_3 : P_5_3,
+		P_5_4 : P_5_4,
+		P_5_5 : P_5_5,
+		P_5_6 : P_5_6,
+		P_5_7 : P_5_7,
+		P_5_8 : P_5_8,
+		P_5_9 : P_5_9,
+		P_5_10 : P_5_10,
+		P_5_11 : P_5_11,
+		P_5_12 : P_5_12,
+		P_5_13 : P_5_13,
+		P_5_14 : P_5_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion16(
+	float P_5_15,
+	float P_5_16,
+	float P_5_17,
+	float P_5_18,
+	float P_5_19,
+	float P_5_20,
+	float P_5_21,
+	float P_5_22,
+	float P_5_23,
+	float P_6_0,
+	float P_6_1,
+	float P_6_2,
+	float P_6_3,
+	float P_6_4,
+	float P_6_5)
+{
+	struct log_MAG_38 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_38),
+		time_us : AP_HAL::micros64(),
+		P_5_15 : P_5_15,
+		P_5_16 : P_5_16,
+		P_5_17 : P_5_17,
+		P_5_18 : P_5_18,
+		P_5_19 : P_5_19,
+		P_5_20 : P_5_20,
+		P_5_21 : P_5_21,
+		P_5_22 : P_5_22,
+		P_5_23 : P_5_23,
+		P_6_0 : P_6_0,
+		P_6_1 : P_6_1,
+		P_6_2 : P_6_2,
+		P_6_3 : P_6_3,
+		P_6_4 : P_6_4,
+		P_6_5 : P_6_5
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion17(
+	float P_6_6,
+	float P_6_7,
+	float P_6_8,
+	float P_6_9,
+	float P_6_10,
+	float P_6_11,
+	float P_6_12,
+	float P_6_13,
+	float P_6_14,
+	float P_6_15,
+	float P_6_16,
+	float P_6_17,
+	float P_6_18,
+	float P_6_19,
+	float P_6_20)
+{
+	struct log_MAG_39 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_39),
+		time_us : AP_HAL::micros64(),
+		P_6_6 : P_6_6,
+		P_6_7 : P_6_7,
+		P_6_8 : P_6_8,
+		P_6_9 : P_6_9,
+		P_6_10 : P_6_10,
+		P_6_11 : P_6_11,
+		P_6_12 : P_6_12,
+		P_6_13 : P_6_13,
+		P_6_14 : P_6_14,
+		P_6_15 : P_6_15,
+		P_6_16 : P_6_16,
+		P_6_17 : P_6_17,
+		P_6_18 : P_6_18,
+		P_6_19 : P_6_19,
+		P_6_20 : P_6_20
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion18(
+	float P_6_21,
+	float P_6_22,
+	float P_6_23,
+	float P_7_0,
+	float P_7_1,
+	float P_7_2,
+	float P_7_3,
+	float P_7_4,
+	float P_7_5,
+	float P_7_6,
+	float P_7_7,
+	float P_7_8,
+	float P_7_9,
+	float P_7_10,
+	float P_7_11)
+{
+	struct log_MAG_40 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_40),
+		time_us : AP_HAL::micros64(),
+		P_6_21 : P_6_21,
+		P_6_22 : P_6_22,
+		P_6_23 : P_6_23,
+		P_7_0 : P_7_0,
+		P_7_1 : P_7_1,
+		P_7_2 : P_7_2,
+		P_7_3 : P_7_3,
+		P_7_4 : P_7_4,
+		P_7_5 : P_7_5,
+		P_7_6 : P_7_6,
+		P_7_7 : P_7_7,
+		P_7_8 : P_7_8,
+		P_7_9 : P_7_9,
+		P_7_10 : P_7_10,
+		P_7_11 : P_7_11
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion19(
+	float P_7_12,
+	float P_7_13,
+	float P_7_14,
+	float P_7_15,
+	float P_7_16,
+	float P_7_17,
+	float P_7_18,
+	float P_7_19,
+	float P_7_20,
+	float P_7_21,
+	float P_7_22,
+	float P_7_23,
+	float P_8_0,
+	float P_8_1,
+	float P_8_2)
+{
+	struct log_MAG_41 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_41),
+		time_us : AP_HAL::micros64(),
+		P_7_12 : P_7_12,
+		P_7_13 : P_7_13,
+		P_7_14 : P_7_14,
+		P_7_15 : P_7_15,
+		P_7_16 : P_7_16,
+		P_7_17 : P_7_17,
+		P_7_18 : P_7_18,
+		P_7_19 : P_7_19,
+		P_7_20 : P_7_20,
+		P_7_21 : P_7_21,
+		P_7_22 : P_7_22,
+		P_7_23 : P_7_23,
+		P_8_0 : P_8_0,
+		P_8_1 : P_8_1,
+		P_8_2 : P_8_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion20(
+	float P_8_3,
+	float P_8_4,
+	float P_8_5,
+	float P_8_6,
+	float P_8_7,
+	float P_8_8,
+	float P_8_9,
+	float P_8_10,
+	float P_8_11,
+	float P_8_12,
+	float P_8_13,
+	float P_8_14,
+	float P_8_15,
+	float P_8_16,
+	float P_8_17)
+{
+	struct log_MAG_42 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_42),
+		time_us : AP_HAL::micros64(),
+		P_8_3 : P_8_3,
+		P_8_4 : P_8_4,
+		P_8_5 : P_8_5,
+		P_8_6 : P_8_6,
+		P_8_7 : P_8_7,
+		P_8_8 : P_8_8,
+		P_8_9 : P_8_9,
+		P_8_10 : P_8_10,
+		P_8_11 : P_8_11,
+		P_8_12 : P_8_12,
+		P_8_13 : P_8_13,
+		P_8_14 : P_8_14,
+		P_8_15 : P_8_15,
+		P_8_16 : P_8_16,
+		P_8_17 : P_8_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion21(
+	float P_8_18,
+	float P_8_19,
+	float P_8_20,
+	float P_8_21,
+	float P_8_22,
+	float P_8_23,
+	float P_9_0,
+	float P_9_1,
+	float P_9_2,
+	float P_9_3,
+	float P_9_4,
+	float P_9_5,
+	float P_9_6,
+	float P_9_7,
+	float P_9_8)
+{
+	struct log_MAG_43 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_43),
+		time_us : AP_HAL::micros64(),
+		P_8_18 : P_8_18,
+		P_8_19 : P_8_19,
+		P_8_20 : P_8_20,
+		P_8_21 : P_8_21,
+		P_8_22 : P_8_22,
+		P_8_23 : P_8_23,
+		P_9_0 : P_9_0,
+		P_9_1 : P_9_1,
+		P_9_2 : P_9_2,
+		P_9_3 : P_9_3,
+		P_9_4 : P_9_4,
+		P_9_5 : P_9_5,
+		P_9_6 : P_9_6,
+		P_9_7 : P_9_7,
+		P_9_8 : P_9_8
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion22(
+	float P_9_9,
+	float P_9_10,
+	float P_9_11,
+	float P_9_12,
+	float P_9_13,
+	float P_9_14,
+	float P_9_15,
+	float P_9_16,
+	float P_9_17,
+	float P_9_18,
+	float P_9_19,
+	float P_9_20,
+	float P_9_21,
+	float P_9_22,
+	float P_9_23)
+{
+	struct log_MAG_44 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_44),
+		time_us : AP_HAL::micros64(),
+		P_9_9 : P_9_9,
+		P_9_10 : P_9_10,
+		P_9_11 : P_9_11,
+		P_9_12 : P_9_12,
+		P_9_13 : P_9_13,
+		P_9_14 : P_9_14,
+		P_9_15 : P_9_15,
+		P_9_16 : P_9_16,
+		P_9_17 : P_9_17,
+		P_9_18 : P_9_18,
+		P_9_19 : P_9_19,
+		P_9_20 : P_9_20,
+		P_9_21 : P_9_21,
+		P_9_22 : P_9_22,
+		P_9_23 : P_9_23
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion23(
+	float P_10_0,
+	float P_10_1,
+	float P_10_2,
+	float P_10_3,
+	float P_10_4,
+	float P_10_5,
+	float P_10_6,
+	float P_10_7,
+	float P_10_8,
+	float P_10_9,
+	float P_10_10,
+	float P_10_11,
+	float P_10_12,
+	float P_10_13,
+	float P_10_14)
+{
+	struct log_MAG_45 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_45),
+		time_us : AP_HAL::micros64(),
+		P_10_0 : P_10_0,
+		P_10_1 : P_10_1,
+		P_10_2 : P_10_2,
+		P_10_3 : P_10_3,
+		P_10_4 : P_10_4,
+		P_10_5 : P_10_5,
+		P_10_6 : P_10_6,
+		P_10_7 : P_10_7,
+		P_10_8 : P_10_8,
+		P_10_9 : P_10_9,
+		P_10_10 : P_10_10,
+		P_10_11 : P_10_11,
+		P_10_12 : P_10_12,
+		P_10_13 : P_10_13,
+		P_10_14 : P_10_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion24(
+	float P_10_15,
+	float P_10_16,
+	float P_10_17,
+	float P_10_18,
+	float P_10_19,
+	float P_10_20,
+	float P_10_21,
+	float P_10_22,
+	float P_10_23,
+	float P_11_0,
+	float P_11_1,
+	float P_11_2,
+	float P_11_3,
+	float P_11_4,
+	float P_11_5)
+{
+	struct log_MAG_46 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_46),
+		time_us : AP_HAL::micros64(),
+		P_10_15 : P_10_15,
+		P_10_16 : P_10_16,
+		P_10_17 : P_10_17,
+		P_10_18 : P_10_18,
+		P_10_19 : P_10_19,
+		P_10_20 : P_10_20,
+		P_10_21 : P_10_21,
+		P_10_22 : P_10_22,
+		P_10_23 : P_10_23,
+		P_11_0 : P_11_0,
+		P_11_1 : P_11_1,
+		P_11_2 : P_11_2,
+		P_11_3 : P_11_3,
+		P_11_4 : P_11_4,
+		P_11_5 : P_11_5
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion25(
+	float P_11_6,
+	float P_11_7,
+	float P_11_8,
+	float P_11_9,
+	float P_11_10,
+	float P_11_11,
+	float P_11_12,
+	float P_11_13,
+	float P_11_14,
+	float P_11_15,
+	float P_11_16,
+	float P_11_17,
+	float P_11_18,
+	float P_11_19,
+	float P_11_20)
+{
+	struct log_MAG_47 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_47),
+		time_us : AP_HAL::micros64(),
+		P_11_6 : P_11_6,
+		P_11_7 : P_11_7,
+		P_11_8 : P_11_8,
+		P_11_9 : P_11_9,
+		P_11_10 : P_11_10,
+		P_11_11 : P_11_11,
+		P_11_12 : P_11_12,
+		P_11_13 : P_11_13,
+		P_11_14 : P_11_14,
+		P_11_15 : P_11_15,
+		P_11_16 : P_11_16,
+		P_11_17 : P_11_17,
+		P_11_18 : P_11_18,
+		P_11_19 : P_11_19,
+		P_11_20 : P_11_20
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion26(
+	float P_11_21,
+	float P_11_22,
+	float P_11_23,
+	float P_12_0,
+	float P_12_1,
+	float P_12_2,
+	float P_12_3,
+	float P_12_4,
+	float P_12_5,
+	float P_12_6,
+	float P_12_7,
+	float P_12_8,
+	float P_12_9,
+	float P_12_10,
+	float P_12_11)
+{
+	struct log_MAG_48 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_48),
+		time_us : AP_HAL::micros64(),
+		P_11_21 : P_11_21,
+		P_11_22 : P_11_22,
+		P_11_23 : P_11_23,
+		P_12_0 : P_12_0,
+		P_12_1 : P_12_1,
+		P_12_2 : P_12_2,
+		P_12_3 : P_12_3,
+		P_12_4 : P_12_4,
+		P_12_5 : P_12_5,
+		P_12_6 : P_12_6,
+		P_12_7 : P_12_7,
+		P_12_8 : P_12_8,
+		P_12_9 : P_12_9,
+		P_12_10 : P_12_10,
+		P_12_11 : P_12_11
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion27(
+	float P_12_12,
+	float P_12_13,
+	float P_12_14,
+	float P_12_15,
+	float P_12_16,
+	float P_12_17,
+	float P_12_18,
+	float P_12_19,
+	float P_12_20,
+	float P_12_21,
+	float P_12_22,
+	float P_12_23,
+	float P_13_0,
+	float P_13_1,
+	float P_13_2)
+{
+	struct log_MAG_49 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_49),
+		time_us : AP_HAL::micros64(),
+		P_12_12 : P_12_12,
+		P_12_13 : P_12_13,
+		P_12_14 : P_12_14,
+		P_12_15 : P_12_15,
+		P_12_16 : P_12_16,
+		P_12_17 : P_12_17,
+		P_12_18 : P_12_18,
+		P_12_19 : P_12_19,
+		P_12_20 : P_12_20,
+		P_12_21 : P_12_21,
+		P_12_22 : P_12_22,
+		P_12_23 : P_12_23,
+		P_13_0 : P_13_0,
+		P_13_1 : P_13_1,
+		P_13_2 : P_13_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion28(
+	float P_13_3,
+	float P_13_4,
+	float P_13_5,
+	float P_13_6,
+	float P_13_7,
+	float P_13_8,
+	float P_13_9,
+	float P_13_10,
+	float P_13_11,
+	float P_13_12,
+	float P_13_13,
+	float P_13_14,
+	float P_13_15,
+	float P_13_16,
+	float P_13_17)
+{
+	struct log_MAG_50 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_50),
+		time_us : AP_HAL::micros64(),
+		P_13_3 : P_13_3,
+		P_13_4 : P_13_4,
+		P_13_5 : P_13_5,
+		P_13_6 : P_13_6,
+		P_13_7 : P_13_7,
+		P_13_8 : P_13_8,
+		P_13_9 : P_13_9,
+		P_13_10 : P_13_10,
+		P_13_11 : P_13_11,
+		P_13_12 : P_13_12,
+		P_13_13 : P_13_13,
+		P_13_14 : P_13_14,
+		P_13_15 : P_13_15,
+		P_13_16 : P_13_16,
+		P_13_17 : P_13_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion29(
+	float P_13_18,
+	float P_13_19,
+	float P_13_20,
+	float P_13_21,
+	float P_13_22,
+	float P_13_23,
+	float P_14_0,
+	float P_14_1,
+	float P_14_2,
+	float P_14_3,
+	float P_14_4,
+	float P_14_5,
+	float P_14_6,
+	float P_14_7,
+	float P_14_8)
+{
+	struct log_MAG_51 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_51),
+		time_us : AP_HAL::micros64(),
+		P_13_18 : P_13_18,
+		P_13_19 : P_13_19,
+		P_13_20 : P_13_20,
+		P_13_21 : P_13_21,
+		P_13_22 : P_13_22,
+		P_13_23 : P_13_23,
+		P_14_0 : P_14_0,
+		P_14_1 : P_14_1,
+		P_14_2 : P_14_2,
+		P_14_3 : P_14_3,
+		P_14_4 : P_14_4,
+		P_14_5 : P_14_5,
+		P_14_6 : P_14_6,
+		P_14_7 : P_14_7,
+		P_14_8 : P_14_8
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion30(
+	float P_14_9,
+	float P_14_10,
+	float P_14_11,
+	float P_14_12,
+	float P_14_13,
+	float P_14_14,
+	float P_14_15,
+	float P_14_16,
+	float P_14_17,
+	float P_14_18,
+	float P_14_19,
+	float P_14_20,
+	float P_14_21,
+	float P_14_22,
+	float P_14_23)
+{
+	struct log_MAG_52 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_52),
+		time_us : AP_HAL::micros64(),
+		P_14_9 : P_14_9,
+		P_14_10 : P_14_10,
+		P_14_11 : P_14_11,
+		P_14_12 : P_14_12,
+		P_14_13 : P_14_13,
+		P_14_14 : P_14_14,
+		P_14_15 : P_14_15,
+		P_14_16 : P_14_16,
+		P_14_17 : P_14_17,
+		P_14_18 : P_14_18,
+		P_14_19 : P_14_19,
+		P_14_20 : P_14_20,
+		P_14_21 : P_14_21,
+		P_14_22 : P_14_22,
+		P_14_23 : P_14_23
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion31(
+	float P_15_0,
+	float P_15_1,
+	float P_15_2,
+	float P_15_3,
+	float P_15_4,
+	float P_15_5,
+	float P_15_6,
+	float P_15_7,
+	float P_15_8,
+	float P_15_9,
+	float P_15_10,
+	float P_15_11,
+	float P_15_12,
+	float P_15_13,
+	float P_15_14)
+{
+	struct log_MAG_53 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_53),
+		time_us : AP_HAL::micros64(),
+		P_15_0 : P_15_0,
+		P_15_1 : P_15_1,
+		P_15_2 : P_15_2,
+		P_15_3 : P_15_3,
+		P_15_4 : P_15_4,
+		P_15_5 : P_15_5,
+		P_15_6 : P_15_6,
+		P_15_7 : P_15_7,
+		P_15_8 : P_15_8,
+		P_15_9 : P_15_9,
+		P_15_10 : P_15_10,
+		P_15_11 : P_15_11,
+		P_15_12 : P_15_12,
+		P_15_13 : P_15_13,
+		P_15_14 : P_15_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion32(
+	float P_15_15,
+	float P_15_16,
+	float P_15_17,
+	float P_15_18,
+	float P_15_19,
+	float P_15_20,
+	float P_15_21,
+	float P_15_22,
+	float P_15_23,
+	float P_16_0,
+	float P_16_1,
+	float P_16_2,
+	float P_16_3,
+	float P_16_4,
+	float P_16_5)
+{
+	struct log_MAG_54 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_54),
+		time_us : AP_HAL::micros64(),
+		P_15_15 : P_15_15,
+		P_15_16 : P_15_16,
+		P_15_17 : P_15_17,
+		P_15_18 : P_15_18,
+		P_15_19 : P_15_19,
+		P_15_20 : P_15_20,
+		P_15_21 : P_15_21,
+		P_15_22 : P_15_22,
+		P_15_23 : P_15_23,
+		P_16_0 : P_16_0,
+		P_16_1 : P_16_1,
+		P_16_2 : P_16_2,
+		P_16_3 : P_16_3,
+		P_16_4 : P_16_4,
+		P_16_5 : P_16_5
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion33(
+	float P_16_6,
+	float P_16_7,
+	float P_16_8,
+	float P_16_9,
+	float P_16_10,
+	float P_16_11,
+	float P_16_12,
+	float P_16_13,
+	float P_16_14,
+	float P_16_15,
+	float P_16_16,
+	float P_16_17,
+	float P_16_18,
+	float P_16_19,
+	float P_16_20)
+{
+	struct log_MAG_55 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_55),
+		time_us : AP_HAL::micros64(),
+		P_16_6 : P_16_6,
+		P_16_7 : P_16_7,
+		P_16_8 : P_16_8,
+		P_16_9 : P_16_9,
+		P_16_10 : P_16_10,
+		P_16_11 : P_16_11,
+		P_16_12 : P_16_12,
+		P_16_13 : P_16_13,
+		P_16_14 : P_16_14,
+		P_16_15 : P_16_15,
+		P_16_16 : P_16_16,
+		P_16_17 : P_16_17,
+		P_16_18 : P_16_18,
+		P_16_19 : P_16_19,
+		P_16_20 : P_16_20
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion34(
+	float P_16_21,
+	float P_16_22,
+	float P_16_23,
+	float P_17_0,
+	float P_17_1,
+	float P_17_2,
+	float P_17_3,
+	float P_17_4,
+	float P_17_5,
+	float P_17_6,
+	float P_17_7,
+	float P_17_8,
+	float P_17_9,
+	float P_17_10,
+	float P_17_11)
+{
+	struct log_MAG_56 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_56),
+		time_us : AP_HAL::micros64(),
+		P_16_21 : P_16_21,
+		P_16_22 : P_16_22,
+		P_16_23 : P_16_23,
+		P_17_0 : P_17_0,
+		P_17_1 : P_17_1,
+		P_17_2 : P_17_2,
+		P_17_3 : P_17_3,
+		P_17_4 : P_17_4,
+		P_17_5 : P_17_5,
+		P_17_6 : P_17_6,
+		P_17_7 : P_17_7,
+		P_17_8 : P_17_8,
+		P_17_9 : P_17_9,
+		P_17_10 : P_17_10,
+		P_17_11 : P_17_11
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion35(
+	float P_17_12,
+	float P_17_13,
+	float P_17_14,
+	float P_17_15,
+	float P_17_16,
+	float P_17_17,
+	float P_17_18,
+	float P_17_19,
+	float P_17_20,
+	float P_17_21,
+	float P_17_22,
+	float P_17_23,
+	float P_18_0,
+	float P_18_1,
+	float P_18_2)
+{
+	struct log_MAG_57 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_57),
+		time_us : AP_HAL::micros64(),
+		P_17_12 : P_17_12,
+		P_17_13 : P_17_13,
+		P_17_14 : P_17_14,
+		P_17_15 : P_17_15,
+		P_17_16 : P_17_16,
+		P_17_17 : P_17_17,
+		P_17_18 : P_17_18,
+		P_17_19 : P_17_19,
+		P_17_20 : P_17_20,
+		P_17_21 : P_17_21,
+		P_17_22 : P_17_22,
+		P_17_23 : P_17_23,
+		P_18_0 : P_18_0,
+		P_18_1 : P_18_1,
+		P_18_2 : P_18_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion36(
+	float P_18_3,
+	float P_18_4,
+	float P_18_5,
+	float P_18_6,
+	float P_18_7,
+	float P_18_8,
+	float P_18_9,
+	float P_18_10,
+	float P_18_11,
+	float P_18_12,
+	float P_18_13,
+	float P_18_14,
+	float P_18_15,
+	float P_18_16,
+	float P_18_17)
+{
+	struct log_MAG_58 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_58),
+		time_us : AP_HAL::micros64(),
+		P_18_3 : P_18_3,
+		P_18_4 : P_18_4,
+		P_18_5 : P_18_5,
+		P_18_6 : P_18_6,
+		P_18_7 : P_18_7,
+		P_18_8 : P_18_8,
+		P_18_9 : P_18_9,
+		P_18_10 : P_18_10,
+		P_18_11 : P_18_11,
+		P_18_12 : P_18_12,
+		P_18_13 : P_18_13,
+		P_18_14 : P_18_14,
+		P_18_15 : P_18_15,
+		P_18_16 : P_18_16,
+		P_18_17 : P_18_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion37(
+	float P_18_18,
+	float P_18_19,
+	float P_18_20,
+	float P_18_21,
+	float P_18_22,
+	float P_18_23,
+	float P_19_0,
+	float P_19_1,
+	float P_19_2,
+	float P_19_3,
+	float P_19_4,
+	float P_19_5,
+	float P_19_6,
+	float P_19_7,
+	float P_19_8)
+{
+	struct log_MAG_59 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_59),
+		time_us : AP_HAL::micros64(),
+		P_18_18 : P_18_18,
+		P_18_19 : P_18_19,
+		P_18_20 : P_18_20,
+		P_18_21 : P_18_21,
+		P_18_22 : P_18_22,
+		P_18_23 : P_18_23,
+		P_19_0 : P_19_0,
+		P_19_1 : P_19_1,
+		P_19_2 : P_19_2,
+		P_19_3 : P_19_3,
+		P_19_4 : P_19_4,
+		P_19_5 : P_19_5,
+		P_19_6 : P_19_6,
+		P_19_7 : P_19_7,
+		P_19_8 : P_19_8
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion38(
+	float P_19_9,
+	float P_19_10,
+	float P_19_11,
+	float P_19_12,
+	float P_19_13,
+	float P_19_14,
+	float P_19_15,
+	float P_19_16,
+	float P_19_17,
+	float P_19_18,
+	float P_19_19,
+	float P_19_20,
+	float P_19_21,
+	float P_19_22,
+	float P_19_23)
+{
+	struct log_MAG_60 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_60),
+		time_us : AP_HAL::micros64(),
+		P_19_9 : P_19_9,
+		P_19_10 : P_19_10,
+		P_19_11 : P_19_11,
+		P_19_12 : P_19_12,
+		P_19_13 : P_19_13,
+		P_19_14 : P_19_14,
+		P_19_15 : P_19_15,
+		P_19_16 : P_19_16,
+		P_19_17 : P_19_17,
+		P_19_18 : P_19_18,
+		P_19_19 : P_19_19,
+		P_19_20 : P_19_20,
+		P_19_21 : P_19_21,
+		P_19_22 : P_19_22,
+		P_19_23 : P_19_23
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion39(
+	float P_20_0,
+	float P_20_1,
+	float P_20_2,
+	float P_20_3,
+	float P_20_4,
+	float P_20_5,
+	float P_20_6,
+	float P_20_7,
+	float P_20_8,
+	float P_20_9,
+	float P_20_10,
+	float P_20_11,
+	float P_20_12,
+	float P_20_13,
+	float P_20_14)
+{
+	struct log_MAG_61 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_61),
+		time_us : AP_HAL::micros64(),
+		P_20_0 : P_20_0,
+		P_20_1 : P_20_1,
+		P_20_2 : P_20_2,
+		P_20_3 : P_20_3,
+		P_20_4 : P_20_4,
+		P_20_5 : P_20_5,
+		P_20_6 : P_20_6,
+		P_20_7 : P_20_7,
+		P_20_8 : P_20_8,
+		P_20_9 : P_20_9,
+		P_20_10 : P_20_10,
+		P_20_11 : P_20_11,
+		P_20_12 : P_20_12,
+		P_20_13 : P_20_13,
+		P_20_14 : P_20_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion40(
+	float P_20_15,
+	float P_20_16,
+	float P_20_17,
+	float P_20_18,
+	float P_20_19,
+	float P_20_20,
+	float P_20_21,
+	float P_20_22,
+	float P_20_23,
+	float P_21_0,
+	float P_21_1,
+	float P_21_2,
+	float P_21_3,
+	float P_21_4,
+	float P_21_5)
+{
+	struct log_MAG_62 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_62),
+		time_us : AP_HAL::micros64(),
+		P_20_15 : P_20_15,
+		P_20_16 : P_20_16,
+		P_20_17 : P_20_17,
+		P_20_18 : P_20_18,
+		P_20_19 : P_20_19,
+		P_20_20 : P_20_20,
+		P_20_21 : P_20_21,
+		P_20_22 : P_20_22,
+		P_20_23 : P_20_23,
+		P_21_0 : P_21_0,
+		P_21_1 : P_21_1,
+		P_21_2 : P_21_2,
+		P_21_3 : P_21_3,
+		P_21_4 : P_21_4,
+		P_21_5 : P_21_5
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion41(
+	float P_21_6,
+	float P_21_7,
+	float P_21_8,
+	float P_21_9,
+	float P_21_10,
+	float P_21_11,
+	float P_21_12,
+	float P_21_13,
+	float P_21_14,
+	float P_21_15,
+	float P_21_16,
+	float P_21_17,
+	float P_21_18,
+	float P_21_19,
+	float P_21_20)
+{
+	struct log_MAG_63 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_63),
+		time_us : AP_HAL::micros64(),
+		P_21_6 : P_21_6,
+		P_21_7 : P_21_7,
+		P_21_8 : P_21_8,
+		P_21_9 : P_21_9,
+		P_21_10 : P_21_10,
+		P_21_11 : P_21_11,
+		P_21_12 : P_21_12,
+		P_21_13 : P_21_13,
+		P_21_14 : P_21_14,
+		P_21_15 : P_21_15,
+		P_21_16 : P_21_16,
+		P_21_17 : P_21_17,
+		P_21_18 : P_21_18,
+		P_21_19 : P_21_19,
+		P_21_20 : P_21_20
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion42(
+	float P_21_21,
+	float P_21_22,
+	float P_21_23,
+	float P_22_0,
+	float P_22_1,
+	float P_22_2,
+	float P_22_3,
+	float P_22_4,
+	float P_22_5,
+	float P_22_6,
+	float P_22_7,
+	float P_22_8,
+	float P_22_9,
+	float P_22_10,
+	float P_22_11)
+{
+	struct log_MAG_64 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_64),
+		time_us : AP_HAL::micros64(),
+		P_21_21 : P_21_21,
+		P_21_22 : P_21_22,
+		P_21_23 : P_21_23,
+		P_22_0 : P_22_0,
+		P_22_1 : P_22_1,
+		P_22_2 : P_22_2,
+		P_22_3 : P_22_3,
+		P_22_4 : P_22_4,
+		P_22_5 : P_22_5,
+		P_22_6 : P_22_6,
+		P_22_7 : P_22_7,
+		P_22_8 : P_22_8,
+		P_22_9 : P_22_9,
+		P_22_10 : P_22_10,
+		P_22_11 : P_22_11
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion43(
+	float P_22_12,
+	float P_22_13,
+	float P_22_14,
+	float P_22_15,
+	float P_22_16,
+	float P_22_17,
+	float P_22_18,
+	float P_22_19,
+	float P_22_20,
+	float P_22_21,
+	float P_22_22,
+	float P_22_23,
+	float P_23_0,
+	float P_23_1,
+	float P_23_2)
+{
+	struct log_MAG_65 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_65),
+		time_us : AP_HAL::micros64(),
+		P_22_12 : P_22_12,
+		P_22_13 : P_22_13,
+		P_22_14 : P_22_14,
+		P_22_15 : P_22_15,
+		P_22_16 : P_22_16,
+		P_22_17 : P_22_17,
+		P_22_18 : P_22_18,
+		P_22_19 : P_22_19,
+		P_22_20 : P_22_20,
+		P_22_21 : P_22_21,
+		P_22_22 : P_22_22,
+		P_22_23 : P_22_23,
+		P_23_0 : P_23_0,
+		P_23_1 : P_23_1,
+		P_23_2 : P_23_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion44(
+	float P_23_3,
+	float P_23_4,
+	float P_23_5,
+	float P_23_6,
+	float P_23_7,
+	float P_23_8,
+	float P_23_9,
+	float P_23_10,
+	float P_23_11,
+	float P_23_12,
+	float P_23_13,
+	float P_23_14,
+	float P_23_15,
+	float P_23_16,
+	float P_23_17)
+{
+	struct log_MAG_66 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_66),
+		time_us : AP_HAL::micros64(),
+		P_23_3 : P_23_3,
+		P_23_4 : P_23_4,
+		P_23_5 : P_23_5,
+		P_23_6 : P_23_6,
+		P_23_7 : P_23_7,
+		P_23_8 : P_23_8,
+		P_23_9 : P_23_9,
+		P_23_10 : P_23_10,
+		P_23_11 : P_23_11,
+		P_23_12 : P_23_12,
+		P_23_13 : P_23_13,
+		P_23_14 : P_23_14,
+		P_23_15 : P_23_15,
+		P_23_16 : P_23_16,
+		P_23_17 : P_23_17
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_SelectMagFusion45(
+	float P_23_18,
+	float P_23_19,
+	float P_23_20,
+	float P_23_21,
+	float P_23_22,
+	float P_23_23)
+{
+	struct log_MAG_67 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MAG_67),
+		time_us : AP_HAL::micros64(),
+		P_23_18 : P_23_18,
+		P_23_19 : P_23_19,
+		P_23_20 : P_23_20,
+		P_23_21 : P_23_21,
+		P_23_22 : P_23_22,
+		P_23_23 : P_23_23
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	MG29_time = 1e-6*MG29(:,2);
+	P_0_0 = [MG29_time, MG29(:,3)];
+	P_0_1 = [MG29_time, MG29(:,4)];
+	P_0_2 = [MG29_time, MG29(:,5)];
+	P_0_3 = [MG29_time, MG29(:,6)];
+	P_0_4 = [MG29_time, MG29(:,7)];
+	P_0_5 = [MG29_time, MG29(:,8)];
+	P_0_6 = [MG29_time, MG29(:,9)];
+	P_0_7 = [MG29_time, MG29(:,10)];
+	P_0_8 = [MG29_time, MG29(:,11)];
+	P_0_9 = [MG29_time, MG29(:,12)];
+	P_0_10 = [MG29_time, MG29(:,13)];
+	P_0_11 = [MG29_time, MG29(:,14)];
+	P_0_12 = [MG29_time, MG29(:,15)];
+	P_0_13 = [MG29_time, MG29(:,16)];
+	P_0_14 = [MG29_time, MG29(:,17)];
+
+
+	MG30_time = 1e-6*MG30(:,2);
+	P_0_15 = [MG30_time, MG30(:,3)];
+	P_0_16 = [MG30_time, MG30(:,4)];
+	P_0_17 = [MG30_time, MG30(:,5)];
+	P_0_18 = [MG30_time, MG30(:,6)];
+	P_0_19 = [MG30_time, MG30(:,7)];
+	P_0_20 = [MG30_time, MG30(:,8)];
+	P_0_21 = [MG30_time, MG30(:,9)];
+	P_0_22 = [MG30_time, MG30(:,10)];
+	P_0_23 = [MG30_time, MG30(:,11)];
+	P_1_0 = [MG30_time, MG30(:,12)];
+	P_1_1 = [MG30_time, MG30(:,13)];
+	P_1_2 = [MG30_time, MG30(:,14)];
+	P_1_3 = [MG30_time, MG30(:,15)];
+	P_1_4 = [MG30_time, MG30(:,16)];
+	P_1_5 = [MG30_time, MG30(:,17)];
+
+
+	MG31_time = 1e-6*MG31(:,2);
+	P_1_6 = [MG31_time, MG31(:,3)];
+	P_1_7 = [MG31_time, MG31(:,4)];
+	P_1_8 = [MG31_time, MG31(:,5)];
+	P_1_9 = [MG31_time, MG31(:,6)];
+	P_1_10 = [MG31_time, MG31(:,7)];
+	P_1_11 = [MG31_time, MG31(:,8)];
+	P_1_12 = [MG31_time, MG31(:,9)];
+	P_1_13 = [MG31_time, MG31(:,10)];
+	P_1_14 = [MG31_time, MG31(:,11)];
+	P_1_15 = [MG31_time, MG31(:,12)];
+	P_1_16 = [MG31_time, MG31(:,13)];
+	P_1_17 = [MG31_time, MG31(:,14)];
+	P_1_18 = [MG31_time, MG31(:,15)];
+	P_1_19 = [MG31_time, MG31(:,16)];
+	P_1_20 = [MG31_time, MG31(:,17)];
+
+
+	MG32_time = 1e-6*MG32(:,2);
+	P_1_21 = [MG32_time, MG32(:,3)];
+	P_1_22 = [MG32_time, MG32(:,4)];
+	P_1_23 = [MG32_time, MG32(:,5)];
+	P_2_0 = [MG32_time, MG32(:,6)];
+	P_2_1 = [MG32_time, MG32(:,7)];
+	P_2_2 = [MG32_time, MG32(:,8)];
+	P_2_3 = [MG32_time, MG32(:,9)];
+	P_2_4 = [MG32_time, MG32(:,10)];
+	P_2_5 = [MG32_time, MG32(:,11)];
+	P_2_6 = [MG32_time, MG32(:,12)];
+	P_2_7 = [MG32_time, MG32(:,13)];
+	P_2_8 = [MG32_time, MG32(:,14)];
+	P_2_9 = [MG32_time, MG32(:,15)];
+	P_2_10 = [MG32_time, MG32(:,16)];
+	P_2_11 = [MG32_time, MG32(:,17)];
+
+
+	MG33_time = 1e-6*MG33(:,2);
+	P_2_12 = [MG33_time, MG33(:,3)];
+	P_2_13 = [MG33_time, MG33(:,4)];
+	P_2_14 = [MG33_time, MG33(:,5)];
+	P_2_15 = [MG33_time, MG33(:,6)];
+	P_2_16 = [MG33_time, MG33(:,7)];
+	P_2_17 = [MG33_time, MG33(:,8)];
+	P_2_18 = [MG33_time, MG33(:,9)];
+	P_2_19 = [MG33_time, MG33(:,10)];
+	P_2_20 = [MG33_time, MG33(:,11)];
+	P_2_21 = [MG33_time, MG33(:,12)];
+	P_2_22 = [MG33_time, MG33(:,13)];
+	P_2_23 = [MG33_time, MG33(:,14)];
+	P_3_0 = [MG33_time, MG33(:,15)];
+	P_3_1 = [MG33_time, MG33(:,16)];
+	P_3_2 = [MG33_time, MG33(:,17)];
+
+
+	MG34_time = 1e-6*MG34(:,2);
+	P_3_3 = [MG34_time, MG34(:,3)];
+	P_3_4 = [MG34_time, MG34(:,4)];
+	P_3_5 = [MG34_time, MG34(:,5)];
+	P_3_6 = [MG34_time, MG34(:,6)];
+	P_3_7 = [MG34_time, MG34(:,7)];
+	P_3_8 = [MG34_time, MG34(:,8)];
+	P_3_9 = [MG34_time, MG34(:,9)];
+	P_3_10 = [MG34_time, MG34(:,10)];
+	P_3_11 = [MG34_time, MG34(:,11)];
+	P_3_12 = [MG34_time, MG34(:,12)];
+	P_3_13 = [MG34_time, MG34(:,13)];
+	P_3_14 = [MG34_time, MG34(:,14)];
+	P_3_15 = [MG34_time, MG34(:,15)];
+	P_3_16 = [MG34_time, MG34(:,16)];
+	P_3_17 = [MG34_time, MG34(:,17)];
+
+
+	MG35_time = 1e-6*MG35(:,2);
+	P_3_18 = [MG35_time, MG35(:,3)];
+	P_3_19 = [MG35_time, MG35(:,4)];
+	P_3_20 = [MG35_time, MG35(:,5)];
+	P_3_21 = [MG35_time, MG35(:,6)];
+	P_3_22 = [MG35_time, MG35(:,7)];
+	P_3_23 = [MG35_time, MG35(:,8)];
+	P_4_0 = [MG35_time, MG35(:,9)];
+	P_4_1 = [MG35_time, MG35(:,10)];
+	P_4_2 = [MG35_time, MG35(:,11)];
+	P_4_3 = [MG35_time, MG35(:,12)];
+	P_4_4 = [MG35_time, MG35(:,13)];
+	P_4_5 = [MG35_time, MG35(:,14)];
+	P_4_6 = [MG35_time, MG35(:,15)];
+	P_4_7 = [MG35_time, MG35(:,16)];
+	P_4_8 = [MG35_time, MG35(:,17)];
+
+
+	MG36_time = 1e-6*MG36(:,2);
+	P_4_9 = [MG36_time, MG36(:,3)];
+	P_4_10 = [MG36_time, MG36(:,4)];
+	P_4_11 = [MG36_time, MG36(:,5)];
+	P_4_12 = [MG36_time, MG36(:,6)];
+	P_4_13 = [MG36_time, MG36(:,7)];
+	P_4_14 = [MG36_time, MG36(:,8)];
+	P_4_15 = [MG36_time, MG36(:,9)];
+	P_4_16 = [MG36_time, MG36(:,10)];
+	P_4_17 = [MG36_time, MG36(:,11)];
+	P_4_18 = [MG36_time, MG36(:,12)];
+	P_4_19 = [MG36_time, MG36(:,13)];
+	P_4_20 = [MG36_time, MG36(:,14)];
+	P_4_21 = [MG36_time, MG36(:,15)];
+	P_4_22 = [MG36_time, MG36(:,16)];
+	P_4_23 = [MG36_time, MG36(:,17)];
+
+
+	MG37_time = 1e-6*MG37(:,2);
+	P_5_0 = [MG37_time, MG37(:,3)];
+	P_5_1 = [MG37_time, MG37(:,4)];
+	P_5_2 = [MG37_time, MG37(:,5)];
+	P_5_3 = [MG37_time, MG37(:,6)];
+	P_5_4 = [MG37_time, MG37(:,7)];
+	P_5_5 = [MG37_time, MG37(:,8)];
+	P_5_6 = [MG37_time, MG37(:,9)];
+	P_5_7 = [MG37_time, MG37(:,10)];
+	P_5_8 = [MG37_time, MG37(:,11)];
+	P_5_9 = [MG37_time, MG37(:,12)];
+	P_5_10 = [MG37_time, MG37(:,13)];
+	P_5_11 = [MG37_time, MG37(:,14)];
+	P_5_12 = [MG37_time, MG37(:,15)];
+	P_5_13 = [MG37_time, MG37(:,16)];
+	P_5_14 = [MG37_time, MG37(:,17)];
+
+
+	MG38_time = 1e-6*MG38(:,2);
+	P_5_15 = [MG38_time, MG38(:,3)];
+	P_5_16 = [MG38_time, MG38(:,4)];
+	P_5_17 = [MG38_time, MG38(:,5)];
+	P_5_18 = [MG38_time, MG38(:,6)];
+	P_5_19 = [MG38_time, MG38(:,7)];
+	P_5_20 = [MG38_time, MG38(:,8)];
+	P_5_21 = [MG38_time, MG38(:,9)];
+	P_5_22 = [MG38_time, MG38(:,10)];
+	P_5_23 = [MG38_time, MG38(:,11)];
+	P_6_0 = [MG38_time, MG38(:,12)];
+	P_6_1 = [MG38_time, MG38(:,13)];
+	P_6_2 = [MG38_time, MG38(:,14)];
+	P_6_3 = [MG38_time, MG38(:,15)];
+	P_6_4 = [MG38_time, MG38(:,16)];
+	P_6_5 = [MG38_time, MG38(:,17)];
+
+
+	MG39_time = 1e-6*MG39(:,2);
+	P_6_6 = [MG39_time, MG39(:,3)];
+	P_6_7 = [MG39_time, MG39(:,4)];
+	P_6_8 = [MG39_time, MG39(:,5)];
+	P_6_9 = [MG39_time, MG39(:,6)];
+	P_6_10 = [MG39_time, MG39(:,7)];
+	P_6_11 = [MG39_time, MG39(:,8)];
+	P_6_12 = [MG39_time, MG39(:,9)];
+	P_6_13 = [MG39_time, MG39(:,10)];
+	P_6_14 = [MG39_time, MG39(:,11)];
+	P_6_15 = [MG39_time, MG39(:,12)];
+	P_6_16 = [MG39_time, MG39(:,13)];
+	P_6_17 = [MG39_time, MG39(:,14)];
+	P_6_18 = [MG39_time, MG39(:,15)];
+	P_6_19 = [MG39_time, MG39(:,16)];
+	P_6_20 = [MG39_time, MG39(:,17)];
+
+
+	MG40_time = 1e-6*MG40(:,2);
+	P_6_21 = [MG40_time, MG40(:,3)];
+	P_6_22 = [MG40_time, MG40(:,4)];
+	P_6_23 = [MG40_time, MG40(:,5)];
+	P_7_0 = [MG40_time, MG40(:,6)];
+	P_7_1 = [MG40_time, MG40(:,7)];
+	P_7_2 = [MG40_time, MG40(:,8)];
+	P_7_3 = [MG40_time, MG40(:,9)];
+	P_7_4 = [MG40_time, MG40(:,10)];
+	P_7_5 = [MG40_time, MG40(:,11)];
+	P_7_6 = [MG40_time, MG40(:,12)];
+	P_7_7 = [MG40_time, MG40(:,13)];
+	P_7_8 = [MG40_time, MG40(:,14)];
+	P_7_9 = [MG40_time, MG40(:,15)];
+	P_7_10 = [MG40_time, MG40(:,16)];
+	P_7_11 = [MG40_time, MG40(:,17)];
+
+
+	MG41_time = 1e-6*MG41(:,2);
+	P_7_12 = [MG41_time, MG41(:,3)];
+	P_7_13 = [MG41_time, MG41(:,4)];
+	P_7_14 = [MG41_time, MG41(:,5)];
+	P_7_15 = [MG41_time, MG41(:,6)];
+	P_7_16 = [MG41_time, MG41(:,7)];
+	P_7_17 = [MG41_time, MG41(:,8)];
+	P_7_18 = [MG41_time, MG41(:,9)];
+	P_7_19 = [MG41_time, MG41(:,10)];
+	P_7_20 = [MG41_time, MG41(:,11)];
+	P_7_21 = [MG41_time, MG41(:,12)];
+	P_7_22 = [MG41_time, MG41(:,13)];
+	P_7_23 = [MG41_time, MG41(:,14)];
+	P_8_0 = [MG41_time, MG41(:,15)];
+	P_8_1 = [MG41_time, MG41(:,16)];
+	P_8_2 = [MG41_time, MG41(:,17)];
+
+
+	MG42_time = 1e-6*MG42(:,2);
+	P_8_3 = [MG42_time, MG42(:,3)];
+	P_8_4 = [MG42_time, MG42(:,4)];
+	P_8_5 = [MG42_time, MG42(:,5)];
+	P_8_6 = [MG42_time, MG42(:,6)];
+	P_8_7 = [MG42_time, MG42(:,7)];
+	P_8_8 = [MG42_time, MG42(:,8)];
+	P_8_9 = [MG42_time, MG42(:,9)];
+	P_8_10 = [MG42_time, MG42(:,10)];
+	P_8_11 = [MG42_time, MG42(:,11)];
+	P_8_12 = [MG42_time, MG42(:,12)];
+	P_8_13 = [MG42_time, MG42(:,13)];
+	P_8_14 = [MG42_time, MG42(:,14)];
+	P_8_15 = [MG42_time, MG42(:,15)];
+	P_8_16 = [MG42_time, MG42(:,16)];
+	P_8_17 = [MG42_time, MG42(:,17)];
+
+
+	MG43_time = 1e-6*MG43(:,2);
+	P_8_18 = [MG43_time, MG43(:,3)];
+	P_8_19 = [MG43_time, MG43(:,4)];
+	P_8_20 = [MG43_time, MG43(:,5)];
+	P_8_21 = [MG43_time, MG43(:,6)];
+	P_8_22 = [MG43_time, MG43(:,7)];
+	P_8_23 = [MG43_time, MG43(:,8)];
+	P_9_0 = [MG43_time, MG43(:,9)];
+	P_9_1 = [MG43_time, MG43(:,10)];
+	P_9_2 = [MG43_time, MG43(:,11)];
+	P_9_3 = [MG43_time, MG43(:,12)];
+	P_9_4 = [MG43_time, MG43(:,13)];
+	P_9_5 = [MG43_time, MG43(:,14)];
+	P_9_6 = [MG43_time, MG43(:,15)];
+	P_9_7 = [MG43_time, MG43(:,16)];
+	P_9_8 = [MG43_time, MG43(:,17)];
+
+
+	MG44_time = 1e-6*MG44(:,2);
+	P_9_9 = [MG44_time, MG44(:,3)];
+	P_9_10 = [MG44_time, MG44(:,4)];
+	P_9_11 = [MG44_time, MG44(:,5)];
+	P_9_12 = [MG44_time, MG44(:,6)];
+	P_9_13 = [MG44_time, MG44(:,7)];
+	P_9_14 = [MG44_time, MG44(:,8)];
+	P_9_15 = [MG44_time, MG44(:,9)];
+	P_9_16 = [MG44_time, MG44(:,10)];
+	P_9_17 = [MG44_time, MG44(:,11)];
+	P_9_18 = [MG44_time, MG44(:,12)];
+	P_9_19 = [MG44_time, MG44(:,13)];
+	P_9_20 = [MG44_time, MG44(:,14)];
+	P_9_21 = [MG44_time, MG44(:,15)];
+	P_9_22 = [MG44_time, MG44(:,16)];
+	P_9_23 = [MG44_time, MG44(:,17)];
+
+
+	MG45_time = 1e-6*MG45(:,2);
+	P_10_0 = [MG45_time, MG45(:,3)];
+	P_10_1 = [MG45_time, MG45(:,4)];
+	P_10_2 = [MG45_time, MG45(:,5)];
+	P_10_3 = [MG45_time, MG45(:,6)];
+	P_10_4 = [MG45_time, MG45(:,7)];
+	P_10_5 = [MG45_time, MG45(:,8)];
+	P_10_6 = [MG45_time, MG45(:,9)];
+	P_10_7 = [MG45_time, MG45(:,10)];
+	P_10_8 = [MG45_time, MG45(:,11)];
+	P_10_9 = [MG45_time, MG45(:,12)];
+	P_10_10 = [MG45_time, MG45(:,13)];
+	P_10_11 = [MG45_time, MG45(:,14)];
+	P_10_12 = [MG45_time, MG45(:,15)];
+	P_10_13 = [MG45_time, MG45(:,16)];
+	P_10_14 = [MG45_time, MG45(:,17)];
+
+
+	MG46_time = 1e-6*MG46(:,2);
+	P_10_15 = [MG46_time, MG46(:,3)];
+	P_10_16 = [MG46_time, MG46(:,4)];
+	P_10_17 = [MG46_time, MG46(:,5)];
+	P_10_18 = [MG46_time, MG46(:,6)];
+	P_10_19 = [MG46_time, MG46(:,7)];
+	P_10_20 = [MG46_time, MG46(:,8)];
+	P_10_21 = [MG46_time, MG46(:,9)];
+	P_10_22 = [MG46_time, MG46(:,10)];
+	P_10_23 = [MG46_time, MG46(:,11)];
+	P_11_0 = [MG46_time, MG46(:,12)];
+	P_11_1 = [MG46_time, MG46(:,13)];
+	P_11_2 = [MG46_time, MG46(:,14)];
+	P_11_3 = [MG46_time, MG46(:,15)];
+	P_11_4 = [MG46_time, MG46(:,16)];
+	P_11_5 = [MG46_time, MG46(:,17)];
+
+
+	MG47_time = 1e-6*MG47(:,2);
+	P_11_6 = [MG47_time, MG47(:,3)];
+	P_11_7 = [MG47_time, MG47(:,4)];
+	P_11_8 = [MG47_time, MG47(:,5)];
+	P_11_9 = [MG47_time, MG47(:,6)];
+	P_11_10 = [MG47_time, MG47(:,7)];
+	P_11_11 = [MG47_time, MG47(:,8)];
+	P_11_12 = [MG47_time, MG47(:,9)];
+	P_11_13 = [MG47_time, MG47(:,10)];
+	P_11_14 = [MG47_time, MG47(:,11)];
+	P_11_15 = [MG47_time, MG47(:,12)];
+	P_11_16 = [MG47_time, MG47(:,13)];
+	P_11_17 = [MG47_time, MG47(:,14)];
+	P_11_18 = [MG47_time, MG47(:,15)];
+	P_11_19 = [MG47_time, MG47(:,16)];
+	P_11_20 = [MG47_time, MG47(:,17)];
+
+
+	MG48_time = 1e-6*MG48(:,2);
+	P_11_21 = [MG48_time, MG48(:,3)];
+	P_11_22 = [MG48_time, MG48(:,4)];
+	P_11_23 = [MG48_time, MG48(:,5)];
+	P_12_0 = [MG48_time, MG48(:,6)];
+	P_12_1 = [MG48_time, MG48(:,7)];
+	P_12_2 = [MG48_time, MG48(:,8)];
+	P_12_3 = [MG48_time, MG48(:,9)];
+	P_12_4 = [MG48_time, MG48(:,10)];
+	P_12_5 = [MG48_time, MG48(:,11)];
+	P_12_6 = [MG48_time, MG48(:,12)];
+	P_12_7 = [MG48_time, MG48(:,13)];
+	P_12_8 = [MG48_time, MG48(:,14)];
+	P_12_9 = [MG48_time, MG48(:,15)];
+	P_12_10 = [MG48_time, MG48(:,16)];
+	P_12_11 = [MG48_time, MG48(:,17)];
+
+
+	MG49_time = 1e-6*MG49(:,2);
+	P_12_12 = [MG49_time, MG49(:,3)];
+	P_12_13 = [MG49_time, MG49(:,4)];
+	P_12_14 = [MG49_time, MG49(:,5)];
+	P_12_15 = [MG49_time, MG49(:,6)];
+	P_12_16 = [MG49_time, MG49(:,7)];
+	P_12_17 = [MG49_time, MG49(:,8)];
+	P_12_18 = [MG49_time, MG49(:,9)];
+	P_12_19 = [MG49_time, MG49(:,10)];
+	P_12_20 = [MG49_time, MG49(:,11)];
+	P_12_21 = [MG49_time, MG49(:,12)];
+	P_12_22 = [MG49_time, MG49(:,13)];
+	P_12_23 = [MG49_time, MG49(:,14)];
+	P_13_0 = [MG49_time, MG49(:,15)];
+	P_13_1 = [MG49_time, MG49(:,16)];
+	P_13_2 = [MG49_time, MG49(:,17)];
+
+
+	MG50_time = 1e-6*MG50(:,2);
+	P_13_3 = [MG50_time, MG50(:,3)];
+	P_13_4 = [MG50_time, MG50(:,4)];
+	P_13_5 = [MG50_time, MG50(:,5)];
+	P_13_6 = [MG50_time, MG50(:,6)];
+	P_13_7 = [MG50_time, MG50(:,7)];
+	P_13_8 = [MG50_time, MG50(:,8)];
+	P_13_9 = [MG50_time, MG50(:,9)];
+	P_13_10 = [MG50_time, MG50(:,10)];
+	P_13_11 = [MG50_time, MG50(:,11)];
+	P_13_12 = [MG50_time, MG50(:,12)];
+	P_13_13 = [MG50_time, MG50(:,13)];
+	P_13_14 = [MG50_time, MG50(:,14)];
+	P_13_15 = [MG50_time, MG50(:,15)];
+	P_13_16 = [MG50_time, MG50(:,16)];
+	P_13_17 = [MG50_time, MG50(:,17)];
+
+
+	MG51_time = 1e-6*MG51(:,2);
+	P_13_18 = [MG51_time, MG51(:,3)];
+	P_13_19 = [MG51_time, MG51(:,4)];
+	P_13_20 = [MG51_time, MG51(:,5)];
+	P_13_21 = [MG51_time, MG51(:,6)];
+	P_13_22 = [MG51_time, MG51(:,7)];
+	P_13_23 = [MG51_time, MG51(:,8)];
+	P_14_0 = [MG51_time, MG51(:,9)];
+	P_14_1 = [MG51_time, MG51(:,10)];
+	P_14_2 = [MG51_time, MG51(:,11)];
+	P_14_3 = [MG51_time, MG51(:,12)];
+	P_14_4 = [MG51_time, MG51(:,13)];
+	P_14_5 = [MG51_time, MG51(:,14)];
+	P_14_6 = [MG51_time, MG51(:,15)];
+	P_14_7 = [MG51_time, MG51(:,16)];
+	P_14_8 = [MG51_time, MG51(:,17)];
+
+
+	MG52_time = 1e-6*MG52(:,2);
+	P_14_9 = [MG52_time, MG52(:,3)];
+	P_14_10 = [MG52_time, MG52(:,4)];
+	P_14_11 = [MG52_time, MG52(:,5)];
+	P_14_12 = [MG52_time, MG52(:,6)];
+	P_14_13 = [MG52_time, MG52(:,7)];
+	P_14_14 = [MG52_time, MG52(:,8)];
+	P_14_15 = [MG52_time, MG52(:,9)];
+	P_14_16 = [MG52_time, MG52(:,10)];
+	P_14_17 = [MG52_time, MG52(:,11)];
+	P_14_18 = [MG52_time, MG52(:,12)];
+	P_14_19 = [MG52_time, MG52(:,13)];
+	P_14_20 = [MG52_time, MG52(:,14)];
+	P_14_21 = [MG52_time, MG52(:,15)];
+	P_14_22 = [MG52_time, MG52(:,16)];
+	P_14_23 = [MG52_time, MG52(:,17)];
+
+
+	MG53_time = 1e-6*MG53(:,2);
+	P_15_0 = [MG53_time, MG53(:,3)];
+	P_15_1 = [MG53_time, MG53(:,4)];
+	P_15_2 = [MG53_time, MG53(:,5)];
+	P_15_3 = [MG53_time, MG53(:,6)];
+	P_15_4 = [MG53_time, MG53(:,7)];
+	P_15_5 = [MG53_time, MG53(:,8)];
+	P_15_6 = [MG53_time, MG53(:,9)];
+	P_15_7 = [MG53_time, MG53(:,10)];
+	P_15_8 = [MG53_time, MG53(:,11)];
+	P_15_9 = [MG53_time, MG53(:,12)];
+	P_15_10 = [MG53_time, MG53(:,13)];
+	P_15_11 = [MG53_time, MG53(:,14)];
+	P_15_12 = [MG53_time, MG53(:,15)];
+	P_15_13 = [MG53_time, MG53(:,16)];
+	P_15_14 = [MG53_time, MG53(:,17)];
+
+
+	MG54_time = 1e-6*MG54(:,2);
+	P_15_15 = [MG54_time, MG54(:,3)];
+	P_15_16 = [MG54_time, MG54(:,4)];
+	P_15_17 = [MG54_time, MG54(:,5)];
+	P_15_18 = [MG54_time, MG54(:,6)];
+	P_15_19 = [MG54_time, MG54(:,7)];
+	P_15_20 = [MG54_time, MG54(:,8)];
+	P_15_21 = [MG54_time, MG54(:,9)];
+	P_15_22 = [MG54_time, MG54(:,10)];
+	P_15_23 = [MG54_time, MG54(:,11)];
+	P_16_0 = [MG54_time, MG54(:,12)];
+	P_16_1 = [MG54_time, MG54(:,13)];
+	P_16_2 = [MG54_time, MG54(:,14)];
+	P_16_3 = [MG54_time, MG54(:,15)];
+	P_16_4 = [MG54_time, MG54(:,16)];
+	P_16_5 = [MG54_time, MG54(:,17)];
+
+
+	MG55_time = 1e-6*MG55(:,2);
+	P_16_6 = [MG55_time, MG55(:,3)];
+	P_16_7 = [MG55_time, MG55(:,4)];
+	P_16_8 = [MG55_time, MG55(:,5)];
+	P_16_9 = [MG55_time, MG55(:,6)];
+	P_16_10 = [MG55_time, MG55(:,7)];
+	P_16_11 = [MG55_time, MG55(:,8)];
+	P_16_12 = [MG55_time, MG55(:,9)];
+	P_16_13 = [MG55_time, MG55(:,10)];
+	P_16_14 = [MG55_time, MG55(:,11)];
+	P_16_15 = [MG55_time, MG55(:,12)];
+	P_16_16 = [MG55_time, MG55(:,13)];
+	P_16_17 = [MG55_time, MG55(:,14)];
+	P_16_18 = [MG55_time, MG55(:,15)];
+	P_16_19 = [MG55_time, MG55(:,16)];
+	P_16_20 = [MG55_time, MG55(:,17)];
+
+
+	MG56_time = 1e-6*MG56(:,2);
+	P_16_21 = [MG56_time, MG56(:,3)];
+	P_16_22 = [MG56_time, MG56(:,4)];
+	P_16_23 = [MG56_time, MG56(:,5)];
+	P_17_0 = [MG56_time, MG56(:,6)];
+	P_17_1 = [MG56_time, MG56(:,7)];
+	P_17_2 = [MG56_time, MG56(:,8)];
+	P_17_3 = [MG56_time, MG56(:,9)];
+	P_17_4 = [MG56_time, MG56(:,10)];
+	P_17_5 = [MG56_time, MG56(:,11)];
+	P_17_6 = [MG56_time, MG56(:,12)];
+	P_17_7 = [MG56_time, MG56(:,13)];
+	P_17_8 = [MG56_time, MG56(:,14)];
+	P_17_9 = [MG56_time, MG56(:,15)];
+	P_17_10 = [MG56_time, MG56(:,16)];
+	P_17_11 = [MG56_time, MG56(:,17)];
+
+
+	MG57_time = 1e-6*MG57(:,2);
+	P_17_12 = [MG57_time, MG57(:,3)];
+	P_17_13 = [MG57_time, MG57(:,4)];
+	P_17_14 = [MG57_time, MG57(:,5)];
+	P_17_15 = [MG57_time, MG57(:,6)];
+	P_17_16 = [MG57_time, MG57(:,7)];
+	P_17_17 = [MG57_time, MG57(:,8)];
+	P_17_18 = [MG57_time, MG57(:,9)];
+	P_17_19 = [MG57_time, MG57(:,10)];
+	P_17_20 = [MG57_time, MG57(:,11)];
+	P_17_21 = [MG57_time, MG57(:,12)];
+	P_17_22 = [MG57_time, MG57(:,13)];
+	P_17_23 = [MG57_time, MG57(:,14)];
+	P_18_0 = [MG57_time, MG57(:,15)];
+	P_18_1 = [MG57_time, MG57(:,16)];
+	P_18_2 = [MG57_time, MG57(:,17)];
+
+
+	MG58_time = 1e-6*MG58(:,2);
+	P_18_3 = [MG58_time, MG58(:,3)];
+	P_18_4 = [MG58_time, MG58(:,4)];
+	P_18_5 = [MG58_time, MG58(:,5)];
+	P_18_6 = [MG58_time, MG58(:,6)];
+	P_18_7 = [MG58_time, MG58(:,7)];
+	P_18_8 = [MG58_time, MG58(:,8)];
+	P_18_9 = [MG58_time, MG58(:,9)];
+	P_18_10 = [MG58_time, MG58(:,10)];
+	P_18_11 = [MG58_time, MG58(:,11)];
+	P_18_12 = [MG58_time, MG58(:,12)];
+	P_18_13 = [MG58_time, MG58(:,13)];
+	P_18_14 = [MG58_time, MG58(:,14)];
+	P_18_15 = [MG58_time, MG58(:,15)];
+	P_18_16 = [MG58_time, MG58(:,16)];
+	P_18_17 = [MG58_time, MG58(:,17)];
+
+
+	MG59_time = 1e-6*MG59(:,2);
+	P_18_18 = [MG59_time, MG59(:,3)];
+	P_18_19 = [MG59_time, MG59(:,4)];
+	P_18_20 = [MG59_time, MG59(:,5)];
+	P_18_21 = [MG59_time, MG59(:,6)];
+	P_18_22 = [MG59_time, MG59(:,7)];
+	P_18_23 = [MG59_time, MG59(:,8)];
+	P_19_0 = [MG59_time, MG59(:,9)];
+	P_19_1 = [MG59_time, MG59(:,10)];
+	P_19_2 = [MG59_time, MG59(:,11)];
+	P_19_3 = [MG59_time, MG59(:,12)];
+	P_19_4 = [MG59_time, MG59(:,13)];
+	P_19_5 = [MG59_time, MG59(:,14)];
+	P_19_6 = [MG59_time, MG59(:,15)];
+	P_19_7 = [MG59_time, MG59(:,16)];
+	P_19_8 = [MG59_time, MG59(:,17)];
+
+
+	MG60_time = 1e-6*MG60(:,2);
+	P_19_9 = [MG60_time, MG60(:,3)];
+	P_19_10 = [MG60_time, MG60(:,4)];
+	P_19_11 = [MG60_time, MG60(:,5)];
+	P_19_12 = [MG60_time, MG60(:,6)];
+	P_19_13 = [MG60_time, MG60(:,7)];
+	P_19_14 = [MG60_time, MG60(:,8)];
+	P_19_15 = [MG60_time, MG60(:,9)];
+	P_19_16 = [MG60_time, MG60(:,10)];
+	P_19_17 = [MG60_time, MG60(:,11)];
+	P_19_18 = [MG60_time, MG60(:,12)];
+	P_19_19 = [MG60_time, MG60(:,13)];
+	P_19_20 = [MG60_time, MG60(:,14)];
+	P_19_21 = [MG60_time, MG60(:,15)];
+	P_19_22 = [MG60_time, MG60(:,16)];
+	P_19_23 = [MG60_time, MG60(:,17)];
+
+
+	MG61_time = 1e-6*MG61(:,2);
+	P_20_0 = [MG61_time, MG61(:,3)];
+	P_20_1 = [MG61_time, MG61(:,4)];
+	P_20_2 = [MG61_time, MG61(:,5)];
+	P_20_3 = [MG61_time, MG61(:,6)];
+	P_20_4 = [MG61_time, MG61(:,7)];
+	P_20_5 = [MG61_time, MG61(:,8)];
+	P_20_6 = [MG61_time, MG61(:,9)];
+	P_20_7 = [MG61_time, MG61(:,10)];
+	P_20_8 = [MG61_time, MG61(:,11)];
+	P_20_9 = [MG61_time, MG61(:,12)];
+	P_20_10 = [MG61_time, MG61(:,13)];
+	P_20_11 = [MG61_time, MG61(:,14)];
+	P_20_12 = [MG61_time, MG61(:,15)];
+	P_20_13 = [MG61_time, MG61(:,16)];
+	P_20_14 = [MG61_time, MG61(:,17)];
+
+
+	MG62_time = 1e-6*MG62(:,2);
+	P_20_15 = [MG62_time, MG62(:,3)];
+	P_20_16 = [MG62_time, MG62(:,4)];
+	P_20_17 = [MG62_time, MG62(:,5)];
+	P_20_18 = [MG62_time, MG62(:,6)];
+	P_20_19 = [MG62_time, MG62(:,7)];
+	P_20_20 = [MG62_time, MG62(:,8)];
+	P_20_21 = [MG62_time, MG62(:,9)];
+	P_20_22 = [MG62_time, MG62(:,10)];
+	P_20_23 = [MG62_time, MG62(:,11)];
+	P_21_0 = [MG62_time, MG62(:,12)];
+	P_21_1 = [MG62_time, MG62(:,13)];
+	P_21_2 = [MG62_time, MG62(:,14)];
+	P_21_3 = [MG62_time, MG62(:,15)];
+	P_21_4 = [MG62_time, MG62(:,16)];
+	P_21_5 = [MG62_time, MG62(:,17)];
+
+
+	MG63_time = 1e-6*MG63(:,2);
+	P_21_6 = [MG63_time, MG63(:,3)];
+	P_21_7 = [MG63_time, MG63(:,4)];
+	P_21_8 = [MG63_time, MG63(:,5)];
+	P_21_9 = [MG63_time, MG63(:,6)];
+	P_21_10 = [MG63_time, MG63(:,7)];
+	P_21_11 = [MG63_time, MG63(:,8)];
+	P_21_12 = [MG63_time, MG63(:,9)];
+	P_21_13 = [MG63_time, MG63(:,10)];
+	P_21_14 = [MG63_time, MG63(:,11)];
+	P_21_15 = [MG63_time, MG63(:,12)];
+	P_21_16 = [MG63_time, MG63(:,13)];
+	P_21_17 = [MG63_time, MG63(:,14)];
+	P_21_18 = [MG63_time, MG63(:,15)];
+	P_21_19 = [MG63_time, MG63(:,16)];
+	P_21_20 = [MG63_time, MG63(:,17)];
+
+
+	MG64_time = 1e-6*MG64(:,2);
+	P_21_21 = [MG64_time, MG64(:,3)];
+	P_21_22 = [MG64_time, MG64(:,4)];
+	P_21_23 = [MG64_time, MG64(:,5)];
+	P_22_0 = [MG64_time, MG64(:,6)];
+	P_22_1 = [MG64_time, MG64(:,7)];
+	P_22_2 = [MG64_time, MG64(:,8)];
+	P_22_3 = [MG64_time, MG64(:,9)];
+	P_22_4 = [MG64_time, MG64(:,10)];
+	P_22_5 = [MG64_time, MG64(:,11)];
+	P_22_6 = [MG64_time, MG64(:,12)];
+	P_22_7 = [MG64_time, MG64(:,13)];
+	P_22_8 = [MG64_time, MG64(:,14)];
+	P_22_9 = [MG64_time, MG64(:,15)];
+	P_22_10 = [MG64_time, MG64(:,16)];
+	P_22_11 = [MG64_time, MG64(:,17)];
+
+
+	MG65_time = 1e-6*MG65(:,2);
+	P_22_12 = [MG65_time, MG65(:,3)];
+	P_22_13 = [MG65_time, MG65(:,4)];
+	P_22_14 = [MG65_time, MG65(:,5)];
+	P_22_15 = [MG65_time, MG65(:,6)];
+	P_22_16 = [MG65_time, MG65(:,7)];
+	P_22_17 = [MG65_time, MG65(:,8)];
+	P_22_18 = [MG65_time, MG65(:,9)];
+	P_22_19 = [MG65_time, MG65(:,10)];
+	P_22_20 = [MG65_time, MG65(:,11)];
+	P_22_21 = [MG65_time, MG65(:,12)];
+	P_22_22 = [MG65_time, MG65(:,13)];
+	P_22_23 = [MG65_time, MG65(:,14)];
+	P_23_0 = [MG65_time, MG65(:,15)];
+	P_23_1 = [MG65_time, MG65(:,16)];
+	P_23_2 = [MG65_time, MG65(:,17)];
+
+
+	MG66_time = 1e-6*MG66(:,2);
+	P_23_3 = [MG66_time, MG66(:,3)];
+	P_23_4 = [MG66_time, MG66(:,4)];
+	P_23_5 = [MG66_time, MG66(:,5)];
+	P_23_6 = [MG66_time, MG66(:,6)];
+	P_23_7 = [MG66_time, MG66(:,7)];
+	P_23_8 = [MG66_time, MG66(:,8)];
+	P_23_9 = [MG66_time, MG66(:,9)];
+	P_23_10 = [MG66_time, MG66(:,10)];
+	P_23_11 = [MG66_time, MG66(:,11)];
+	P_23_12 = [MG66_time, MG66(:,12)];
+	P_23_13 = [MG66_time, MG66(:,13)];
+	P_23_14 = [MG66_time, MG66(:,14)];
+	P_23_15 = [MG66_time, MG66(:,15)];
+	P_23_16 = [MG66_time, MG66(:,16)];
+	P_23_17 = [MG66_time, MG66(:,17)];
+
+
+	MG67_time = 1e-6*MG67(:,2);
+	P_23_18 = [MG67_time, MG67(:,3)];
+	P_23_19 = [MG67_time, MG67(:,4)];
+	P_23_20 = [MG67_time, MG67(:,5)];
+	P_23_21 = [MG67_time, MG67(:,6)];
+	P_23_22 = [MG67_time, MG67(:,7)];
+	P_23_23 = [MG67_time, MG67(:,8)];
+
+

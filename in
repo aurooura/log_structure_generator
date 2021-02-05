@@ -1,0 +1,6 @@
+F700 F700
+FuseMagnetometer700
+int auxH[0]
+int auxH[1]
+int auxH[2]
+END

@@ -1,0 +1,182 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_AD_430 1
+#define AUX_LOG_AD_430 AP::logger().Write_alignMagStateDeclination430(\
+	log_faultStatus_bad_xmag, \
+	log_faultStatus_bad_ymag, \
+	log_faultStatus_bad_zmag, \
+	log_faultStatus_bad_airspeed, \
+	log_faultStatus_bad_sideslip, \
+	log_faultStatus_bad_nvel, \
+	log_faultStatus_bad_evel, \
+	log_faultStatus_bad_dvel, \
+	log_faultStatus_bad_npos, \
+	log_faultStatus_bad_epos, \
+	log_faultStatus_bad_dpos, \
+	log_faultStatus_bad_yaw, \
+	log_faultStatus_bad_decl)
+
+
+#define ACTIVE_LOG_AD_431 1
+#define AUX_LOG_AD_431 AP::logger().Write_alignMagStateDeclination431(\
+	log_faultStatus_bad_xflow, \
+	log_faultStatus_bad_yflow, \
+	log_faultStatus_bad_rngbcn)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	uint8_t log_faultStatus_bad_xmag = faultStatus.bad_xmag;
+	uint8_t log_faultStatus_bad_ymag = faultStatus.bad_ymag;
+	uint8_t log_faultStatus_bad_zmag = faultStatus.bad_zmag;
+	uint8_t log_faultStatus_bad_airspeed = faultStatus.bad_airspeed;
+	uint8_t log_faultStatus_bad_sideslip = faultStatus.bad_sideslip;
+	uint8_t log_faultStatus_bad_nvel = faultStatus.bad_nvel;
+	uint8_t log_faultStatus_bad_evel = faultStatus.bad_evel;
+	uint8_t log_faultStatus_bad_dvel = faultStatus.bad_dvel;
+	uint8_t log_faultStatus_bad_npos = faultStatus.bad_npos;
+	uint8_t log_faultStatus_bad_epos = faultStatus.bad_epos;
+	uint8_t log_faultStatus_bad_dpos = faultStatus.bad_dpos;
+	uint8_t log_faultStatus_bad_yaw = faultStatus.bad_yaw;
+	uint8_t log_faultStatus_bad_decl = faultStatus.bad_decl;
+	AUX_LOG_AD_430;
+
+	uint8_t log_faultStatus_bad_xflow = faultStatus.bad_xflow;
+	uint8_t log_faultStatus_bad_yflow = faultStatus.bad_yflow;
+	uint8_t log_faultStatus_bad_rngbcn = faultStatus.bad_rngbcn;
+	AUX_LOG_AD_431;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_AD_430_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_AD_430), "A430",\
+	"QBBBBBBBBBBBBB","t,1,2,3,4,5,6,7,8,9,10,11,12,13","s-------------","F0000000000000"}
+
+struct PACKED log_AD_430 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	uint8_t faultStatus_bad_xmag;
+	uint8_t faultStatus_bad_ymag;
+	uint8_t faultStatus_bad_zmag;
+	uint8_t faultStatus_bad_airspeed;
+	uint8_t faultStatus_bad_sideslip;
+	uint8_t faultStatus_bad_nvel;
+	uint8_t faultStatus_bad_evel;
+	uint8_t faultStatus_bad_dvel;
+	uint8_t faultStatus_bad_npos;
+	uint8_t faultStatus_bad_epos;
+	uint8_t faultStatus_bad_dpos;
+	uint8_t faultStatus_bad_yaw;
+	uint8_t faultStatus_bad_decl;
+};
+
+#define LOG_AD_431_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_AD_431), "A431",\
+	"QBBB","t,1,2,3","s---","F000"}
+
+struct PACKED log_AD_431 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	uint8_t faultStatus_bad_xflow;
+	uint8_t faultStatus_bad_yflow;
+	uint8_t faultStatus_bad_rngbcn;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_alignMagStateDeclination430(uint8_t faultStatus_bad_xmag,uint8_t faultStatus_bad_ymag,uint8_t faultStatus_bad_zmag,uint8_t faultStatus_bad_airspeed,uint8_t faultStatus_bad_sideslip,uint8_t faultStatus_bad_nvel,uint8_t faultStatus_bad_evel,uint8_t faultStatus_bad_dvel,uint8_t faultStatus_bad_npos,uint8_t faultStatus_bad_epos,uint8_t faultStatus_bad_dpos,uint8_t faultStatus_bad_yaw,uint8_t faultStatus_bad_decl);
+
+
+void Write_alignMagStateDeclination431(uint8_t faultStatus_bad_xflow,uint8_t faultStatus_bad_yflow,uint8_t faultStatus_bad_rngbcn);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_AD_430,
+LOG_AD_431,
+LOG_AD_430_BASE(LOG_AD_430),\
+LOG_AD_431_BASE(LOG_AD_431),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_alignMagStateDeclination430(
+	uint8_t faultStatus_bad_xmag,
+	uint8_t faultStatus_bad_ymag,
+	uint8_t faultStatus_bad_zmag,
+	uint8_t faultStatus_bad_airspeed,
+	uint8_t faultStatus_bad_sideslip,
+	uint8_t faultStatus_bad_nvel,
+	uint8_t faultStatus_bad_evel,
+	uint8_t faultStatus_bad_dvel,
+	uint8_t faultStatus_bad_npos,
+	uint8_t faultStatus_bad_epos,
+	uint8_t faultStatus_bad_dpos,
+	uint8_t faultStatus_bad_yaw,
+	uint8_t faultStatus_bad_decl)
+{
+	struct log_AD_430 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_AD_430),
+		time_us : AP_HAL::micros64(),
+		faultStatus_bad_xmag : faultStatus_bad_xmag,
+		faultStatus_bad_ymag : faultStatus_bad_ymag,
+		faultStatus_bad_zmag : faultStatus_bad_zmag,
+		faultStatus_bad_airspeed : faultStatus_bad_airspeed,
+		faultStatus_bad_sideslip : faultStatus_bad_sideslip,
+		faultStatus_bad_nvel : faultStatus_bad_nvel,
+		faultStatus_bad_evel : faultStatus_bad_evel,
+		faultStatus_bad_dvel : faultStatus_bad_dvel,
+		faultStatus_bad_npos : faultStatus_bad_npos,
+		faultStatus_bad_epos : faultStatus_bad_epos,
+		faultStatus_bad_dpos : faultStatus_bad_dpos,
+		faultStatus_bad_yaw : faultStatus_bad_yaw,
+		faultStatus_bad_decl : faultStatus_bad_decl
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_alignMagStateDeclination431(
+	uint8_t faultStatus_bad_xflow,
+	uint8_t faultStatus_bad_yflow,
+	uint8_t faultStatus_bad_rngbcn)
+{
+	struct log_AD_431 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_AD_431),
+		time_us : AP_HAL::micros64(),
+		faultStatus_bad_xflow : faultStatus_bad_xflow,
+		faultStatus_bad_yflow : faultStatus_bad_yflow,
+		faultStatus_bad_rngbcn : faultStatus_bad_rngbcn
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	A430_time = 1e-6*A430(:,2);
+	faultStatus_bad_xmag = [A430_time, A430(:,3)];
+	faultStatus_bad_ymag = [A430_time, A430(:,4)];
+	faultStatus_bad_zmag = [A430_time, A430(:,5)];
+	faultStatus_bad_airspeed = [A430_time, A430(:,6)];
+	faultStatus_bad_sideslip = [A430_time, A430(:,7)];
+	faultStatus_bad_nvel = [A430_time, A430(:,8)];
+	faultStatus_bad_evel = [A430_time, A430(:,9)];
+	faultStatus_bad_dvel = [A430_time, A430(:,10)];
+	faultStatus_bad_npos = [A430_time, A430(:,11)];
+	faultStatus_bad_epos = [A430_time, A430(:,12)];
+	faultStatus_bad_dpos = [A430_time, A430(:,13)];
+	faultStatus_bad_yaw = [A430_time, A430(:,14)];
+	faultStatus_bad_decl = [A430_time, A430(:,15)];
+
+
+	A431_time = 1e-6*A431(:,2);
+	faultStatus_bad_xflow = [A431_time, A431(:,3)];
+	faultStatus_bad_yflow = [A431_time, A431(:,4)];
+	faultStatus_bad_rngbcn = [A431_time, A431(:,5)];
+
+

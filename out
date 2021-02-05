@@ -1,0 +1,72 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_F700 1
+#define AUX_LOG_F700 AP::logger().Write_FuseMagnetometer700(\
+	log_auxH_0, \
+	log_auxH_1, \
+	log_auxH_2)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	int32_t log_auxH_0 = auxH[0];
+	int32_t log_auxH_1 = auxH[1];
+	int32_t log_auxH_2 = auxH[2];
+	AUX_LOG_F700;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_F700_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_F700), "F700",\
+	"Qiii","t,1,2,3","s---","F000"}
+
+struct PACKED log_F700 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	int32_t auxH_0;
+	int32_t auxH_1;
+	int32_t auxH_2;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_FuseMagnetometer700(int32_t auxH_0,int32_t auxH_1,int32_t auxH_2);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_F700,
+LOG_F700_BASE(LOG_F700),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_FuseMagnetometer700(
+	int32_t auxH_0,
+	int32_t auxH_1,
+	int32_t auxH_2)
+{
+	struct log_F700 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_F700),
+		time_us : AP_HAL::micros64(),
+		auxH_0 : auxH_0,
+		auxH_1 : auxH_1,
+		auxH_2 : auxH_2
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	F700_time = 1e-6*F700(:,2);
+	auxH_0 = [F700_time, F700(:,3)];
+	auxH_1 = [F700_time, F700(:,4)];
+	auxH_2 = [F700_time, F700(:,5)];
+
+

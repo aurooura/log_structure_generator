@@ -1,0 +1,22 @@
+AD_430 A430
+alignMagStateDeclination430
+bool faultStatus.bad_xmag
+bool faultStatus.bad_ymag
+bool faultStatus.bad_zmag
+bool faultStatus.bad_airspeed
+bool faultStatus.bad_sideslip
+bool faultStatus.bad_nvel
+bool faultStatus.bad_evel
+bool faultStatus.bad_dvel
+bool faultStatus.bad_npos
+bool faultStatus.bad_epos
+bool faultStatus.bad_dpos
+bool faultStatus.bad_yaw
+bool faultStatus.bad_decl
+END
+AD_431 A431
+alignMagStateDeclination431
+bool faultStatus.bad_xflow
+bool faultStatus.bad_yflow
+bool faultStatus.bad_rngbcn
+END

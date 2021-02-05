@@ -1,0 +1,280 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_MG_70 1
+#define AUX_LOG_MG_70 AP::logger().Write_SelectMagFusion52(\
+	log_sumP, \
+	log_sumStates, \
+	log_faultStatus_bad_xmag, \
+	log_faultStatus_bad_ymag, \
+	log_faultStatus_bad_zmag, \
+	log_faultStatus_bad_xmag_out, \
+	log_faultStatus_bad_ymag_out, \
+	log_faultStatus_bad_zmag_out)
+
+
+#define ACTIVE_LOG_MG_71 1
+#define AUX_LOG_MG_71 AP::logger().Write_FuseMagnetometer(\
+	log_magDataDelayed_mag_0, \
+	log_magDataDelayed_mag_1, \
+	log_magDataDelayed_mag_2, \
+	log_delAngCorrected_length​, \
+	log_imuDataDelayed_delAngDT​, \
+	log_varInnovMag_0, \
+	log_varInnovMag_1, \
+	log_varInnovMag_2, \
+	log_stateIndexLim, \
+	log_magHealth, \
+	log_inhibitWindStates, \
+	log_inhibitMagStates, \
+	log_healthyFusion, \
+	log_dtEkfAvg, \
+	log_PV_AidingMode)
+
+
+#define ACTIVE_LOG_MG_72 1
+#define AUX_LOG_MG_72 AP::logger().Write_FuseMagnetometer1(\
+	log_have_table_earth_field, \
+	log_table_earth_field_ga_x, \
+	log_table_earth_field_ga_y, \
+	log_table_earth_field_ga_z)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	float log_sumP = sumP;
+	float log_sumStates = sumStates;
+	uint8_t log_faultStatus_bad_xmag = faultStatus.bad_xmag;
+	uint8_t log_faultStatus_bad_ymag = faultStatus.bad_ymag;
+	uint8_t log_faultStatus_bad_zmag = faultStatus.bad_zmag;
+	uint8_t log_faultStatus_bad_xmag_out = faultStatus.bad_xmag_out;
+	uint8_t log_faultStatus_bad_ymag_out = faultStatus.bad_ymag_out;
+	uint8_t log_faultStatus_bad_zmag_out = faultStatus.bad_zmag_out;
+	AUX_LOG_MG_70;
+
+	float log_magDataDelayed_mag_0 = magDataDelayed.mag[0];
+	float log_magDataDelayed_mag_1 = magDataDelayed.mag[1];
+	float log_magDataDelayed_mag_2 = magDataDelayed.mag[2];
+	float log_delAngCorrected_length​ = delAngCorrected.length​();
+	float log_imuDataDelayed_delAngDT​ = imuDataDelayed.delAngDT​;
+	float log_varInnovMag_0 = varInnovMag[0];
+	float log_varInnovMag_1 = varInnovMag[1];
+	float log_varInnovMag_2 = varInnovMag[2];
+	int32_t log_stateIndexLim = stateIndexLim;
+	uint8_t log_magHealth = magHealth;
+	uint8_t log_inhibitWindStates = inhibitWindStates;
+	uint8_t log_inhibitMagStates = inhibitMagStates;
+	uint8_t log_healthyFusion = healthyFusion;
+	float log_dtEkfAvg = dtEkfAvg;
+	int32_t log_PV_AidingMode = PV_AidingMode;
+	AUX_LOG_MG_71;
+
+	uint8_t log_have_table_earth_field = have_table_earth_field;
+	float log_table_earth_field_ga_x = table_earth_field_ga.x;
+	float log_table_earth_field_ga_y = table_earth_field_ga.y;
+	float log_table_earth_field_ga_z = table_earth_field_ga.z;
+	AUX_LOG_MG_72;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_MG_70_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MG_70), "MG70",\
+	"QffBBBBBB","t,1,2,3,4,5,6,7,8","s--------","F00000000"}
+
+struct PACKED log_MG_70 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float sumP;
+	float sumStates;
+	uint8_t faultStatus_bad_xmag;
+	uint8_t faultStatus_bad_ymag;
+	uint8_t faultStatus_bad_zmag;
+	uint8_t faultStatus_bad_xmag_out;
+	uint8_t faultStatus_bad_ymag_out;
+	uint8_t faultStatus_bad_zmag_out;
+};
+
+#define LOG_MG_71_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MG_71), "MG71",\
+	"QffffffffiBBBBfi","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_MG_71 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float magDataDelayed_mag_0;
+	float magDataDelayed_mag_1;
+	float magDataDelayed_mag_2;
+	float delAngCorrected_length​;
+	float imuDataDelayed_delAngDT​;
+	float varInnovMag_0;
+	float varInnovMag_1;
+	float varInnovMag_2;
+	int32_t stateIndexLim;
+	uint8_t magHealth;
+	uint8_t inhibitWindStates;
+	uint8_t inhibitMagStates;
+	uint8_t healthyFusion;
+	float dtEkfAvg;
+	int32_t PV_AidingMode;
+};
+
+#define LOG_MG_72_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_MG_72), "MG72",\
+	"QBfff","t,1,2,3,4","s----","F0000"}
+
+struct PACKED log_MG_72 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	uint8_t have_table_earth_field;
+	float table_earth_field_ga_x;
+	float table_earth_field_ga_y;
+	float table_earth_field_ga_z;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_SelectMagFusion52(float sumP,float sumStates,uint8_t faultStatus_bad_xmag,uint8_t faultStatus_bad_ymag,uint8_t faultStatus_bad_zmag,uint8_t faultStatus_bad_xmag_out,uint8_t faultStatus_bad_ymag_out,uint8_t faultStatus_bad_zmag_out);
+
+
+void Write_FuseMagnetometer(float magDataDelayed_mag_0,float magDataDelayed_mag_1,float magDataDelayed_mag_2,float delAngCorrected_length​,float imuDataDelayed_delAngDT​,float varInnovMag_0,float varInnovMag_1,float varInnovMag_2,int32_t stateIndexLim,uint8_t magHealth,uint8_t inhibitWindStates,uint8_t inhibitMagStates,uint8_t healthyFusion,float dtEkfAvg,int32_t PV_AidingMode);
+
+
+void Write_FuseMagnetometer1(uint8_t have_table_earth_field,float table_earth_field_ga_x,float table_earth_field_ga_y,float table_earth_field_ga_z);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_MG_70,
+LOG_MG_71,
+LOG_MG_72,
+LOG_MG_70_BASE(LOG_MG_70),\
+LOG_MG_71_BASE(LOG_MG_71),\
+LOG_MG_72_BASE(LOG_MG_72),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_SelectMagFusion52(
+	float sumP,
+	float sumStates,
+	uint8_t faultStatus_bad_xmag,
+	uint8_t faultStatus_bad_ymag,
+	uint8_t faultStatus_bad_zmag,
+	uint8_t faultStatus_bad_xmag_out,
+	uint8_t faultStatus_bad_ymag_out,
+	uint8_t faultStatus_bad_zmag_out)
+{
+	struct log_MG_70 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MG_70),
+		time_us : AP_HAL::micros64(),
+		sumP : sumP,
+		sumStates : sumStates,
+		faultStatus_bad_xmag : faultStatus_bad_xmag,
+		faultStatus_bad_ymag : faultStatus_bad_ymag,
+		faultStatus_bad_zmag : faultStatus_bad_zmag,
+		faultStatus_bad_xmag_out : faultStatus_bad_xmag_out,
+		faultStatus_bad_ymag_out : faultStatus_bad_ymag_out,
+		faultStatus_bad_zmag_out : faultStatus_bad_zmag_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_FuseMagnetometer(
+	float magDataDelayed_mag_0,
+	float magDataDelayed_mag_1,
+	float magDataDelayed_mag_2,
+	float delAngCorrected_length​,
+	float imuDataDelayed_delAngDT​,
+	float varInnovMag_0,
+	float varInnovMag_1,
+	float varInnovMag_2,
+	int32_t stateIndexLim,
+	uint8_t magHealth,
+	uint8_t inhibitWindStates,
+	uint8_t inhibitMagStates,
+	uint8_t healthyFusion,
+	float dtEkfAvg,
+	int32_t PV_AidingMode)
+{
+	struct log_MG_71 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MG_71),
+		time_us : AP_HAL::micros64(),
+		magDataDelayed_mag_0 : magDataDelayed_mag_0,
+		magDataDelayed_mag_1 : magDataDelayed_mag_1,
+		magDataDelayed_mag_2 : magDataDelayed_mag_2,
+		delAngCorrected_length​ : delAngCorrected_length​,
+		imuDataDelayed_delAngDT​ : imuDataDelayed_delAngDT​,
+		varInnovMag_0 : varInnovMag_0,
+		varInnovMag_1 : varInnovMag_1,
+		varInnovMag_2 : varInnovMag_2,
+		stateIndexLim : stateIndexLim,
+		magHealth : magHealth,
+		inhibitWindStates : inhibitWindStates,
+		inhibitMagStates : inhibitMagStates,
+		healthyFusion : healthyFusion,
+		dtEkfAvg : dtEkfAvg,
+		PV_AidingMode : PV_AidingMode
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_FuseMagnetometer1(
+	uint8_t have_table_earth_field,
+	float table_earth_field_ga_x,
+	float table_earth_field_ga_y,
+	float table_earth_field_ga_z)
+{
+	struct log_MG_72 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_MG_72),
+		time_us : AP_HAL::micros64(),
+		have_table_earth_field : have_table_earth_field,
+		table_earth_field_ga_x : table_earth_field_ga_x,
+		table_earth_field_ga_y : table_earth_field_ga_y,
+		table_earth_field_ga_z : table_earth_field_ga_z
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	MG70_time = 1e-6*MG70(:,2);
+	sumP = [MG70_time, MG70(:,3)];
+	sumStates = [MG70_time, MG70(:,4)];
+	faultStatus_bad_xmag = [MG70_time, MG70(:,5)];
+	faultStatus_bad_ymag = [MG70_time, MG70(:,6)];
+	faultStatus_bad_zmag = [MG70_time, MG70(:,7)];
+	faultStatus_bad_xmag_out = [MG70_time, MG70(:,8)];
+	faultStatus_bad_ymag_out = [MG70_time, MG70(:,9)];
+	faultStatus_bad_zmag_out = [MG70_time, MG70(:,10)];
+
+
+	MG71_time = 1e-6*MG71(:,2);
+	magDataDelayed_mag_0 = [MG71_time, MG71(:,3)];
+	magDataDelayed_mag_1 = [MG71_time, MG71(:,4)];
+	magDataDelayed_mag_2 = [MG71_time, MG71(:,5)];
+	delAngCorrected_length​ = [MG71_time, MG71(:,6)];
+	imuDataDelayed_delAngDT​ = [MG71_time, MG71(:,7)];
+	varInnovMag_0 = [MG71_time, MG71(:,8)];
+	varInnovMag_1 = [MG71_time, MG71(:,9)];
+	varInnovMag_2 = [MG71_time, MG71(:,10)];
+	stateIndexLim = [MG71_time, MG71(:,11)];
+	magHealth = [MG71_time, MG71(:,12)];
+	inhibitWindStates = [MG71_time, MG71(:,13)];
+	inhibitMagStates = [MG71_time, MG71(:,14)];
+	healthyFusion = [MG71_time, MG71(:,15)];
+	dtEkfAvg = [MG71_time, MG71(:,16)];
+	PV_AidingMode = [MG71_time, MG71(:,17)];
+
+
+	MG72_time = 1e-6*MG72(:,2);
+	have_table_earth_field = [MG72_time, MG72(:,3)];
+	table_earth_field_ga_x = [MG72_time, MG72(:,4)];
+	table_earth_field_ga_y = [MG72_time, MG72(:,5)];
+	table_earth_field_ga_z = [MG72_time, MG72(:,6)];
+
+
