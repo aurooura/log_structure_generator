@@ -1,0 +1,12 @@
+C700 C700
+controlMagYawReset700
+float prevQuatMagReset.q1
+float prevQuatMagReset.q2
+float prevQuatMagReset.q3
+float prevQuatMagReset.q4
+bool initialResetRequest
+float prevQuat.q1
+float prevQuat.q2
+float prevQuat.q3
+float prevQuat.q4
+END

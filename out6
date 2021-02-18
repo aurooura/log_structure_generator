@@ -1,0 +1,108 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_C700 1
+#define AUX_LOG_C700 AP::logger().Write_controlMagYawReset700(\
+	log_prevQuatMagReset_q1, \
+	log_prevQuatMagReset_q2, \
+	log_prevQuatMagReset_q3, \
+	log_prevQuatMagReset_q4, \
+	log_initialResetRequest, \
+	log_prevQuat_q1, \
+	log_prevQuat_q2, \
+	log_prevQuat_q3, \
+	log_prevQuat_q4)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	float log_prevQuatMagReset_q1 = prevQuatMagReset.q1;
+	float log_prevQuatMagReset_q2 = prevQuatMagReset.q2;
+	float log_prevQuatMagReset_q3 = prevQuatMagReset.q3;
+	float log_prevQuatMagReset_q4 = prevQuatMagReset.q4;
+	uint8_t log_initialResetRequest = initialResetRequest;
+	float log_prevQuat_q1 = prevQuat.q1;
+	float log_prevQuat_q2 = prevQuat.q2;
+	float log_prevQuat_q3 = prevQuat.q3;
+	float log_prevQuat_q4 = prevQuat.q4;
+	AUX_LOG_C700;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_C700_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_C700), "C700",\
+	"QffffBffff","t,1,2,3,4,5,6,7,8,9","s---------","F000000000"}
+
+struct PACKED log_C700 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float prevQuatMagReset_q1;
+	float prevQuatMagReset_q2;
+	float prevQuatMagReset_q3;
+	float prevQuatMagReset_q4;
+	uint8_t initialResetRequest;
+	float prevQuat_q1;
+	float prevQuat_q2;
+	float prevQuat_q3;
+	float prevQuat_q4;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_controlMagYawReset700(float prevQuatMagReset_q1,float prevQuatMagReset_q2,float prevQuatMagReset_q3,float prevQuatMagReset_q4,uint8_t initialResetRequest,float prevQuat_q1,float prevQuat_q2,float prevQuat_q3,float prevQuat_q4);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_C700,
+LOG_C700_BASE(LOG_C700),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_controlMagYawReset700(
+	float prevQuatMagReset_q1,
+	float prevQuatMagReset_q2,
+	float prevQuatMagReset_q3,
+	float prevQuatMagReset_q4,
+	uint8_t initialResetRequest,
+	float prevQuat_q1,
+	float prevQuat_q2,
+	float prevQuat_q3,
+	float prevQuat_q4)
+{
+	struct log_C700 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_C700),
+		time_us : AP_HAL::micros64(),
+		prevQuatMagReset_q1 : prevQuatMagReset_q1,
+		prevQuatMagReset_q2 : prevQuatMagReset_q2,
+		prevQuatMagReset_q3 : prevQuatMagReset_q3,
+		prevQuatMagReset_q4 : prevQuatMagReset_q4,
+		initialResetRequest : initialResetRequest,
+		prevQuat_q1 : prevQuat_q1,
+		prevQuat_q2 : prevQuat_q2,
+		prevQuat_q3 : prevQuat_q3,
+		prevQuat_q4 : prevQuat_q4
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	C700_time = 1e-6*C700(:,2);
+	prevQuatMagReset_q1 = [C700_time, C700(:,3)];
+	prevQuatMagReset_q2 = [C700_time, C700(:,4)];
+	prevQuatMagReset_q3 = [C700_time, C700(:,5)];
+	prevQuatMagReset_q4 = [C700_time, C700(:,6)];
+	initialResetRequest = [C700_time, C700(:,7)];
+	prevQuat_q1 = [C700_time, C700(:,8)];
+	prevQuat_q2 = [C700_time, C700(:,9)];
+	prevQuat_q3 = [C700_time, C700(:,10)];
+	prevQuat_q4 = [C700_time, C700(:,11)];
+
+

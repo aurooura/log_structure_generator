@@ -1,0 +1,17 @@
+F900 F900
+FuseDeclination900
+float sumKHP
+float KH
+float sumKFusion
+float sumP5
+float sumStatesArray
+float innovation
+float magDecAngF
+float fmagE
+float magN
+float dtEkfAvgF
+bool healthyFusion
+int stateIndexLimF
+int PV_AidingModeF
+float sumCons;
+END

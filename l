@@ -1,5 +1,5 @@
-AD_100 A100
-alignMagStateDeclination100
+S100 S100
+setWindMagStateLearningMode100
 float statesArray[0]
 float statesArray[1]
 float statesArray[2]
@@ -16,8 +16,8 @@ float statesArray[12]
 float statesArray[13]
 float statesArray[14]
 END
-AD_101 A101
-alignMagStateDeclination101
+S101 S101
+setWindMagStateLearningMode101
 float statesArray[15]
 float statesArray[16]
 float statesArray[17]
@@ -34,8 +34,8 @@ float statesArray[27]
 float statesArray[0].out
 float statesArray[1].out
 END
-AD_102 A102
-alignMagStateDeclination102
+S102 S102
+setWindMagStateLearningMode102
 float statesArray[2].out
 float statesArray[3].out
 float statesArray[4].out
@@ -52,8 +52,8 @@ float statesArray[14].out
 float statesArray[15].out
 float statesArray[16].out
 END
-AD_103 A103
-alignMagStateDeclination103
+S103 S103
+setWindMagStateLearningMode102
 float statesArray[17].out
 float statesArray[18].out
 float statesArray[19].out
@@ -65,14 +65,4 @@ float statesArray[24].out
 float statesArray[25].out
 float statesArray[26].out
 float statesArray[27].out
-bool magFieldLearned
-bool magDecAng
-bool inhibitMagStates
-END
-AD_104 A104
-alignMagStateDeclination104
-int stateIndexLim
-int PV_AidingMode
-float dtEkfAvg
-bool faultStatus.bad_decl
 END

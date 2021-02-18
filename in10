@@ -1,0 +1,24 @@
+C800 C800
+controlMagYawReset800
+float outputDataNew.quat.q1.out
+float outputDataNew.quat.q2.out
+float outputDataNew.quat.q3.out
+float outputDataNew.quat.q4.out
+float outputDataDelayed.quat.q1.out
+float outputDataDelayed.quat.q2.out
+float outputDataDelayed.quat.q3.out
+float outputDataDelayed.quat.q4.out
+bool magYawResetRequest_out
+bool yawAlignComplete_out
+bool finalInflightYawInit_out
+bool finalInflightMagInit_out
+END
+C801 C801
+controlMagYawReset801
+bool gpsYawResetRequest
+int lastYawReset_ms_out
+float yawResetAngle_out
+bool faultStatus.bad_decl
+bool faultStatus.bad_decl.out
+bool magStateResetRequest.out
+END

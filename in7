@@ -1,0 +1,11 @@
+C470 C470
+controlMagYawReset470
+float yawInnovAtLastMagReset.out
+float posDownAtLastMagReset.out
+float quatAtLastMagReset.q1.out
+float quatAtLastMagReset.q2.out
+float quatAtLastMagReset.q3.out
+float quatAtLastMagReset.q4.out
+bool magStateInitComplete.out
+bool gpsYawResetRequest.out
+END

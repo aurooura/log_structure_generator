@@ -1,0 +1,138 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_F900 1
+#define AUX_LOG_F900 AP::logger().Write_FuseDeclination900(\
+	log_sumKHP, \
+	log_KH, \
+	log_sumKFusion, \
+	log_sumP5, \
+	log_sumStatesArray, \
+	log_innovation, \
+	log_magDecAngF, \
+	log_fmagE, \
+	log_magN, \
+	log_dtEkfAvgF, \
+	log_healthyFusion, \
+	log_stateIndexLimF, \
+	log_PV_AidingModeF, \
+	log_sumCons)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	float log_sumKHP = sumKHP;
+	float log_KH = KH;
+	float log_sumKFusion = sumKFusion;
+	float log_sumP5 = sumP5;
+	float log_sumStatesArray = sumStatesArray;
+	float log_innovation = innovation;
+	float log_magDecAngF = magDecAngF;
+	float log_fmagE = fmagE;
+	float log_magN = magN;
+	float log_dtEkfAvgF = dtEkfAvgF;
+	uint8_t log_healthyFusion = healthyFusion;
+	int32_t log_stateIndexLimF = stateIndexLimF;
+	int32_t log_PV_AidingModeF = PV_AidingModeF;
+	float log_sumCons = sumCons;;
+	AUX_LOG_F900;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_F900_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_F900), "F900",\
+	"QffffffffffBiif","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14","s--------------","F00000000000000"}
+
+struct PACKED log_F900 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float sumKHP;
+	float KH;
+	float sumKFusion;
+	float sumP5;
+	float sumStatesArray;
+	float innovation;
+	float magDecAngF;
+	float fmagE;
+	float magN;
+	float dtEkfAvgF;
+	uint8_t healthyFusion;
+	int32_t stateIndexLimF;
+	int32_t PV_AidingModeF;
+	float sumCons;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_FuseDeclination900(float sumKHP,float KH,float sumKFusion,float sumP5,float sumStatesArray,float innovation,float magDecAngF,float fmagE,float magN,float dtEkfAvgF,uint8_t healthyFusion,int32_t stateIndexLimF,int32_t PV_AidingModeF,float sumCons);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_F900,
+LOG_F900_BASE(LOG_F900),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_FuseDeclination900(
+	float sumKHP,
+	float KH,
+	float sumKFusion,
+	float sumP5,
+	float sumStatesArray,
+	float innovation,
+	float magDecAngF,
+	float fmagE,
+	float magN,
+	float dtEkfAvgF,
+	uint8_t healthyFusion,
+	int32_t stateIndexLimF,
+	int32_t PV_AidingModeF,
+	float sumCons)
+{
+	struct log_F900 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_F900),
+		time_us : AP_HAL::micros64(),
+		sumKHP : sumKHP,
+		KH : KH,
+		sumKFusion : sumKFusion,
+		sumP5 : sumP5,
+		sumStatesArray : sumStatesArray,
+		innovation : innovation,
+		magDecAngF : magDecAngF,
+		fmagE : fmagE,
+		magN : magN,
+		dtEkfAvgF : dtEkfAvgF,
+		healthyFusion : healthyFusion,
+		stateIndexLimF : stateIndexLimF,
+		PV_AidingModeF : PV_AidingModeF,
+		sumCons : sumCons
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	F900_time = 1e-6*F900(:,2);
+	sumKHP = [F900_time, F900(:,3)];
+	KH = [F900_time, F900(:,4)];
+	sumKFusion = [F900_time, F900(:,5)];
+	sumP5 = [F900_time, F900(:,6)];
+	sumStatesArray = [F900_time, F900(:,7)];
+	innovation = [F900_time, F900(:,8)];
+	magDecAngF = [F900_time, F900(:,9)];
+	fmagE = [F900_time, F900(:,10)];
+	magN = [F900_time, F900(:,11)];
+	dtEkfAvgF = [F900_time, F900(:,12)];
+	healthyFusion = [F900_time, F900(:,13)];
+	stateIndexLimF = [F900_time, F900(:,14)];
+	PV_AidingModeF = [F900_time, F900(:,15)];
+	sumCons = [F900_time, F900(:,16)];
+
+

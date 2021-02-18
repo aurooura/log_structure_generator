@@ -1,0 +1,5 @@
+C502 C502
+controlMagYawReset502
+float eulerAngles.x
+float eulerAngles.y
+END

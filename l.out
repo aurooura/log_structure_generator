@@ -1,0 +1,486 @@
+===============ARQUIVO.CPP ====================
+
+#define ACTIVE_LOG_C100 1
+#define AUX_LOG_C100 AP::logger().Write_controlMagYawReset100(\
+	log_statesArray_0_in, \
+	log_statesArray_1_in, \
+	log_statesArray_2_in, \
+	log_statesArray_3_in, \
+	log_statesArray_4_in, \
+	log_statesArray_5_in, \
+	log_statesArray_6_in, \
+	log_statesArray_7_in, \
+	log_statesArray_8_in, \
+	log_statesArray_9_in, \
+	log_statesArray_10_in, \
+	log_statesArray_11_in, \
+	log_statesArray_12_in, \
+	log_statesArray_13_in, \
+	log_statesArray_14_in)
+
+
+#define ACTIVE_LOG_C101 1
+#define AUX_LOG_C101 AP::logger().Write_controlMagYawReset101(\
+	log_statesArray_15_in, \
+	log_statesArray_16_in, \
+	log_statesArray_17_in, \
+	log_statesArray_18_in, \
+	log_statesArray_19_in, \
+	log_statesArray_20_in, \
+	log_statesArray_21_in, \
+	log_statesArray_22_in, \
+	log_statesArray_23_in, \
+	log_statesArray_24_in, \
+	log_statesArray_25_in, \
+	log_statesArray_26_in, \
+	log_statesArray_27_in, \
+	log_statesArray_0_out, \
+	log_statesArray_1_out)
+
+
+#define ACTIVE_LOG_C102 1
+#define AUX_LOG_C102 AP::logger().Write_controlMagYawReset102(\
+	log_statesArray_2_out, \
+	log_statesArray_3_out, \
+	log_statesArray_4_out, \
+	log_statesArray_5_out, \
+	log_statesArray_6_out, \
+	log_statesArray_7_out, \
+	log_statesArray_8_out, \
+	log_statesArray_9_out, \
+	log_statesArray_10_out, \
+	log_statesArray_11_out, \
+	log_statesArray_12_out, \
+	log_statesArray_13_out, \
+	log_statesArray_14_out, \
+	log_statesArray_15_out, \
+	log_statesArray_16_out)
+
+
+#define ACTIVE_LOG_C103 1
+#define AUX_LOG_C103 AP::logger().Write_controlMagYawReset103(\
+	log_statesArray_17_out, \
+	log_statesArray_18_out, \
+	log_statesArray_19_out, \
+	log_statesArray_20_out, \
+	log_statesArray_21_out, \
+	log_statesArray_22_out, \
+	log_statesArray_23_out, \
+	log_statesArray_24_out, \
+	log_statesArray_25_out, \
+	log_statesArray_26_out, \
+	log_statesArray_27_out)
+
+
+ATRIBUICAO PARA OS #if E #endif
+
+	float log_statesArray_0_in = statesArray[0].in;
+	float log_statesArray_1_in = statesArray[1].in;
+	float log_statesArray_2_in = statesArray[2].in;
+	float log_statesArray_3_in = statesArray[3].in;
+	float log_statesArray_4_in = statesArray[4].in;
+	float log_statesArray_5_in = statesArray[5].in;
+	float log_statesArray_6_in = statesArray[6].in;
+	float log_statesArray_7_in = statesArray[7].in;
+	float log_statesArray_8_in = statesArray[8].in;
+	float log_statesArray_9_in = statesArray[9].in;
+	float log_statesArray_10_in = statesArray[10].in;
+	float log_statesArray_11_in = statesArray[11].in;
+	float log_statesArray_12_in = statesArray[12].in;
+	float log_statesArray_13_in = statesArray[13].in;
+	float log_statesArray_14_in = statesArray[14].in;
+	AUX_LOG_C100;
+
+	float log_statesArray_15_in = statesArray[15].in;
+	float log_statesArray_16_in = statesArray[16].in;
+	float log_statesArray_17_in = statesArray[17].in;
+	float log_statesArray_18_in = statesArray[18].in;
+	float log_statesArray_19_in = statesArray[19].in;
+	float log_statesArray_20_in = statesArray[20].in;
+	float log_statesArray_21_in = statesArray[21].in;
+	float log_statesArray_22_in = statesArray[22].in;
+	float log_statesArray_23_in = statesArray[23].in;
+	float log_statesArray_24_in = statesArray[24].in;
+	float log_statesArray_25_in = statesArray[25].in;
+	float log_statesArray_26_in = statesArray[26].in;
+	float log_statesArray_27_in = statesArray[27].in;
+	float log_statesArray_0_out = statesArray[0].out;
+	float log_statesArray_1_out = statesArray[1].out;
+	AUX_LOG_C101;
+
+	float log_statesArray_2_out = statesArray[2].out;
+	float log_statesArray_3_out = statesArray[3].out;
+	float log_statesArray_4_out = statesArray[4].out;
+	float log_statesArray_5_out = statesArray[5].out;
+	float log_statesArray_6_out = statesArray[6].out;
+	float log_statesArray_7_out = statesArray[7].out;
+	float log_statesArray_8_out = statesArray[8].out;
+	float log_statesArray_9_out = statesArray[9].out;
+	float log_statesArray_10_out = statesArray[10].out;
+	float log_statesArray_11_out = statesArray[11].out;
+	float log_statesArray_12_out = statesArray[12].out;
+	float log_statesArray_13_out = statesArray[13].out;
+	float log_statesArray_14_out = statesArray[14].out;
+	float log_statesArray_15_out = statesArray[15].out;
+	float log_statesArray_16_out = statesArray[16].out;
+	AUX_LOG_C102;
+
+	float log_statesArray_17_out = statesArray[17].out;
+	float log_statesArray_18_out = statesArray[18].out;
+	float log_statesArray_19_out = statesArray[19].out;
+	float log_statesArray_20_out = statesArray[20].out;
+	float log_statesArray_21_out = statesArray[21].out;
+	float log_statesArray_22_out = statesArray[22].out;
+	float log_statesArray_23_out = statesArray[23].out;
+	float log_statesArray_24_out = statesArray[24].out;
+	float log_statesArray_25_out = statesArray[25].out;
+	float log_statesArray_26_out = statesArray[26].out;
+	float log_statesArray_27_out = statesArray[27].out;
+	AUX_LOG_C103;
+
+
+
+=============== XMOBOTS_LOGS.H ====================
+
+#define LOG_C100_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_C100), "C100",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_C100 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_0_in;
+	float statesArray_1_in;
+	float statesArray_2_in;
+	float statesArray_3_in;
+	float statesArray_4_in;
+	float statesArray_5_in;
+	float statesArray_6_in;
+	float statesArray_7_in;
+	float statesArray_8_in;
+	float statesArray_9_in;
+	float statesArray_10_in;
+	float statesArray_11_in;
+	float statesArray_12_in;
+	float statesArray_13_in;
+	float statesArray_14_in;
+};
+
+#define LOG_C101_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_C101), "C101",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_C101 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_15_in;
+	float statesArray_16_in;
+	float statesArray_17_in;
+	float statesArray_18_in;
+	float statesArray_19_in;
+	float statesArray_20_in;
+	float statesArray_21_in;
+	float statesArray_22_in;
+	float statesArray_23_in;
+	float statesArray_24_in;
+	float statesArray_25_in;
+	float statesArray_26_in;
+	float statesArray_27_in;
+	float statesArray_0_out;
+	float statesArray_1_out;
+};
+
+#define LOG_C102_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_C102), "C102",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_C102 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_2_out;
+	float statesArray_3_out;
+	float statesArray_4_out;
+	float statesArray_5_out;
+	float statesArray_6_out;
+	float statesArray_7_out;
+	float statesArray_8_out;
+	float statesArray_9_out;
+	float statesArray_10_out;
+	float statesArray_11_out;
+	float statesArray_12_out;
+	float statesArray_13_out;
+	float statesArray_14_out;
+	float statesArray_15_out;
+	float statesArray_16_out;
+};
+
+#define LOG_C103_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_C103), "C103",\
+	"Qfffffffffff","t,1,2,3,4,5,6,7,8,9,10,11","s-----------","F00000000000"}
+
+struct PACKED log_C103 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_17_out;
+	float statesArray_18_out;
+	float statesArray_19_out;
+	float statesArray_20_out;
+	float statesArray_21_out;
+	float statesArray_22_out;
+	float statesArray_23_out;
+	float statesArray_24_out;
+	float statesArray_25_out;
+	float statesArray_26_out;
+	float statesArray_27_out;
+};
+
+=============== AP_LOGGER_H====================
+
+void Write_controlMagYawReset100(float statesArray_0_in,float statesArray_1_in,float statesArray_2_in,float statesArray_3_in,float statesArray_4_in,float statesArray_5_in,float statesArray_6_in,float statesArray_7_in,float statesArray_8_in,float statesArray_9_in,float statesArray_10_in,float statesArray_11_in,float statesArray_12_in,float statesArray_13_in,float statesArray_14_in);
+
+
+void Write_controlMagYawReset101(float statesArray_15_in,float statesArray_16_in,float statesArray_17_in,float statesArray_18_in,float statesArray_19_in,float statesArray_20_in,float statesArray_21_in,float statesArray_22_in,float statesArray_23_in,float statesArray_24_in,float statesArray_25_in,float statesArray_26_in,float statesArray_27_in,float statesArray_0_out,float statesArray_1_out);
+
+
+void Write_controlMagYawReset102(float statesArray_2_out,float statesArray_3_out,float statesArray_4_out,float statesArray_5_out,float statesArray_6_out,float statesArray_7_out,float statesArray_8_out,float statesArray_9_out,float statesArray_10_out,float statesArray_11_out,float statesArray_12_out,float statesArray_13_out,float statesArray_14_out,float statesArray_15_out,float statesArray_16_out);
+
+
+void Write_controlMagYawReset103(float statesArray_17_out,float statesArray_18_out,float statesArray_19_out,float statesArray_20_out,float statesArray_21_out,float statesArray_22_out,float statesArray_23_out,float statesArray_24_out,float statesArray_25_out,float statesArray_26_out,float statesArray_27_out);
+
+
+===============LOG_STRUCTURE.H=======================
+NAO ESQUECER O SHOULD_LOG_EKF!!!!!
+
+LOG_C100,
+LOG_C101,
+LOG_C102,
+LOG_C103,
+LOG_C100_BASE(LOG_C100),\
+LOG_C101_BASE(LOG_C101),\
+LOG_C102_BASE(LOG_C102),\
+LOG_C103_BASE(LOG_C103),\
+
+
+===============LOG_FILE_CPP====================
+
+void AP_Logger::Write_controlMagYawReset100(
+	float statesArray_0_in,
+	float statesArray_1_in,
+	float statesArray_2_in,
+	float statesArray_3_in,
+	float statesArray_4_in,
+	float statesArray_5_in,
+	float statesArray_6_in,
+	float statesArray_7_in,
+	float statesArray_8_in,
+	float statesArray_9_in,
+	float statesArray_10_in,
+	float statesArray_11_in,
+	float statesArray_12_in,
+	float statesArray_13_in,
+	float statesArray_14_in)
+{
+	struct log_C100 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_C100),
+		time_us : AP_HAL::micros64(),
+		statesArray_0_in : statesArray_0_in,
+		statesArray_1_in : statesArray_1_in,
+		statesArray_2_in : statesArray_2_in,
+		statesArray_3_in : statesArray_3_in,
+		statesArray_4_in : statesArray_4_in,
+		statesArray_5_in : statesArray_5_in,
+		statesArray_6_in : statesArray_6_in,
+		statesArray_7_in : statesArray_7_in,
+		statesArray_8_in : statesArray_8_in,
+		statesArray_9_in : statesArray_9_in,
+		statesArray_10_in : statesArray_10_in,
+		statesArray_11_in : statesArray_11_in,
+		statesArray_12_in : statesArray_12_in,
+		statesArray_13_in : statesArray_13_in,
+		statesArray_14_in : statesArray_14_in
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_controlMagYawReset101(
+	float statesArray_15_in,
+	float statesArray_16_in,
+	float statesArray_17_in,
+	float statesArray_18_in,
+	float statesArray_19_in,
+	float statesArray_20_in,
+	float statesArray_21_in,
+	float statesArray_22_in,
+	float statesArray_23_in,
+	float statesArray_24_in,
+	float statesArray_25_in,
+	float statesArray_26_in,
+	float statesArray_27_in,
+	float statesArray_0_out,
+	float statesArray_1_out)
+{
+	struct log_C101 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_C101),
+		time_us : AP_HAL::micros64(),
+		statesArray_15_in : statesArray_15_in,
+		statesArray_16_in : statesArray_16_in,
+		statesArray_17_in : statesArray_17_in,
+		statesArray_18_in : statesArray_18_in,
+		statesArray_19_in : statesArray_19_in,
+		statesArray_20_in : statesArray_20_in,
+		statesArray_21_in : statesArray_21_in,
+		statesArray_22_in : statesArray_22_in,
+		statesArray_23_in : statesArray_23_in,
+		statesArray_24_in : statesArray_24_in,
+		statesArray_25_in : statesArray_25_in,
+		statesArray_26_in : statesArray_26_in,
+		statesArray_27_in : statesArray_27_in,
+		statesArray_0_out : statesArray_0_out,
+		statesArray_1_out : statesArray_1_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_controlMagYawReset102(
+	float statesArray_2_out,
+	float statesArray_3_out,
+	float statesArray_4_out,
+	float statesArray_5_out,
+	float statesArray_6_out,
+	float statesArray_7_out,
+	float statesArray_8_out,
+	float statesArray_9_out,
+	float statesArray_10_out,
+	float statesArray_11_out,
+	float statesArray_12_out,
+	float statesArray_13_out,
+	float statesArray_14_out,
+	float statesArray_15_out,
+	float statesArray_16_out)
+{
+	struct log_C102 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_C102),
+		time_us : AP_HAL::micros64(),
+		statesArray_2_out : statesArray_2_out,
+		statesArray_3_out : statesArray_3_out,
+		statesArray_4_out : statesArray_4_out,
+		statesArray_5_out : statesArray_5_out,
+		statesArray_6_out : statesArray_6_out,
+		statesArray_7_out : statesArray_7_out,
+		statesArray_8_out : statesArray_8_out,
+		statesArray_9_out : statesArray_9_out,
+		statesArray_10_out : statesArray_10_out,
+		statesArray_11_out : statesArray_11_out,
+		statesArray_12_out : statesArray_12_out,
+		statesArray_13_out : statesArray_13_out,
+		statesArray_14_out : statesArray_14_out,
+		statesArray_15_out : statesArray_15_out,
+		statesArray_16_out : statesArray_16_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_controlMagYawReset103(
+	float statesArray_17_out,
+	float statesArray_18_out,
+	float statesArray_19_out,
+	float statesArray_20_out,
+	float statesArray_21_out,
+	float statesArray_22_out,
+	float statesArray_23_out,
+	float statesArray_24_out,
+	float statesArray_25_out,
+	float statesArray_26_out,
+	float statesArray_27_out)
+{
+	struct log_C103 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_C103),
+		time_us : AP_HAL::micros64(),
+		statesArray_17_out : statesArray_17_out,
+		statesArray_18_out : statesArray_18_out,
+		statesArray_19_out : statesArray_19_out,
+		statesArray_20_out : statesArray_20_out,
+		statesArray_21_out : statesArray_21_out,
+		statesArray_22_out : statesArray_22_out,
+		statesArray_23_out : statesArray_23_out,
+		statesArray_24_out : statesArray_24_out,
+		statesArray_25_out : statesArray_25_out,
+		statesArray_26_out : statesArray_26_out,
+		statesArray_27_out : statesArray_27_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+--------------------------------------------------------------
+
+
+PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
+
+	C100_time = 1e-6*C100(:,2);
+	statesArray_0_in = [C100_time, C100(:,3)];
+	statesArray_1_in = [C100_time, C100(:,4)];
+	statesArray_2_in = [C100_time, C100(:,5)];
+	statesArray_3_in = [C100_time, C100(:,6)];
+	statesArray_4_in = [C100_time, C100(:,7)];
+	statesArray_5_in = [C100_time, C100(:,8)];
+	statesArray_6_in = [C100_time, C100(:,9)];
+	statesArray_7_in = [C100_time, C100(:,10)];
+	statesArray_8_in = [C100_time, C100(:,11)];
+	statesArray_9_in = [C100_time, C100(:,12)];
+	statesArray_10_in = [C100_time, C100(:,13)];
+	statesArray_11_in = [C100_time, C100(:,14)];
+	statesArray_12_in = [C100_time, C100(:,15)];
+	statesArray_13_in = [C100_time, C100(:,16)];
+	statesArray_14_in = [C100_time, C100(:,17)];
+
+
+	C101_time = 1e-6*C101(:,2);
+	statesArray_15_in = [C101_time, C101(:,3)];
+	statesArray_16_in = [C101_time, C101(:,4)];
+	statesArray_17_in = [C101_time, C101(:,5)];
+	statesArray_18_in = [C101_time, C101(:,6)];
+	statesArray_19_in = [C101_time, C101(:,7)];
+	statesArray_20_in = [C101_time, C101(:,8)];
+	statesArray_21_in = [C101_time, C101(:,9)];
+	statesArray_22_in = [C101_time, C101(:,10)];
+	statesArray_23_in = [C101_time, C101(:,11)];
+	statesArray_24_in = [C101_time, C101(:,12)];
+	statesArray_25_in = [C101_time, C101(:,13)];
+	statesArray_26_in = [C101_time, C101(:,14)];
+	statesArray_27_in = [C101_time, C101(:,15)];
+	statesArray_0_out = [C101_time, C101(:,16)];
+	statesArray_1_out = [C101_time, C101(:,17)];
+
+
+	C102_time = 1e-6*C102(:,2);
+	statesArray_2_out = [C102_time, C102(:,3)];
+	statesArray_3_out = [C102_time, C102(:,4)];
+	statesArray_4_out = [C102_time, C102(:,5)];
+	statesArray_5_out = [C102_time, C102(:,6)];
+	statesArray_6_out = [C102_time, C102(:,7)];
+	statesArray_7_out = [C102_time, C102(:,8)];
+	statesArray_8_out = [C102_time, C102(:,9)];
+	statesArray_9_out = [C102_time, C102(:,10)];
+	statesArray_10_out = [C102_time, C102(:,11)];
+	statesArray_11_out = [C102_time, C102(:,12)];
+	statesArray_12_out = [C102_time, C102(:,13)];
+	statesArray_13_out = [C102_time, C102(:,14)];
+	statesArray_14_out = [C102_time, C102(:,15)];
+	statesArray_15_out = [C102_time, C102(:,16)];
+	statesArray_16_out = [C102_time, C102(:,17)];
+
+
+	C103_time = 1e-6*C103(:,2);
+	statesArray_17_out = [C103_time, C103(:,3)];
+	statesArray_18_out = [C103_time, C103(:,4)];
+	statesArray_19_out = [C103_time, C103(:,5)];
+	statesArray_20_out = [C103_time, C103(:,6)];
+	statesArray_21_out = [C103_time, C103(:,7)];
+	statesArray_22_out = [C103_time, C103(:,8)];
+	statesArray_23_out = [C103_time, C103(:,9)];
+	statesArray_24_out = [C103_time, C103(:,10)];
+	statesArray_25_out = [C103_time, C103(:,11)];
+	statesArray_26_out = [C103_time, C103(:,12)];
+	statesArray_27_out = [C103_time, C103(:,13)];
+
+

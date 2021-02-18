@@ -1,0 +1,7 @@
+C600 C600
+calcQuatAndFieldStates600
+float magDataDelayed.mag[0].c
+float magDataDelayed.mag[1].c
+float magDataDelayed.mag[2].c
+float MagDeclination().c
+END

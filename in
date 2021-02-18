@@ -1,6 +1,105 @@
-F700 F700
-FuseMagnetometer700
-int auxH[0]
-int auxH[1]
-int auxH[2]
+
+S104 S104
+SelectMagFusion104
+bool assume_zero_sideslip()
+bool finalInflightYawInit
+bool inFlight
+bool onGround 
+bool yawAlignComplete
+float posDownAtTakeoff
+float posDownAtLastMagReset
+float innovYaw
+float yawInnovAtLastMagReset
+float quatAtLastMagReset.q1
+float quatAtLastMagReset.q2
+float quatAtLastMagReset.q3
+float quatAtLastMagReset.q4
+bool magYawResetRequest
+bool magStateResetRequest
+END
+S105 S105
+SelectMagFusion105
+bool use_compass()
+int imuSampleTime_ms
+bool finalInflightMagInit
+float magDataDelayed.mag[0]
+float magDataDelayed.mag[1]
+float magDataDelayed.mag[2]
+float MagDeclination()
+int imu_buffer_length
+float table_earth_field_ga[0]
+float table_earth_field_ga[1]
+float table_earth_field_ga[2]
+int stateIndexLim
+float dtEkfAvg
+int PV_AidingMode
+bool inhibitMagStates
+END
+S106 S106
+SelectMagFusion106
+bool inhibitWindStates
+int lastYawReset_ms
+float yawResetAngle
+bool magFieldLearned
+bool have_table_earth_field
+float delAngCorrected[0]
+float delAngCorrected[1]
+float delAngCorrected[2]
+float imuDataDelayed.delAngDT
+bool magFusePerformed
+bool faultStatus.bad_xmag
+bool faultStatus.bad_ymag
+bool faultStatus.bad_zmag
+bool faultStatus.bad_airspeed
+bool faultStatus.bad_sideslip
+END
+S107 S107
+SelectMagFusion107
+bool faultStatus.bad_nvel
+bool faultStatus.bad_evel
+bool faultStatus.bad_dvel
+bool faultStatus.bad_npos
+bool faultStatus.bad_epos
+bool faultStatus.bad_dpos
+bool faultStatus.bad_yaw
+bool faultStatus.bad_decl
+bool faultStatus.bad_xflow
+bool faultStatus.bad_yflow
+bool faultStatus.bad_rngbcn
+float outputDataNew.quat.q1 
+float outputDataNew.quat.q2   
+float outputDataNew.quat.q3   
+float outputDataNew.quat.q4 
+END
+S108 S108
+SelectMagFusion108  
+float outputDataNew.velocity[0]
+float outputDataNew.velocity[1]
+float outputDataNew.velocity[2]
+float outputDataNew.position[0]
+float outputDataNew.position[1]
+float outputDataNew.position[2]
+float outputDataDelayed.quat.q1 
+float outputDataDelayed.quat.q2   
+float outputDataDelayed.quat.q3   
+float outputDataDelayed.quat.q4   
+float outputDataDelayed.velocity[0]
+float outputDataDelayed.velocity[1]
+float outputDataDelayed.velocity[2]
+float outputDataDelayed.position[0]
+float outputDataDelayed.position[1]
+END
+S109 S109
+SelectMagFusion109  
+float outputDataDelayed.position[2]
+bool magStateInitComplete
+float prevTnb[0][0]
+float prevTnb[0][1]
+float prevTnb[0][2]
+float prevTnb[1][0]
+float prevTnb[1][1]
+float prevTnb[1][2]
+float prevTnb[2][0]
+float prevTnb[2][1]
+float prevTnb[2][2]
 END

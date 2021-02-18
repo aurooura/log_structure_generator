@@ -1,476 +1,283 @@
 ===============ARQUIVO.CPP ====================
 
-#define ACTIVE_LOG_AD_100 1
-#define AUX_LOG_AD_100 AP::logger().Write_alignMagStateDeclination100(\
-	log_statesArray_0, \
-	log_statesArray_1, \
-	log_statesArray_2, \
-	log_statesArray_3, \
-	log_statesArray_4, \
-	log_statesArray_5, \
-	log_statesArray_6, \
-	log_statesArray_7, \
-	log_statesArray_8, \
-	log_statesArray_9, \
-	log_statesArray_10, \
-	log_statesArray_11, \
-	log_statesArray_12, \
-	log_statesArray_13, \
-	log_statesArray_14)
-
-
-#define ACTIVE_LOG_AD_101 1
-#define AUX_LOG_AD_101 AP::logger().Write_alignMagStateDeclination101(\
-	log_statesArray_15, \
-	log_statesArray_16, \
-	log_statesArray_17, \
-	log_statesArray_18, \
-	log_statesArray_19, \
-	log_statesArray_20, \
-	log_statesArray_21, \
-	log_statesArray_22, \
-	log_statesArray_23, \
-	log_statesArray_24, \
-	log_statesArray_25, \
-	log_statesArray_26, \
-	log_statesArray_27, \
-	log_statesArray_0_out, \
-	log_statesArray_1_out)
-
-
-#define ACTIVE_LOG_AD_102 1
-#define AUX_LOG_AD_102 AP::logger().Write_alignMagStateDeclination102(\
-	log_statesArray_2_out, \
-	log_statesArray_3_out, \
-	log_statesArray_4_out, \
-	log_statesArray_5_out, \
-	log_statesArray_6_out, \
-	log_statesArray_7_out, \
-	log_statesArray_8_out, \
-	log_statesArray_9_out, \
-	log_statesArray_10_out, \
-	log_statesArray_11_out, \
-	log_statesArray_12_out, \
-	log_statesArray_13_out, \
-	log_statesArray_14_out, \
-	log_statesArray_15_out, \
-	log_statesArray_16_out)
-
-
-#define ACTIVE_LOG_AD_103 1
-#define AUX_LOG_AD_103 AP::logger().Write_alignMagStateDeclination103(\
-	log_statesArray_17_out, \
-	log_statesArray_18_out, \
-	log_statesArray_19_out, \
-	log_statesArray_20_out, \
-	log_statesArray_21_out, \
-	log_statesArray_22_out, \
-	log_statesArray_23_out, \
-	log_statesArray_24_out, \
-	log_statesArray_25_out, \
-	log_statesArray_26_out, \
-	log_statesArray_27_out, \
-	log_magFieldLearned, \
-	log_magDecAng, \
-	log_inhibitMagStates)
-
-
-#define ACTIVE_LOG_AD_104 1
-#define AUX_LOG_AD_104 AP::logger().Write_alignMagStateDeclination104(\
-	log_stateIndexLim, \
+#define ACTIVE_LOG_S200 1
+#define AUX_LOG_S200 AP::logger().Write_setWindMagStateLearningMode200(\
+	log_useAirspeed, \
+	log_assume_zero_sideslip, \
+	log_onGround, \
 	log_PV_AidingMode, \
+	log_inhibitWindStates, \
+	log_yawAlignComplete, \
+	log_useAirspeed, \
+	log_accNavMagHoriz, \
+	log_manoeuvring, \
+	log_effective_magCal, \
+	log_use_compass, \
+	log_inhibitMagStates, \
+	log_setMagInhibit, \
+	log_magFieldLearned, \
+	log_earthMagFieldVar_x)
+
+
+#define ACTIVE_LOG_S201 1
+#define AUX_LOG_S201 AP::logger().Write_setWindMagStateLearningMode201(\
+	log_earthMagFieldVar_y, \
+	log_earthMagFieldVar_z, \
+	log_bodyMagFieldVar_x, \
+	log_bodyMagFieldVar_y, \
+	log_bodyMagFieldVar_z, \
+	log_magStateInitComplete, \
+	log_inFlight, \
+	log_finalInflightYawInit, \
+	log_stateIndexLim, \
+	log_stateIndexLim2, \
+	log_finalInflightMagInit, \
+	log_tempEuler_x, \
+	log_tempEuler_y, \
+	log_tempEuler_z, \
+	log_tasDataDelayed_tas)
+
+
+#define ACTIVE_LOG_S202 1
+#define AUX_LOG_S202 AP::logger().Write_setWindMagStateLearningMode202(\
+	log_magCalRequested, \
+	log_magCalDenied, \
 	log_dtEkfAvg, \
-	log_faultStatus_bad_decl)
+	log_MagDeclination, \
+	log_SumP, \
+	log_SumPAfterDecl)
 
 
 ATRIBUICAO PARA OS #if E #endif
 
-	float log_statesArray_0 = statesArray[0];
-	float log_statesArray_1 = statesArray[1];
-	float log_statesArray_2 = statesArray[2];
-	float log_statesArray_3 = statesArray[3];
-	float log_statesArray_4 = statesArray[4];
-	float log_statesArray_5 = statesArray[5];
-	float log_statesArray_6 = statesArray[6];
-	float log_statesArray_7 = statesArray[7];
-	float log_statesArray_8 = statesArray[8];
-	float log_statesArray_9 = statesArray[9];
-	float log_statesArray_10 = statesArray[10];
-	float log_statesArray_11 = statesArray[11];
-	float log_statesArray_12 = statesArray[12];
-	float log_statesArray_13 = statesArray[13];
-	float log_statesArray_14 = statesArray[14];
-	AUX_LOG_AD_100;
-
-	float log_statesArray_15 = statesArray[15];
-	float log_statesArray_16 = statesArray[16];
-	float log_statesArray_17 = statesArray[17];
-	float log_statesArray_18 = statesArray[18];
-	float log_statesArray_19 = statesArray[19];
-	float log_statesArray_20 = statesArray[20];
-	float log_statesArray_21 = statesArray[21];
-	float log_statesArray_22 = statesArray[22];
-	float log_statesArray_23 = statesArray[23];
-	float log_statesArray_24 = statesArray[24];
-	float log_statesArray_25 = statesArray[25];
-	float log_statesArray_26 = statesArray[26];
-	float log_statesArray_27 = statesArray[27];
-	float log_statesArray_0_out = statesArray[0].out;
-	float log_statesArray_1_out = statesArray[1].out;
-	AUX_LOG_AD_101;
-
-	float log_statesArray_2_out = statesArray[2].out;
-	float log_statesArray_3_out = statesArray[3].out;
-	float log_statesArray_4_out = statesArray[4].out;
-	float log_statesArray_5_out = statesArray[5].out;
-	float log_statesArray_6_out = statesArray[6].out;
-	float log_statesArray_7_out = statesArray[7].out;
-	float log_statesArray_8_out = statesArray[8].out;
-	float log_statesArray_9_out = statesArray[9].out;
-	float log_statesArray_10_out = statesArray[10].out;
-	float log_statesArray_11_out = statesArray[11].out;
-	float log_statesArray_12_out = statesArray[12].out;
-	float log_statesArray_13_out = statesArray[13].out;
-	float log_statesArray_14_out = statesArray[14].out;
-	float log_statesArray_15_out = statesArray[15].out;
-	float log_statesArray_16_out = statesArray[16].out;
-	AUX_LOG_AD_102;
-
-	float log_statesArray_17_out = statesArray[17].out;
-	float log_statesArray_18_out = statesArray[18].out;
-	float log_statesArray_19_out = statesArray[19].out;
-	float log_statesArray_20_out = statesArray[20].out;
-	float log_statesArray_21_out = statesArray[21].out;
-	float log_statesArray_22_out = statesArray[22].out;
-	float log_statesArray_23_out = statesArray[23].out;
-	float log_statesArray_24_out = statesArray[24].out;
-	float log_statesArray_25_out = statesArray[25].out;
-	float log_statesArray_26_out = statesArray[26].out;
-	float log_statesArray_27_out = statesArray[27].out;
-	uint8_t log_magFieldLearned = magFieldLearned;
-	uint8_t log_magDecAng = magDecAng;
-	uint8_t log_inhibitMagStates = inhibitMagStates;
-	AUX_LOG_AD_103;
-
-	int32_t log_stateIndexLim = stateIndexLim;
+	uint8_t log_useAirspeed = useAirspeed();
+	uint8_t log_assume_zero_sideslip = assume_zero_sideslip();
+	uint8_t log_onGround = onGround;
 	int32_t log_PV_AidingMode = PV_AidingMode;
+	uint8_t log_inhibitWindStates = inhibitWindStates;
+	uint8_t log_yawAlignComplete = yawAlignComplete;
+	uint8_t log_useAirspeed = useAirspeed;
+	float log_accNavMagHoriz = accNavMagHoriz;
+	uint8_t log_manoeuvring = manoeuvring;
+	uint8_t log_effective_magCal = effective_magCal();
+	uint8_t log_use_compass = use_compass();
+	uint8_t log_inhibitMagStates = inhibitMagStates;
+	uint8_t log_setMagInhibit = setMagInhibit;
+	uint8_t log_magFieldLearned = magFieldLearned;
+	float log_earthMagFieldVar_x = earthMagFieldVar.x;
+	AUX_LOG_S200;
+
+	float log_earthMagFieldVar_y = earthMagFieldVar.y;
+	float log_earthMagFieldVar_z = earthMagFieldVar.z;
+	float log_bodyMagFieldVar_x = bodyMagFieldVar.x;
+	float log_bodyMagFieldVar_y = bodyMagFieldVar.y;
+	float log_bodyMagFieldVar_z = bodyMagFieldVar.z;
+	uint8_t log_magStateInitComplete = magStateInitComplete;
+	uint8_t log_inFlight = inFlight;
+	uint8_t log_finalInflightYawInit = finalInflightYawInit;
+	int32_t log_stateIndexLim = stateIndexLim;
+	int32_t log_stateIndexLim2 = stateIndexLim2;
+	uint8_t log_finalInflightMagInit = finalInflightMagInit;
+	float log_tempEuler_x = tempEuler.x;
+	float log_tempEuler_y = tempEuler.y;
+	float log_tempEuler_z = tempEuler.z;
+	float log_tasDataDelayed_tas = tasDataDelayed.tas;
+	AUX_LOG_S201;
+
+	uint8_t log_magCalRequested = magCalRequested;
+	uint8_t log_magCalDenied = magCalDenied;
 	float log_dtEkfAvg = dtEkfAvg;
-	uint8_t log_faultStatus_bad_decl = faultStatus.bad_decl;
-	AUX_LOG_AD_104;
+	float log_MagDeclination = MagDeclination();
+	float log_SumP = SumP;
+	float log_SumPAfterDecl = SumPAfterDecl;
+	AUX_LOG_S202;
 
 
 
 =============== XMOBOTS_LOGS.H ====================
 
-#define LOG_AD_100_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_AD_100), "A100",\
-	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+#define LOG_S200_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S200), "S200",\
+	"QBBBiBBBfBBBBBBf","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
 
-struct PACKED log_AD_100 {
+struct PACKED log_S200 {
 	LOG_PACKET_HEADER;
 	uint64_t time_us;
-	float statesArray_0;
-	float statesArray_1;
-	float statesArray_2;
-	float statesArray_3;
-	float statesArray_4;
-	float statesArray_5;
-	float statesArray_6;
-	float statesArray_7;
-	float statesArray_8;
-	float statesArray_9;
-	float statesArray_10;
-	float statesArray_11;
-	float statesArray_12;
-	float statesArray_13;
-	float statesArray_14;
-};
-
-#define LOG_AD_101_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_AD_101), "A101",\
-	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
-
-struct PACKED log_AD_101 {
-	LOG_PACKET_HEADER;
-	uint64_t time_us;
-	float statesArray_15;
-	float statesArray_16;
-	float statesArray_17;
-	float statesArray_18;
-	float statesArray_19;
-	float statesArray_20;
-	float statesArray_21;
-	float statesArray_22;
-	float statesArray_23;
-	float statesArray_24;
-	float statesArray_25;
-	float statesArray_26;
-	float statesArray_27;
-	float statesArray_0_out;
-	float statesArray_1_out;
-};
-
-#define LOG_AD_102_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_AD_102), "A102",\
-	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
-
-struct PACKED log_AD_102 {
-	LOG_PACKET_HEADER;
-	uint64_t time_us;
-	float statesArray_2_out;
-	float statesArray_3_out;
-	float statesArray_4_out;
-	float statesArray_5_out;
-	float statesArray_6_out;
-	float statesArray_7_out;
-	float statesArray_8_out;
-	float statesArray_9_out;
-	float statesArray_10_out;
-	float statesArray_11_out;
-	float statesArray_12_out;
-	float statesArray_13_out;
-	float statesArray_14_out;
-	float statesArray_15_out;
-	float statesArray_16_out;
-};
-
-#define LOG_AD_103_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_AD_103), "A103",\
-	"QfffffffffffBBB","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14","s--------------","F00000000000000"}
-
-struct PACKED log_AD_103 {
-	LOG_PACKET_HEADER;
-	uint64_t time_us;
-	float statesArray_17_out;
-	float statesArray_18_out;
-	float statesArray_19_out;
-	float statesArray_20_out;
-	float statesArray_21_out;
-	float statesArray_22_out;
-	float statesArray_23_out;
-	float statesArray_24_out;
-	float statesArray_25_out;
-	float statesArray_26_out;
-	float statesArray_27_out;
-	uint8_t magFieldLearned;
-	uint8_t magDecAng;
-	uint8_t inhibitMagStates;
-};
-
-#define LOG_AD_104_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_AD_104), "A104",\
-	"QiifB","t,1,2,3,4","s----","F0000"}
-
-struct PACKED log_AD_104 {
-	LOG_PACKET_HEADER;
-	uint64_t time_us;
-	int32_t stateIndexLim;
+	uint8_t useAirspeed;
+	uint8_t assume_zero_sideslip;
+	uint8_t onGround;
 	int32_t PV_AidingMode;
+	uint8_t inhibitWindStates;
+	uint8_t yawAlignComplete;
+	uint8_t useAirspeed;
+	float accNavMagHoriz;
+	uint8_t manoeuvring;
+	uint8_t effective_magCal;
+	uint8_t use_compass;
+	uint8_t inhibitMagStates;
+	uint8_t setMagInhibit;
+	uint8_t magFieldLearned;
+	float earthMagFieldVar_x;
+};
+
+#define LOG_S201_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S201), "S201",\
+	"QfffffBBBiiBffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_S201 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float earthMagFieldVar_y;
+	float earthMagFieldVar_z;
+	float bodyMagFieldVar_x;
+	float bodyMagFieldVar_y;
+	float bodyMagFieldVar_z;
+	uint8_t magStateInitComplete;
+	uint8_t inFlight;
+	uint8_t finalInflightYawInit;
+	int32_t stateIndexLim;
+	int32_t stateIndexLim2;
+	uint8_t finalInflightMagInit;
+	float tempEuler_x;
+	float tempEuler_y;
+	float tempEuler_z;
+	float tasDataDelayed_tas;
+};
+
+#define LOG_S202_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S202), "S202",\
+	"QBBffff","t,1,2,3,4,5,6","s------","F000000"}
+
+struct PACKED log_S202 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	uint8_t magCalRequested;
+	uint8_t magCalDenied;
 	float dtEkfAvg;
-	uint8_t faultStatus_bad_decl;
+	float MagDeclination;
+	float SumP;
+	float SumPAfterDecl;
 };
 
 =============== AP_LOGGER_H====================
 
-void Write_alignMagStateDeclination100(float statesArray_0,float statesArray_1,float statesArray_2,float statesArray_3,float statesArray_4,float statesArray_5,float statesArray_6,float statesArray_7,float statesArray_8,float statesArray_9,float statesArray_10,float statesArray_11,float statesArray_12,float statesArray_13,float statesArray_14);
+void Write_setWindMagStateLearningMode200(uint8_t useAirspeed,uint8_t assume_zero_sideslip,uint8_t onGround,int32_t PV_AidingMode,uint8_t inhibitWindStates,uint8_t yawAlignComplete,uint8_t useAirspeed,float accNavMagHoriz,uint8_t manoeuvring,uint8_t effective_magCal,uint8_t use_compass,uint8_t inhibitMagStates,uint8_t setMagInhibit,uint8_t magFieldLearned,float earthMagFieldVar_x);
 
 
-void Write_alignMagStateDeclination101(float statesArray_15,float statesArray_16,float statesArray_17,float statesArray_18,float statesArray_19,float statesArray_20,float statesArray_21,float statesArray_22,float statesArray_23,float statesArray_24,float statesArray_25,float statesArray_26,float statesArray_27,float statesArray_0_out,float statesArray_1_out);
+void Write_setWindMagStateLearningMode201(float earthMagFieldVar_y,float earthMagFieldVar_z,float bodyMagFieldVar_x,float bodyMagFieldVar_y,float bodyMagFieldVar_z,uint8_t magStateInitComplete,uint8_t inFlight,uint8_t finalInflightYawInit,int32_t stateIndexLim,int32_t stateIndexLim2,uint8_t finalInflightMagInit,float tempEuler_x,float tempEuler_y,float tempEuler_z,float tasDataDelayed_tas);
 
 
-void Write_alignMagStateDeclination102(float statesArray_2_out,float statesArray_3_out,float statesArray_4_out,float statesArray_5_out,float statesArray_6_out,float statesArray_7_out,float statesArray_8_out,float statesArray_9_out,float statesArray_10_out,float statesArray_11_out,float statesArray_12_out,float statesArray_13_out,float statesArray_14_out,float statesArray_15_out,float statesArray_16_out);
-
-
-void Write_alignMagStateDeclination103(float statesArray_17_out,float statesArray_18_out,float statesArray_19_out,float statesArray_20_out,float statesArray_21_out,float statesArray_22_out,float statesArray_23_out,float statesArray_24_out,float statesArray_25_out,float statesArray_26_out,float statesArray_27_out,uint8_t magFieldLearned,uint8_t magDecAng,uint8_t inhibitMagStates);
-
-
-void Write_alignMagStateDeclination104(int32_t stateIndexLim,int32_t PV_AidingMode,float dtEkfAvg,uint8_t faultStatus_bad_decl);
+void Write_setWindMagStateLearningMode202(uint8_t magCalRequested,uint8_t magCalDenied,float dtEkfAvg,float MagDeclination,float SumP,float SumPAfterDecl);
 
 
 ===============LOG_STRUCTURE.H=======================
 NAO ESQUECER O SHOULD_LOG_EKF!!!!!
 
-LOG_AD_100,
-LOG_AD_101,
-LOG_AD_102,
-LOG_AD_103,
-LOG_AD_104,
-LOG_AD_100_BASE(LOG_AD_100),\
-LOG_AD_101_BASE(LOG_AD_101),\
-LOG_AD_102_BASE(LOG_AD_102),\
-LOG_AD_103_BASE(LOG_AD_103),\
-LOG_AD_104_BASE(LOG_AD_104),\
+LOG_S200,
+LOG_S201,
+LOG_S202,
+LOG_S200_BASE(LOG_S200),\
+LOG_S201_BASE(LOG_S201),\
+LOG_S202_BASE(LOG_S202),\
 
 
 ===============LOG_FILE_CPP====================
 
-void AP_Logger::Write_alignMagStateDeclination100(
-	float statesArray_0,
-	float statesArray_1,
-	float statesArray_2,
-	float statesArray_3,
-	float statesArray_4,
-	float statesArray_5,
-	float statesArray_6,
-	float statesArray_7,
-	float statesArray_8,
-	float statesArray_9,
-	float statesArray_10,
-	float statesArray_11,
-	float statesArray_12,
-	float statesArray_13,
-	float statesArray_14)
-{
-	struct log_AD_100 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_AD_100),
-		time_us : AP_HAL::micros64(),
-		statesArray_0 : statesArray_0,
-		statesArray_1 : statesArray_1,
-		statesArray_2 : statesArray_2,
-		statesArray_3 : statesArray_3,
-		statesArray_4 : statesArray_4,
-		statesArray_5 : statesArray_5,
-		statesArray_6 : statesArray_6,
-		statesArray_7 : statesArray_7,
-		statesArray_8 : statesArray_8,
-		statesArray_9 : statesArray_9,
-		statesArray_10 : statesArray_10,
-		statesArray_11 : statesArray_11,
-		statesArray_12 : statesArray_12,
-		statesArray_13 : statesArray_13,
-		statesArray_14 : statesArray_14
-	};
-	WriteBlock(&pkt, sizeof(pkt));
-} 
-
-void AP_Logger::Write_alignMagStateDeclination101(
-	float statesArray_15,
-	float statesArray_16,
-	float statesArray_17,
-	float statesArray_18,
-	float statesArray_19,
-	float statesArray_20,
-	float statesArray_21,
-	float statesArray_22,
-	float statesArray_23,
-	float statesArray_24,
-	float statesArray_25,
-	float statesArray_26,
-	float statesArray_27,
-	float statesArray_0_out,
-	float statesArray_1_out)
-{
-	struct log_AD_101 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_AD_101),
-		time_us : AP_HAL::micros64(),
-		statesArray_15 : statesArray_15,
-		statesArray_16 : statesArray_16,
-		statesArray_17 : statesArray_17,
-		statesArray_18 : statesArray_18,
-		statesArray_19 : statesArray_19,
-		statesArray_20 : statesArray_20,
-		statesArray_21 : statesArray_21,
-		statesArray_22 : statesArray_22,
-		statesArray_23 : statesArray_23,
-		statesArray_24 : statesArray_24,
-		statesArray_25 : statesArray_25,
-		statesArray_26 : statesArray_26,
-		statesArray_27 : statesArray_27,
-		statesArray_0_out : statesArray_0_out,
-		statesArray_1_out : statesArray_1_out
-	};
-	WriteBlock(&pkt, sizeof(pkt));
-} 
-
-void AP_Logger::Write_alignMagStateDeclination102(
-	float statesArray_2_out,
-	float statesArray_3_out,
-	float statesArray_4_out,
-	float statesArray_5_out,
-	float statesArray_6_out,
-	float statesArray_7_out,
-	float statesArray_8_out,
-	float statesArray_9_out,
-	float statesArray_10_out,
-	float statesArray_11_out,
-	float statesArray_12_out,
-	float statesArray_13_out,
-	float statesArray_14_out,
-	float statesArray_15_out,
-	float statesArray_16_out)
-{
-	struct log_AD_102 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_AD_102),
-		time_us : AP_HAL::micros64(),
-		statesArray_2_out : statesArray_2_out,
-		statesArray_3_out : statesArray_3_out,
-		statesArray_4_out : statesArray_4_out,
-		statesArray_5_out : statesArray_5_out,
-		statesArray_6_out : statesArray_6_out,
-		statesArray_7_out : statesArray_7_out,
-		statesArray_8_out : statesArray_8_out,
-		statesArray_9_out : statesArray_9_out,
-		statesArray_10_out : statesArray_10_out,
-		statesArray_11_out : statesArray_11_out,
-		statesArray_12_out : statesArray_12_out,
-		statesArray_13_out : statesArray_13_out,
-		statesArray_14_out : statesArray_14_out,
-		statesArray_15_out : statesArray_15_out,
-		statesArray_16_out : statesArray_16_out
-	};
-	WriteBlock(&pkt, sizeof(pkt));
-} 
-
-void AP_Logger::Write_alignMagStateDeclination103(
-	float statesArray_17_out,
-	float statesArray_18_out,
-	float statesArray_19_out,
-	float statesArray_20_out,
-	float statesArray_21_out,
-	float statesArray_22_out,
-	float statesArray_23_out,
-	float statesArray_24_out,
-	float statesArray_25_out,
-	float statesArray_26_out,
-	float statesArray_27_out,
-	uint8_t magFieldLearned,
-	uint8_t magDecAng,
-	uint8_t inhibitMagStates)
-{
-	struct log_AD_103 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_AD_103),
-		time_us : AP_HAL::micros64(),
-		statesArray_17_out : statesArray_17_out,
-		statesArray_18_out : statesArray_18_out,
-		statesArray_19_out : statesArray_19_out,
-		statesArray_20_out : statesArray_20_out,
-		statesArray_21_out : statesArray_21_out,
-		statesArray_22_out : statesArray_22_out,
-		statesArray_23_out : statesArray_23_out,
-		statesArray_24_out : statesArray_24_out,
-		statesArray_25_out : statesArray_25_out,
-		statesArray_26_out : statesArray_26_out,
-		statesArray_27_out : statesArray_27_out,
-		magFieldLearned : magFieldLearned,
-		magDecAng : magDecAng,
-		inhibitMagStates : inhibitMagStates
-	};
-	WriteBlock(&pkt, sizeof(pkt));
-} 
-
-void AP_Logger::Write_alignMagStateDeclination104(
-	int32_t stateIndexLim,
+void AP_Logger::Write_setWindMagStateLearningMode200(
+	uint8_t useAirspeed,
+	uint8_t assume_zero_sideslip,
+	uint8_t onGround,
 	int32_t PV_AidingMode,
-	float dtEkfAvg,
-	uint8_t faultStatus_bad_decl)
+	uint8_t inhibitWindStates,
+	uint8_t yawAlignComplete,
+	uint8_t useAirspeed,
+	float accNavMagHoriz,
+	uint8_t manoeuvring,
+	uint8_t effective_magCal,
+	uint8_t use_compass,
+	uint8_t inhibitMagStates,
+	uint8_t setMagInhibit,
+	uint8_t magFieldLearned,
+	float earthMagFieldVar_x)
 {
-	struct log_AD_104 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_AD_104),
+	struct log_S200 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S200),
 		time_us : AP_HAL::micros64(),
-		stateIndexLim : stateIndexLim,
+		useAirspeed : useAirspeed,
+		assume_zero_sideslip : assume_zero_sideslip,
+		onGround : onGround,
 		PV_AidingMode : PV_AidingMode,
+		inhibitWindStates : inhibitWindStates,
+		yawAlignComplete : yawAlignComplete,
+		useAirspeed : useAirspeed,
+		accNavMagHoriz : accNavMagHoriz,
+		manoeuvring : manoeuvring,
+		effective_magCal : effective_magCal,
+		use_compass : use_compass,
+		inhibitMagStates : inhibitMagStates,
+		setMagInhibit : setMagInhibit,
+		magFieldLearned : magFieldLearned,
+		earthMagFieldVar_x : earthMagFieldVar_x
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_setWindMagStateLearningMode201(
+	float earthMagFieldVar_y,
+	float earthMagFieldVar_z,
+	float bodyMagFieldVar_x,
+	float bodyMagFieldVar_y,
+	float bodyMagFieldVar_z,
+	uint8_t magStateInitComplete,
+	uint8_t inFlight,
+	uint8_t finalInflightYawInit,
+	int32_t stateIndexLim,
+	int32_t stateIndexLim2,
+	uint8_t finalInflightMagInit,
+	float tempEuler_x,
+	float tempEuler_y,
+	float tempEuler_z,
+	float tasDataDelayed_tas)
+{
+	struct log_S201 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S201),
+		time_us : AP_HAL::micros64(),
+		earthMagFieldVar_y : earthMagFieldVar_y,
+		earthMagFieldVar_z : earthMagFieldVar_z,
+		bodyMagFieldVar_x : bodyMagFieldVar_x,
+		bodyMagFieldVar_y : bodyMagFieldVar_y,
+		bodyMagFieldVar_z : bodyMagFieldVar_z,
+		magStateInitComplete : magStateInitComplete,
+		inFlight : inFlight,
+		finalInflightYawInit : finalInflightYawInit,
+		stateIndexLim : stateIndexLim,
+		stateIndexLim2 : stateIndexLim2,
+		finalInflightMagInit : finalInflightMagInit,
+		tempEuler_x : tempEuler_x,
+		tempEuler_y : tempEuler_y,
+		tempEuler_z : tempEuler_z,
+		tasDataDelayed_tas : tasDataDelayed_tas
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_setWindMagStateLearningMode202(
+	uint8_t magCalRequested,
+	uint8_t magCalDenied,
+	float dtEkfAvg,
+	float MagDeclination,
+	float SumP,
+	float SumPAfterDecl)
+{
+	struct log_S202 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S202),
+		time_us : AP_HAL::micros64(),
+		magCalRequested : magCalRequested,
+		magCalDenied : magCalDenied,
 		dtEkfAvg : dtEkfAvg,
-		faultStatus_bad_decl : faultStatus_bad_decl
+		MagDeclination : MagDeclination,
+		SumP : SumP,
+		SumPAfterDecl : SumPAfterDecl
 	};
 	WriteBlock(&pkt, sizeof(pkt));
 } 
@@ -480,81 +287,48 @@ void AP_Logger::Write_alignMagStateDeclination104(
 
 PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
 
-	A100_time = 1e-6*A100(:,2);
-	statesArray_0 = [A100_time, A100(:,3)];
-	statesArray_1 = [A100_time, A100(:,4)];
-	statesArray_2 = [A100_time, A100(:,5)];
-	statesArray_3 = [A100_time, A100(:,6)];
-	statesArray_4 = [A100_time, A100(:,7)];
-	statesArray_5 = [A100_time, A100(:,8)];
-	statesArray_6 = [A100_time, A100(:,9)];
-	statesArray_7 = [A100_time, A100(:,10)];
-	statesArray_8 = [A100_time, A100(:,11)];
-	statesArray_9 = [A100_time, A100(:,12)];
-	statesArray_10 = [A100_time, A100(:,13)];
-	statesArray_11 = [A100_time, A100(:,14)];
-	statesArray_12 = [A100_time, A100(:,15)];
-	statesArray_13 = [A100_time, A100(:,16)];
-	statesArray_14 = [A100_time, A100(:,17)];
+	S200_time = 1e-6*S200(:,2);
+	useAirspeed = [S200_time, S200(:,3)];
+	assume_zero_sideslip = [S200_time, S200(:,4)];
+	onGround = [S200_time, S200(:,5)];
+	PV_AidingMode = [S200_time, S200(:,6)];
+	inhibitWindStates = [S200_time, S200(:,7)];
+	yawAlignComplete = [S200_time, S200(:,8)];
+	useAirspeed = [S200_time, S200(:,9)];
+	accNavMagHoriz = [S200_time, S200(:,10)];
+	manoeuvring = [S200_time, S200(:,11)];
+	effective_magCal = [S200_time, S200(:,12)];
+	use_compass = [S200_time, S200(:,13)];
+	inhibitMagStates = [S200_time, S200(:,14)];
+	setMagInhibit = [S200_time, S200(:,15)];
+	magFieldLearned = [S200_time, S200(:,16)];
+	earthMagFieldVar_x = [S200_time, S200(:,17)];
 
 
-	A101_time = 1e-6*A101(:,2);
-	statesArray_15 = [A101_time, A101(:,3)];
-	statesArray_16 = [A101_time, A101(:,4)];
-	statesArray_17 = [A101_time, A101(:,5)];
-	statesArray_18 = [A101_time, A101(:,6)];
-	statesArray_19 = [A101_time, A101(:,7)];
-	statesArray_20 = [A101_time, A101(:,8)];
-	statesArray_21 = [A101_time, A101(:,9)];
-	statesArray_22 = [A101_time, A101(:,10)];
-	statesArray_23 = [A101_time, A101(:,11)];
-	statesArray_24 = [A101_time, A101(:,12)];
-	statesArray_25 = [A101_time, A101(:,13)];
-	statesArray_26 = [A101_time, A101(:,14)];
-	statesArray_27 = [A101_time, A101(:,15)];
-	statesArray_0_out = [A101_time, A101(:,16)];
-	statesArray_1_out = [A101_time, A101(:,17)];
+	S201_time = 1e-6*S201(:,2);
+	earthMagFieldVar_y = [S201_time, S201(:,3)];
+	earthMagFieldVar_z = [S201_time, S201(:,4)];
+	bodyMagFieldVar_x = [S201_time, S201(:,5)];
+	bodyMagFieldVar_y = [S201_time, S201(:,6)];
+	bodyMagFieldVar_z = [S201_time, S201(:,7)];
+	magStateInitComplete = [S201_time, S201(:,8)];
+	inFlight = [S201_time, S201(:,9)];
+	finalInflightYawInit = [S201_time, S201(:,10)];
+	stateIndexLim = [S201_time, S201(:,11)];
+	stateIndexLim2 = [S201_time, S201(:,12)];
+	finalInflightMagInit = [S201_time, S201(:,13)];
+	tempEuler_x = [S201_time, S201(:,14)];
+	tempEuler_y = [S201_time, S201(:,15)];
+	tempEuler_z = [S201_time, S201(:,16)];
+	tasDataDelayed_tas = [S201_time, S201(:,17)];
 
 
-	A102_time = 1e-6*A102(:,2);
-	statesArray_2_out = [A102_time, A102(:,3)];
-	statesArray_3_out = [A102_time, A102(:,4)];
-	statesArray_4_out = [A102_time, A102(:,5)];
-	statesArray_5_out = [A102_time, A102(:,6)];
-	statesArray_6_out = [A102_time, A102(:,7)];
-	statesArray_7_out = [A102_time, A102(:,8)];
-	statesArray_8_out = [A102_time, A102(:,9)];
-	statesArray_9_out = [A102_time, A102(:,10)];
-	statesArray_10_out = [A102_time, A102(:,11)];
-	statesArray_11_out = [A102_time, A102(:,12)];
-	statesArray_12_out = [A102_time, A102(:,13)];
-	statesArray_13_out = [A102_time, A102(:,14)];
-	statesArray_14_out = [A102_time, A102(:,15)];
-	statesArray_15_out = [A102_time, A102(:,16)];
-	statesArray_16_out = [A102_time, A102(:,17)];
-
-
-	A103_time = 1e-6*A103(:,2);
-	statesArray_17_out = [A103_time, A103(:,3)];
-	statesArray_18_out = [A103_time, A103(:,4)];
-	statesArray_19_out = [A103_time, A103(:,5)];
-	statesArray_20_out = [A103_time, A103(:,6)];
-	statesArray_21_out = [A103_time, A103(:,7)];
-	statesArray_22_out = [A103_time, A103(:,8)];
-	statesArray_23_out = [A103_time, A103(:,9)];
-	statesArray_24_out = [A103_time, A103(:,10)];
-	statesArray_25_out = [A103_time, A103(:,11)];
-	statesArray_26_out = [A103_time, A103(:,12)];
-	statesArray_27_out = [A103_time, A103(:,13)];
-	magFieldLearned = [A103_time, A103(:,14)];
-	magDecAng = [A103_time, A103(:,15)];
-	inhibitMagStates = [A103_time, A103(:,16)];
-
-
-	A104_time = 1e-6*A104(:,2);
-	stateIndexLim = [A104_time, A104(:,3)];
-	PV_AidingMode = [A104_time, A104(:,4)];
-	dtEkfAvg = [A104_time, A104(:,5)];
-	faultStatus_bad_decl = [A104_time, A104(:,6)];
+	S202_time = 1e-6*S202(:,2);
+	magCalRequested = [S202_time, S202(:,3)];
+	magCalDenied = [S202_time, S202(:,4)];
+	dtEkfAvg = [S202_time, S202(:,5)];
+	MagDeclination = [S202_time, S202(:,6)];
+	SumP = [S202_time, S202(:,7)];
+	SumPAfterDecl = [S202_time, S202(:,8)];
 
 

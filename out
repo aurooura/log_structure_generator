@@ -1,60 +1,412 @@
 ===============ARQUIVO.CPP ====================
 
-#define ACTIVE_LOG_F700 1
-#define AUX_LOG_F700 AP::logger().Write_FuseMagnetometer700(\
-	log_auxH_0, \
-	log_auxH_1, \
-	log_auxH_2)
+#define ACTIVE_LOG_S100 1
+#define AUX_LOG_S100 AP::logger().Write_setWindMagStateLearningMode100(\
+	log_statesArray_0, \
+	log_statesArray_1, \
+	log_statesArray_2, \
+	log_statesArray_3, \
+	log_statesArray_4, \
+	log_statesArray_5, \
+	log_statesArray_6, \
+	log_statesArray_7, \
+	log_statesArray_8, \
+	log_statesArray_9, \
+	log_statesArray_10, \
+	log_statesArray_11, \
+	log_statesArray_12, \
+	log_statesArray_13, \
+	log_statesArray_14)
+
+
+#define ACTIVE_LOG_S101 1
+#define AUX_LOG_S101 AP::logger().Write_setWindMagStateLearningMode101(\
+	log_statesArray_15, \
+	log_statesArray_16, \
+	log_statesArray_17, \
+	log_statesArray_18, \
+	log_statesArray_19, \
+	log_statesArray_20, \
+	log_statesArray_21, \
+	log_statesArray_22, \
+	log_statesArray_23, \
+	log_statesArray_24, \
+	log_statesArray_25, \
+	log_statesArray_26, \
+	log_statesArray_27, \
+	log_statesArray_0_out, \
+	log_statesArray_1_out)
+
+
+#define ACTIVE_LOG_S102 1
+#define AUX_LOG_S102 AP::logger().Write_setWindMagStateLearningMode102(\
+	log_statesArray_2_out, \
+	log_statesArray_3_out, \
+	log_statesArray_4_out, \
+	log_statesArray_5_out, \
+	log_statesArray_6_out, \
+	log_statesArray_7_out, \
+	log_statesArray_8_out, \
+	log_statesArray_9_out, \
+	log_statesArray_10_out, \
+	log_statesArray_11_out, \
+	log_statesArray_12_out, \
+	log_statesArray_13_out, \
+	log_statesArray_14_out, \
+	log_statesArray_15_out, \
+	log_statesArray_16_out)
+
+
+#define ACTIVE_LOG_S103 1
+#define AUX_LOG_S103 AP::logger().Write_setWindMagStateLearningMode102(\
+	log_statesArray_17_out, \
+	log_statesArray_18_out, \
+	log_statesArray_19_out, \
+	log_statesArray_20_out, \
+	log_statesArray_21_out, \
+	log_statesArray_22_out, \
+	log_statesArray_23_out, \
+	log_statesArray_24_out, \
+	log_statesArray_25_out, \
+	log_statesArray_26_out, \
+	log_statesArray_27_out)
 
 
 ATRIBUICAO PARA OS #if E #endif
 
-	int32_t log_auxH_0 = auxH[0];
-	int32_t log_auxH_1 = auxH[1];
-	int32_t log_auxH_2 = auxH[2];
-	AUX_LOG_F700;
+	float log_statesArray_0 = statesArray[0];
+	float log_statesArray_1 = statesArray[1];
+	float log_statesArray_2 = statesArray[2];
+	float log_statesArray_3 = statesArray[3];
+	float log_statesArray_4 = statesArray[4];
+	float log_statesArray_5 = statesArray[5];
+	float log_statesArray_6 = statesArray[6];
+	float log_statesArray_7 = statesArray[7];
+	float log_statesArray_8 = statesArray[8];
+	float log_statesArray_9 = statesArray[9];
+	float log_statesArray_10 = statesArray[10];
+	float log_statesArray_11 = statesArray[11];
+	float log_statesArray_12 = statesArray[12];
+	float log_statesArray_13 = statesArray[13];
+	float log_statesArray_14 = statesArray[14];
+	AUX_LOG_S100;
+
+	float log_statesArray_15 = statesArray[15];
+	float log_statesArray_16 = statesArray[16];
+	float log_statesArray_17 = statesArray[17];
+	float log_statesArray_18 = statesArray[18];
+	float log_statesArray_19 = statesArray[19];
+	float log_statesArray_20 = statesArray[20];
+	float log_statesArray_21 = statesArray[21];
+	float log_statesArray_22 = statesArray[22];
+	float log_statesArray_23 = statesArray[23];
+	float log_statesArray_24 = statesArray[24];
+	float log_statesArray_25 = statesArray[25];
+	float log_statesArray_26 = statesArray[26];
+	float log_statesArray_27 = statesArray[27];
+	float log_statesArray_0_out = statesArray[0].out;
+	float log_statesArray_1_out = statesArray[1].out;
+	AUX_LOG_S101;
+
+	float log_statesArray_2_out = statesArray[2].out;
+	float log_statesArray_3_out = statesArray[3].out;
+	float log_statesArray_4_out = statesArray[4].out;
+	float log_statesArray_5_out = statesArray[5].out;
+	float log_statesArray_6_out = statesArray[6].out;
+	float log_statesArray_7_out = statesArray[7].out;
+	float log_statesArray_8_out = statesArray[8].out;
+	float log_statesArray_9_out = statesArray[9].out;
+	float log_statesArray_10_out = statesArray[10].out;
+	float log_statesArray_11_out = statesArray[11].out;
+	float log_statesArray_12_out = statesArray[12].out;
+	float log_statesArray_13_out = statesArray[13].out;
+	float log_statesArray_14_out = statesArray[14].out;
+	float log_statesArray_15_out = statesArray[15].out;
+	float log_statesArray_16_out = statesArray[16].out;
+	AUX_LOG_S102;
+
+	float log_statesArray_17_out = statesArray[17].out;
+	float log_statesArray_18_out = statesArray[18].out;
+	float log_statesArray_19_out = statesArray[19].out;
+	float log_statesArray_20_out = statesArray[20].out;
+	float log_statesArray_21_out = statesArray[21].out;
+	float log_statesArray_22_out = statesArray[22].out;
+	float log_statesArray_23_out = statesArray[23].out;
+	float log_statesArray_24_out = statesArray[24].out;
+	float log_statesArray_25_out = statesArray[25].out;
+	float log_statesArray_26_out = statesArray[26].out;
+	float log_statesArray_27_out = statesArray[27].out;
+	AUX_LOG_S103;
 
 
 
 =============== XMOBOTS_LOGS.H ====================
 
-#define LOG_F700_BASE(struct_enum)\
-	{ (struct_enum), sizeof(log_F700), "F700",\
-	"Qiii","t,1,2,3","s---","F000"}
+#define LOG_S100_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S100), "S100",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
 
-struct PACKED log_F700 {
+struct PACKED log_S100 {
 	LOG_PACKET_HEADER;
 	uint64_t time_us;
-	int32_t auxH_0;
-	int32_t auxH_1;
-	int32_t auxH_2;
+	float statesArray_0;
+	float statesArray_1;
+	float statesArray_2;
+	float statesArray_3;
+	float statesArray_4;
+	float statesArray_5;
+	float statesArray_6;
+	float statesArray_7;
+	float statesArray_8;
+	float statesArray_9;
+	float statesArray_10;
+	float statesArray_11;
+	float statesArray_12;
+	float statesArray_13;
+	float statesArray_14;
+};
+
+#define LOG_S101_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S101), "S101",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_S101 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_15;
+	float statesArray_16;
+	float statesArray_17;
+	float statesArray_18;
+	float statesArray_19;
+	float statesArray_20;
+	float statesArray_21;
+	float statesArray_22;
+	float statesArray_23;
+	float statesArray_24;
+	float statesArray_25;
+	float statesArray_26;
+	float statesArray_27;
+	float statesArray_0_out;
+	float statesArray_1_out;
+};
+
+#define LOG_S102_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S102), "S102",\
+	"Qfffffffffffffff","t,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15","s---------------","F000000000000000"}
+
+struct PACKED log_S102 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_2_out;
+	float statesArray_3_out;
+	float statesArray_4_out;
+	float statesArray_5_out;
+	float statesArray_6_out;
+	float statesArray_7_out;
+	float statesArray_8_out;
+	float statesArray_9_out;
+	float statesArray_10_out;
+	float statesArray_11_out;
+	float statesArray_12_out;
+	float statesArray_13_out;
+	float statesArray_14_out;
+	float statesArray_15_out;
+	float statesArray_16_out;
+};
+
+#define LOG_S103_BASE(struct_enum)\
+	{ (struct_enum), sizeof(log_S103), "S103",\
+	"Qfffffffffff","t,1,2,3,4,5,6,7,8,9,10,11","s-----------","F00000000000"}
+
+struct PACKED log_S103 {
+	LOG_PACKET_HEADER;
+	uint64_t time_us;
+	float statesArray_17_out;
+	float statesArray_18_out;
+	float statesArray_19_out;
+	float statesArray_20_out;
+	float statesArray_21_out;
+	float statesArray_22_out;
+	float statesArray_23_out;
+	float statesArray_24_out;
+	float statesArray_25_out;
+	float statesArray_26_out;
+	float statesArray_27_out;
 };
 
 =============== AP_LOGGER_H====================
 
-void Write_FuseMagnetometer700(int32_t auxH_0,int32_t auxH_1,int32_t auxH_2);
+void Write_setWindMagStateLearningMode100(float statesArray_0,float statesArray_1,float statesArray_2,float statesArray_3,float statesArray_4,float statesArray_5,float statesArray_6,float statesArray_7,float statesArray_8,float statesArray_9,float statesArray_10,float statesArray_11,float statesArray_12,float statesArray_13,float statesArray_14);
+
+
+void Write_setWindMagStateLearningMode101(float statesArray_15,float statesArray_16,float statesArray_17,float statesArray_18,float statesArray_19,float statesArray_20,float statesArray_21,float statesArray_22,float statesArray_23,float statesArray_24,float statesArray_25,float statesArray_26,float statesArray_27,float statesArray_0_out,float statesArray_1_out);
+
+
+void Write_setWindMagStateLearningMode102(float statesArray_2_out,float statesArray_3_out,float statesArray_4_out,float statesArray_5_out,float statesArray_6_out,float statesArray_7_out,float statesArray_8_out,float statesArray_9_out,float statesArray_10_out,float statesArray_11_out,float statesArray_12_out,float statesArray_13_out,float statesArray_14_out,float statesArray_15_out,float statesArray_16_out);
+
+
+void Write_setWindMagStateLearningMode102(float statesArray_17_out,float statesArray_18_out,float statesArray_19_out,float statesArray_20_out,float statesArray_21_out,float statesArray_22_out,float statesArray_23_out,float statesArray_24_out,float statesArray_25_out,float statesArray_26_out,float statesArray_27_out);
 
 
 ===============LOG_STRUCTURE.H=======================
 NAO ESQUECER O SHOULD_LOG_EKF!!!!!
 
-LOG_F700,
-LOG_F700_BASE(LOG_F700),\
+LOG_S100,
+LOG_S101,
+LOG_S102,
+LOG_S103,
+LOG_S100_BASE(LOG_S100),\
+LOG_S101_BASE(LOG_S101),\
+LOG_S102_BASE(LOG_S102),\
+LOG_S103_BASE(LOG_S103),\
 
 
 ===============LOG_FILE_CPP====================
 
-void AP_Logger::Write_FuseMagnetometer700(
-	int32_t auxH_0,
-	int32_t auxH_1,
-	int32_t auxH_2)
+void AP_Logger::Write_setWindMagStateLearningMode100(
+	float statesArray_0,
+	float statesArray_1,
+	float statesArray_2,
+	float statesArray_3,
+	float statesArray_4,
+	float statesArray_5,
+	float statesArray_6,
+	float statesArray_7,
+	float statesArray_8,
+	float statesArray_9,
+	float statesArray_10,
+	float statesArray_11,
+	float statesArray_12,
+	float statesArray_13,
+	float statesArray_14)
 {
-	struct log_F700 pkt = {
-		LOG_PACKET_HEADER_INIT(LOG_F700),
+	struct log_S100 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S100),
 		time_us : AP_HAL::micros64(),
-		auxH_0 : auxH_0,
-		auxH_1 : auxH_1,
-		auxH_2 : auxH_2
+		statesArray_0 : statesArray_0,
+		statesArray_1 : statesArray_1,
+		statesArray_2 : statesArray_2,
+		statesArray_3 : statesArray_3,
+		statesArray_4 : statesArray_4,
+		statesArray_5 : statesArray_5,
+		statesArray_6 : statesArray_6,
+		statesArray_7 : statesArray_7,
+		statesArray_8 : statesArray_8,
+		statesArray_9 : statesArray_9,
+		statesArray_10 : statesArray_10,
+		statesArray_11 : statesArray_11,
+		statesArray_12 : statesArray_12,
+		statesArray_13 : statesArray_13,
+		statesArray_14 : statesArray_14
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_setWindMagStateLearningMode101(
+	float statesArray_15,
+	float statesArray_16,
+	float statesArray_17,
+	float statesArray_18,
+	float statesArray_19,
+	float statesArray_20,
+	float statesArray_21,
+	float statesArray_22,
+	float statesArray_23,
+	float statesArray_24,
+	float statesArray_25,
+	float statesArray_26,
+	float statesArray_27,
+	float statesArray_0_out,
+	float statesArray_1_out)
+{
+	struct log_S101 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S101),
+		time_us : AP_HAL::micros64(),
+		statesArray_15 : statesArray_15,
+		statesArray_16 : statesArray_16,
+		statesArray_17 : statesArray_17,
+		statesArray_18 : statesArray_18,
+		statesArray_19 : statesArray_19,
+		statesArray_20 : statesArray_20,
+		statesArray_21 : statesArray_21,
+		statesArray_22 : statesArray_22,
+		statesArray_23 : statesArray_23,
+		statesArray_24 : statesArray_24,
+		statesArray_25 : statesArray_25,
+		statesArray_26 : statesArray_26,
+		statesArray_27 : statesArray_27,
+		statesArray_0_out : statesArray_0_out,
+		statesArray_1_out : statesArray_1_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_setWindMagStateLearningMode102(
+	float statesArray_2_out,
+	float statesArray_3_out,
+	float statesArray_4_out,
+	float statesArray_5_out,
+	float statesArray_6_out,
+	float statesArray_7_out,
+	float statesArray_8_out,
+	float statesArray_9_out,
+	float statesArray_10_out,
+	float statesArray_11_out,
+	float statesArray_12_out,
+	float statesArray_13_out,
+	float statesArray_14_out,
+	float statesArray_15_out,
+	float statesArray_16_out)
+{
+	struct log_S102 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S102),
+		time_us : AP_HAL::micros64(),
+		statesArray_2_out : statesArray_2_out,
+		statesArray_3_out : statesArray_3_out,
+		statesArray_4_out : statesArray_4_out,
+		statesArray_5_out : statesArray_5_out,
+		statesArray_6_out : statesArray_6_out,
+		statesArray_7_out : statesArray_7_out,
+		statesArray_8_out : statesArray_8_out,
+		statesArray_9_out : statesArray_9_out,
+		statesArray_10_out : statesArray_10_out,
+		statesArray_11_out : statesArray_11_out,
+		statesArray_12_out : statesArray_12_out,
+		statesArray_13_out : statesArray_13_out,
+		statesArray_14_out : statesArray_14_out,
+		statesArray_15_out : statesArray_15_out,
+		statesArray_16_out : statesArray_16_out
+	};
+	WriteBlock(&pkt, sizeof(pkt));
+} 
+
+void AP_Logger::Write_setWindMagStateLearningMode102(
+	float statesArray_17_out,
+	float statesArray_18_out,
+	float statesArray_19_out,
+	float statesArray_20_out,
+	float statesArray_21_out,
+	float statesArray_22_out,
+	float statesArray_23_out,
+	float statesArray_24_out,
+	float statesArray_25_out,
+	float statesArray_26_out,
+	float statesArray_27_out)
+{
+	struct log_S103 pkt = {
+		LOG_PACKET_HEADER_INIT(LOG_S103),
+		time_us : AP_HAL::micros64(),
+		statesArray_17_out : statesArray_17_out,
+		statesArray_18_out : statesArray_18_out,
+		statesArray_19_out : statesArray_19_out,
+		statesArray_20_out : statesArray_20_out,
+		statesArray_21_out : statesArray_21_out,
+		statesArray_22_out : statesArray_22_out,
+		statesArray_23_out : statesArray_23_out,
+		statesArray_24_out : statesArray_24_out,
+		statesArray_25_out : statesArray_25_out,
+		statesArray_26_out : statesArray_26_out,
+		statesArray_27_out : statesArray_27_out
 	};
 	WriteBlock(&pkt, sizeof(pkt));
 } 
@@ -64,9 +416,71 @@ void AP_Logger::Write_FuseMagnetometer700(
 
 PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M
 
-	F700_time = 1e-6*F700(:,2);
-	auxH_0 = [F700_time, F700(:,3)];
-	auxH_1 = [F700_time, F700(:,4)];
-	auxH_2 = [F700_time, F700(:,5)];
+	S100_time = 1e-6*S100(:,2);
+	statesArray_0 = [S100_time, S100(:,3)];
+	statesArray_1 = [S100_time, S100(:,4)];
+	statesArray_2 = [S100_time, S100(:,5)];
+	statesArray_3 = [S100_time, S100(:,6)];
+	statesArray_4 = [S100_time, S100(:,7)];
+	statesArray_5 = [S100_time, S100(:,8)];
+	statesArray_6 = [S100_time, S100(:,9)];
+	statesArray_7 = [S100_time, S100(:,10)];
+	statesArray_8 = [S100_time, S100(:,11)];
+	statesArray_9 = [S100_time, S100(:,12)];
+	statesArray_10 = [S100_time, S100(:,13)];
+	statesArray_11 = [S100_time, S100(:,14)];
+	statesArray_12 = [S100_time, S100(:,15)];
+	statesArray_13 = [S100_time, S100(:,16)];
+	statesArray_14 = [S100_time, S100(:,17)];
+
+
+	S101_time = 1e-6*S101(:,2);
+	statesArray_15 = [S101_time, S101(:,3)];
+	statesArray_16 = [S101_time, S101(:,4)];
+	statesArray_17 = [S101_time, S101(:,5)];
+	statesArray_18 = [S101_time, S101(:,6)];
+	statesArray_19 = [S101_time, S101(:,7)];
+	statesArray_20 = [S101_time, S101(:,8)];
+	statesArray_21 = [S101_time, S101(:,9)];
+	statesArray_22 = [S101_time, S101(:,10)];
+	statesArray_23 = [S101_time, S101(:,11)];
+	statesArray_24 = [S101_time, S101(:,12)];
+	statesArray_25 = [S101_time, S101(:,13)];
+	statesArray_26 = [S101_time, S101(:,14)];
+	statesArray_27 = [S101_time, S101(:,15)];
+	statesArray_0_out = [S101_time, S101(:,16)];
+	statesArray_1_out = [S101_time, S101(:,17)];
+
+
+	S102_time = 1e-6*S102(:,2);
+	statesArray_2_out = [S102_time, S102(:,3)];
+	statesArray_3_out = [S102_time, S102(:,4)];
+	statesArray_4_out = [S102_time, S102(:,5)];
+	statesArray_5_out = [S102_time, S102(:,6)];
+	statesArray_6_out = [S102_time, S102(:,7)];
+	statesArray_7_out = [S102_time, S102(:,8)];
+	statesArray_8_out = [S102_time, S102(:,9)];
+	statesArray_9_out = [S102_time, S102(:,10)];
+	statesArray_10_out = [S102_time, S102(:,11)];
+	statesArray_11_out = [S102_time, S102(:,12)];
+	statesArray_12_out = [S102_time, S102(:,13)];
+	statesArray_13_out = [S102_time, S102(:,14)];
+	statesArray_14_out = [S102_time, S102(:,15)];
+	statesArray_15_out = [S102_time, S102(:,16)];
+	statesArray_16_out = [S102_time, S102(:,17)];
+
+
+	S103_time = 1e-6*S103(:,2);
+	statesArray_17_out = [S103_time, S103(:,3)];
+	statesArray_18_out = [S103_time, S103(:,4)];
+	statesArray_19_out = [S103_time, S103(:,5)];
+	statesArray_20_out = [S103_time, S103(:,6)];
+	statesArray_21_out = [S103_time, S103(:,7)];
+	statesArray_22_out = [S103_time, S103(:,8)];
+	statesArray_23_out = [S103_time, S103(:,9)];
+	statesArray_24_out = [S103_time, S103(:,10)];
+	statesArray_25_out = [S103_time, S103(:,11)];
+	statesArray_26_out = [S103_time, S103(:,12)];
+	statesArray_27_out = [S103_time, S103(:,13)];
 
 

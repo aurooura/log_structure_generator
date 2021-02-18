@@ -1,0 +1,9 @@
+
+C300 C300
+controlMagYawReset
+bool magYawResetRequest2
+float newQuat.q1
+float newQuat.q2
+float newQuat.q3
+float newQuat.q4
+END
