@@ -63,7 +63,7 @@ string build_header(string& model, string& name_func) {
 }
 
 
-int main() {
+int main(int argc, char *argv[]) {
     cout << "===============ARQUIVO.CPP ====================\n\n";
     vector<string> model(MAX), name(MAX), name_func(MAX);
     vector<string> type[MAX], buffer[MAX], originals[MAX];
@@ -204,10 +204,21 @@ int main() {
         cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
     }
 
+
+
     cout << "--------------------------------------------------------------\n\n\n";
     cout << "PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M\n\n";
-    string time = name[0] + "_time";
-    cout << "\t" << time << " = 1e-6*" << name[0] << "(:,2);\n";
+    string time(argv[(argc > 1 ? 1 : 0)]);
+    if(argc > 1) {
+        time += "_time";
+        cout << "\t" << time << " = 1e-6*" << argv[1] << "(:,2);\n";
+
+    } else {
+        time = name[0] + "_time";
+        cout << "\t" << time << " = 1e-6*" << name[0] << "(:,2);\n";
+
+    }
+
     for(int j = 0; j < size; ++j) {
         //string time = name[j] + "_time";
         //cout << "\t" << time << " = 1e-6*" << name[j] << "(:,2);\n";
@@ -218,5 +229,4 @@ int main() {
         }
         cout << "\n\n";
     }
-
 }
