@@ -88,7 +88,7 @@ int main() {
 
     
     
-
+    vector<string> s_aux;
     for(int j = 0; j < size; ++j) {
         cout << build_act(model[j]) << endl;
         cout << build_header(model[j], name_func[j]) << endl;
@@ -100,13 +100,18 @@ int main() {
         cout << "\n\n";
     }
 
-      cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
-      for(int j = 0; j < size; ++j) {
-        for(int i = 0; i < buffer[j].size(); ++i) {
-            cout << '\t' << type[j][i] << " " << buffer[j][i] << " = " << originals[j][i] << ";\n";
-        }
-        cout << "\tAUX_LOG_" + model[j] << ";\n\n";
+    cout << "ATRIBUICAO PARA OS #if E #endif\n\n";
+    for(int j = 0; j < size; ++j) {
+      for(int i = 0; i < buffer[j].size(); ++i) {
+          cout << '\t' << type[j][i] << " " << buffer[j][i] << " = " << originals[j][i] << ";\n";
       }
+      //cout << "\tAUX_LOG_" + model[j] << ";\n\n";
+      s_aux.push_back("\tAUX_LOG_" + model[j]);
+    }
+    cout << endl;
+    for(string& it : s_aux) {
+        cout << it << ";\n";
+    }
     cout << "\n\n=============== XMOBOTS_LOGS.H ====================\n\n";
 
     for(int j = 0; j < size; ++j) {
@@ -199,15 +204,16 @@ int main() {
         cout << "\t};\n\tWriteBlock(&pkt, sizeof(pkt));\n} \n\n";
     }
 
-
     cout << "--------------------------------------------------------------\n\n\n";
     cout << "PARTE DO MATLAB, ALIMENTAR O WORKSPACE COM VARIAVEIS LOGADAS CONVERT_MODELO_LOGS.M\n\n";
+    string time = name[0] + "_time";
+    cout << "\t" << time << " = 1e-6*" << name[0] << "(:,2);\n";
     for(int j = 0; j < size; ++j) {
-        string time = name[j] + "_time";
-        cout << "\t" << time << " = 1e-6*" << name[j] << "(:,2);\n";
+        //string time = name[j] + "_time";
+        //cout << "\t" << time << " = 1e-6*" << name[j] << "(:,2);\n";
         int counter = 3;
         for(string& it : buffer[j]) {
-            cout << "\t" << name[j] << "_" << it << " = [";
+            cout << "\t" /*<< name[j] << "_"*/ << it << " = [";
             cout << time << ", " << name[j] << "(:," << counter++ << ")];\n";
         }
         cout << "\n\n";
