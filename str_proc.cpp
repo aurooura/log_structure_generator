@@ -218,14 +218,14 @@ int main(int argc, char *argv[]) {
         cout << "\t" << time << " = 1e-6*" << name[0] << "(:,2);\n";
 
     }
-
+    cout << "\tN = length(" << time << ")" << endl;
     for(int j = 0; j < size; ++j) {
         //string time = name[j] + "_time";
         //cout << "\t" << time << " = 1e-6*" << name[j] << "(:,2);\n";
         int counter = 3;
         for(string& it : buffer[j]) {
             cout << "\t" /*<< name[j] << "_"*/ << it << " = [";
-            cout << time << ", " << name[j] << "(:," << counter++ << ")];\n";
+            cout << time << ", " << name[j] << "(1:N," << counter++ << ")];\n";
         }
         cout << "\n\n";
     }
